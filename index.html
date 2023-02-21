@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<head>
+    <title>dkuKnowledgeMap</title>
+
+    <meta name="description" content="Duke Kunshan University Knowledge Mapping">
+    <meta name="author" content="Junyi Tao">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+    <!-- Load bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <!-- css -->
+    <link rel='stylesheet' href='css/graph.css'>
+    <link rel='stylesheet' href='css/style.css'>
+    <link rel='stylesheet' href='css/switch.css'>
+    <link rel='stylesheet' href='css/search.css'>
+    <link rel='stylesheet' href='css/info.css'>
+    <!-- js -->
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <!-- data -->
+    <!-- graph -->
+    <script src="js\02-16-2023\research-faculty.js"></script>
+    <script src="js\02-16-2023\research-area.js"></script>
+    <script src="js\02-16-2023\teaching.js"></script>
+
+
+    <!-- js -->
+    <script src="js/init.js"></script>
+    <script src="js/d3-graph.js"></script>
+    <script src="https://d3js.org/d3-selection-multi.v0.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+
+    
+
+</head>
+
+<body>
+
+<!-- D3 graph -->
+<div id="d3_selectable_force_directed_graph">
+    <svg/>
+</div>
+
+
+<div class="switch-container-view">
+
+    
+    <!-- Dropdown -->
+
+    <label class="switch">
+        <div class="dropdown">
+            <button 
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton2"
+            
+            data-toggle="dropdown"
+            aria-expanded="false"
+            >
+            Views
+            <span class="caret"></span>
+            </button>
+            
+            <ul class="dropdown-menu" style = "background-color:rgba(240, 240, 240, 0.829)" role="menu" aria-labelledby="dropdownMenuButton2">
+                
+
+                <!-- <li role="presentation"><a class="dropdown-item" role="menuitem" href="#"></a> -->
+          <!-- %%%%%%%%%%%%%%%%%%%%%%%%%% research overview: research direction and pillar %%%%%%%%%%%%%%%%%%%%%%%%%% -->
+                  <!-- <button style="font-size: 13px; text-align: center; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="window.open('x/index.html');">open in a new window -->
+                    <!-- Research Overview</button></a></li> -->
+
+          <!-- %%%%%%%%%%%%%%%%%%%%%%%%%% major support + mentoring/advising %%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+                <!-- <li role="presentation"><a class="dropdown-item" role="menuitem" href="#"></a> -->
+                <button style="font-size: 13px; text-align: left; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="createD3Graph(graph_research_faculty, graphContainer.clientWidth, graphContainer.clientHeight);"> 
+                  Research | Faculty </button></a></li>
+
+                <button style="font-size: 13px; text-align: left; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="createD3Graph(graph_research_area, graphContainer.clientWidth, graphContainer.clientHeight);"> 
+                  Research | Area </button></a></li>
+
+                <button style="font-size: 13px; text-align: center; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="createD3Graph(graph_teaching, graphContainer.clientWidth, graphContainer.clientHeight); ">
+                  <!-- onclick="window.location = 'x/index.html';">open in the current window -->
+                    Teaching</button></a></li>
+
+          <!-- %%%%%%%%%%%%%%%%%%%%%%%%%% Metrics for Individuals pages %%%%%%%%%%%%%%%%%%%%%%%%%% -->
+                <!-- design: interdisciplinary, centrality, distance, etc. -->
+          
+          <!-- %%%%%%%%%%%%%%%%%%%%%%%%%% Mentoring Matching System %%%%%%%%%%%%%%%%%%%%%%%%%% -->
+                <!-- Algorithm design: similarities (density coefficient), projection -->
+              
+            </ul>
+
+            
+        </div>
+        
+  </label>
+  <!-- search -->
+    <div class="search-container">
+        <input id="search" type="search" placeholder="Search" onkeyup="searchByName()">
+    </div>
+
+
+</div>
+
+
+<!-- Help & About -->
+<div class="help-container">
+
+    <div class="help-tip" style="font-size: 18px; color: #065e87; font-weight: 600; font-family:calibri;">
+        <div>
+          <p id="legendHeader">Play With It!</p>
+            <p style = "line-height: 20px; margin-left: 0px;">
+                ★ <strong>Shift views</strong> (research & teaching)
+                <br>★ <strong>Click on nodes to access more info</strong>
+                <br>★ <strong>Search keywords to target nodes</strong>
+            </p>
+
+
+            <p id="legendHeader">Four Primary Research Pillar (big circles)</p>
+            <p style = "line-height: 18px; margin-left: 20px;"> 
+              1. Biological Sciences and Health
+              <br>2. Physical and applied sciences
+              <br>3. Environmental science and sustainability
+              <br>4. Data and computer sciences
+            </p>
+            
+            <p id="legendHeader">Color Code</p>
+            <!-- node -->
+
+            <div class="legend-row">
+                <div id="search-match-node" class="node-symbol"></div>
+                <p>Node matched by search or selected</p>
+            </div>
+
+            <div class="legend-row">
+                <div id="regular-node" class="node-symbol"></div>
+                <p>Research Interest</p>
+            </div>
+            
+
+            <p>Faculty, grouped by research directions</p>
+            
+            <div class="legend-row">
+              <div id="area-math-node" class="node-symbol"></div>
+              <p>Faculty | Mathematics</p>
+            </div>
+            <div class="legend-row">
+              <div id="area-ds-node" class="node-symbol"></div>
+              <p>Faculty | Data Science</p>
+            </div>
+            <p></p>
+            <div class="legend-row">
+              <div id="area-phys-node" class="node-symbol"></div>
+              <p>Faculty | Physics</p>
+            </div>
+            <div class="legend-row">
+              <div id="area-chem-node" class="node-symbol"></div>
+              <p>Faculty | Chemistry</p>
+            </div>
+            <div class="legend-row">
+              <div id="area-biol-node" class="node-symbol"></div>
+              <p>Faculty | Biology</p>
+            </div>
+            <p></p>
+            <div class="legend-row">
+              <div id="area-gh-node" class="node-symbol"></div>
+              <p>Faculty | Global Health</p>
+            </div>
+            <div class="legend-row">
+              <div id="area-beha-node" class="node-symbol"></div>
+              <p>Faculty | Behavoural Science</p>
+            </div>
+            <div class="legend-row">
+              <div id="area-envi-node" class="node-symbol"></div>
+              <p>Faculty | Environmental Science</p>
+            </div>
+            
+
+            <div class="legend-row">
+              <div id="area-mult-node" class="node-symbol"></div>
+              <p>Faculty | More Than One Directions</p>
+            </div>
+            
+            
+            
+        </div>
+    </div>
+    
+</div>
+
+
+<!-- info card -->
+<div id="bottom_sheet" class="modal bottom-sheet modal-fixed-footer">
+    <div id="modalContent" class="modal-content">
+        <!-- <img id="peopleImg"> -->
+        <div id="PeopleBio">
+            <a id="PeopleName" target="_blank"></a>
+            <p id="PeopleDescription"></p>
+        </div>
+    </div>
+    <!-- close the info card -->
+    <!-- reference: 
+            https://www.freetimelearning.com/materialize-css/materialize-css-buttons.php
+            https://www.freetimelearning.com/materialize-css/materialize-css-icons.php -->
+    <div class="modal-footer">
+        
+        <a id="closeButton" class="btn-floating btn-small btn-flat modal-action modal-close">
+            <!-- the icon -->
+            <i class="material-icons white-text tiny">close</i>
+            <!-- close -->
+        </a>
+    </div>
+</div>
+
+<script>
+    $('.modal').modal({
+            dismissible: false,
+            preventScrolling: false,
+            opacity: .0,
+            inDuration: 500,
+            outDuration: 200,
+            startingTop: '50%',
+            endingTop: '50%'
+        }
+    );
+</script>
+
+<!-- Graph initialization -->
+<script>
+    <!-- initGraph(graph) -->
+    var graphContainer = document.getElementById("d3_selectable_force_directed_graph")
+    <!-- createD3Graph(graph, parentWidth, parentHeight) -->
+    createD3Graph(graph_research_faculty, graphContainer.clientWidth, graphContainer.clientHeight);
+</script>
+
+
+</body>
