@@ -6,12 +6,12 @@
     <meta name="author" content="Junyi Tao">
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css'>
+    <link rel='stylesheet' href='vendor/ajax/libs/materialize/0.98.1/css/materialize.min.css'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
     <!-- Load bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="vendor/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="vendor/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="vendor/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     
     <!-- css -->
     <link rel='stylesheet' href='css/graph.css'>
@@ -20,7 +20,7 @@
     <link rel='stylesheet' href='css/search.css'>
     <link rel='stylesheet' href='css/info.css'>
     <!-- js -->
-    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="vendor/d3js.org/d3.v4.js"></script>
     <!-- data -->
     <!-- graph -->
     <script src="js\02-16-2023\research-faculty.js"></script>
@@ -31,9 +31,9 @@
     <!-- js -->
     <script src="js/init.js"></script>
     <script src="js/d3-graph.js"></script>
-    <script src="https://d3js.org/d3-selection-multi.v0.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+    <script src="vendor/d3js.org/d3-selection-multi.v0.4.min.js"></script>
+    <script src="vendor/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="vendor/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
 
     
 
@@ -62,7 +62,7 @@
             data-toggle="dropdown"
             aria-expanded="false"
             >
-            Views
+            <span class="switch-title">Views</span>
             <span class="caret"></span>
             </button>
             
@@ -77,15 +77,15 @@
           <!-- %%%%%%%%%%%%%%%%%%%%%%%%%% major support + mentoring/advising %%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
                 <!-- <li role="presentation"><a class="dropdown-item" role="menuitem" href="#"></a> -->
-                <button style="font-size: 13px; text-align: left; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="createD3Graph(graph_research_faculty, graphContainer.clientWidth, graphContainer.clientHeight);"> 
-                  Research | Faculty </button></a></li>
+                <li><button style="font-size: 13px; text-align: left; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="createD3Graph(graph_research_faculty, graphContainer.clientWidth, graphContainer.clientHeight);"> 
+                  Research | Faculty </button></li>
 
-                <button style="font-size: 13px; text-align: left; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="createD3Graph(graph_research_area, graphContainer.clientWidth, graphContainer.clientHeight);"> 
-                  Research | Area </button></a></li>
+                <li><button style="font-size: 13px; text-align: left; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="createD3Graph(graph_research_area, graphContainer.clientWidth, graphContainer.clientHeight);"> 
+                  Research | Area </button></li>
 
-                <button style="font-size: 13px; text-align: center; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="createD3Graph(graph_teaching, graphContainer.clientWidth, graphContainer.clientHeight); ">
+                <li><button style="font-size: 13px; text-align: center; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="createD3Graph(graph_teaching, graphContainer.clientWidth, graphContainer.clientHeight); ">
                   <!-- onclick="window.location = 'x/index.html';">open in the current window -->
-                    Teaching</button></a></li>
+                    Teaching</button></li>
 
           <!-- %%%%%%%%%%%%%%%%%%%%%%%%%% Metrics for Individuals pages %%%%%%%%%%%%%%%%%%%%%%%%%% -->
                 <!-- design: interdisciplinary, centrality, distance, etc. -->
@@ -238,5 +238,22 @@
     createD3Graph(graph_research_faculty, graphContainer.clientWidth, graphContainer.clientHeight);
 </script>
 
+<!-- custom by lai -->
+
+<script>
+  $(document).ready(function(){
+    // add active class if click and replace the Views of the current item
+    $(".switch .dropdown-menu li").click(function(){
+      $(this).addClass("item-active");
+      $(this).siblings().removeClass("item-active");
+      //console.log();
+      $("#dropdownMenuButton2 .switch-title").html($(this).text());
+    });
+
+  });
+</script>
+<style>
+  .search-container { left: 40px !important; }
+</style>
 
 </body>
