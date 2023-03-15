@@ -15,11 +15,16 @@ var showingHighlight = true;
 
 
 // Shift Views 
-// ??
 
-
-function createD3Graph(graph, parentWidth, parentHeight) {
-
+function createD3Graph(graph, parentWidth, parentHeight, reasonableScreenSizeScaleMultiple) {
+    var x = document.getElementById("detail-area-container");
+    var y = document.getElementById("d3_svg");
+    var z = document.getElementById("d3_selectable_force_directed_graph");
+    x.style.display = "none";
+    x.style.zIndex = 1;
+    
+    y.style.display = "block";
+    z.style.zIndex = 10;
     var svg = d3v4.select('svg')
     .attr('width', '100%')
     .attr('height', '100%')
@@ -38,7 +43,7 @@ function createD3Graph(graph, parentWidth, parentHeight) {
 
     // add graph
     // give graph a reasonable size and position for different screen sizes / aspect ratios using shallow trickery
-    var reasonableScreenSizeScaleMultiple = 11600 * 1
+    // var reasonableScreenSizeScaleMultiple = 11600 * 1
     var initScale = Math.max(parentWidth, parentHeight) / (reasonableScreenSizeScaleMultiple);
     var initXTransform = parentWidth / 2 - initScale * 800;
     var initYTransform = parentHeight / 3;
@@ -190,10 +195,14 @@ function createD3Graph(graph, parentWidth, parentHeight) {
         .enter().append("text")
         .text(function(n) { 
             // only if faculty
-            if(n.labels[0] == "Faculty" || n.labels[0] == "ResearchInterest_shown") {
+            if(n.labels[0] == "Faculty") {
                 return n.properties.name;
             }
 
+            if(n.labels[0] == "ResearchInterest_shown") {
+                //return n.properties.name;
+                return n.properties.name.split(" ").map(word => (typeof word[0] === 'string' ? word[0].toUpperCase() : '')).join("");
+            }
             // research pillar
             // if(n.labels[0] == "PrimaryResearchPillar") {
             //     return n.properties.name;
@@ -223,7 +232,8 @@ function createD3Graph(graph, parentWidth, parentHeight) {
         .force("link", d3v4.forceLink()
                 .id(function(d) { return d.id; })
                 .distance(function(d) { return 200;}))
-        .force("charge", d3v4.forceManyBody().distanceMin(300).strength(-4500))
+        .force("charge", d3v4.forceManyBody().distanceMin(10).strength(-4500))
+        //.force('charge', d3.forceManyBody().strength(-1900).theta(0.5).distanceMax(1500))
         .force("center", d3v4.forceCenter(parentWidth / 2, parentHeight / 2))
         .force("x", d3v4.forceX(parentWidth/2))
         .force("y", d3v4.forceY(parentHeight/2))
@@ -428,7 +438,6 @@ function onClickHighlightNode() {
 function searchByName() {
     // get strings in search bar
     var searchTerm = document.getElementById("search").value;
-
     // color 
     nodes.classed("search-match", function(n){
         if(searchTerm.length == 0) {
@@ -436,7 +445,7 @@ function searchByName() {
         } else {
             return n.properties.name.toLowerCase().includes(searchTerm.toLowerCase());
         } 
-    })
+    });
     // Not matched
     nodes.classed("not-search-match", function(n){
         if(searchTerm.length == 0) {
@@ -444,8 +453,7 @@ function searchByName() {
         } else {
             return !n.properties.name.toLowerCase().includes(searchTerm.toLowerCase());
         }
-    })
-    ;
+    });
 }
 
 

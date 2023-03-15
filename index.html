@@ -26,7 +26,7 @@
     <script src="js\02-16-2023\research-faculty.js"></script>
     <script src="js\02-16-2023\research-area.js"></script>
     <script src="js\02-16-2023\teaching.js"></script>
-
+    <script src="js\02-16-2023\research-area-detail.js"></script>
 
     <!-- js -->
     <script src="js/init.js"></script>
@@ -34,82 +34,78 @@
     <script src="vendor/d3js.org/d3-selection-multi.v0.4.min.js"></script>
     <script src="vendor/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="vendor/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
-
-    
-
 </head>
 
 <body>
 
 <!-- D3 graph -->
 <div id="d3_selectable_force_directed_graph">
-    <svg/>
+    <svg id="d3_svg"/>
 </div>
 
-
-<div class="switch-container-view">
-
-    
-    <!-- Dropdown -->
-
-    <label class="switch">
-        <div class="dropdown">
-            <button 
-            class="btn btn-secondary dropdown-toggle"
-            type="button"
-            id="dropdownMenuButton2"
-            
-            data-toggle="dropdown"
-            aria-expanded="false"
-            >
-            <span class="switch-title">Views</span>
-            <span class="caret"></span>
+<div class="container menu-container" style="z-index: 20; position: relative;">
+    <div class="row ">
+      <div class="col-md-6">
+        <div class="input-group mb-3">
+          <div class="dropdown input-group-btn">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="switch-title">Research | Faculty</span>
+                  <span class="caret"></span>
             </button>
-            
-            <ul class="dropdown-menu" style = "background-color:rgba(240, 240, 240, 0.829)" role="menu" aria-labelledby="dropdownMenuButton2">
-                
+            <ul class="dropdown-menu" style = "background-color:rgba(240, 240, 240, 0.829)" role="menu">
+              <li><button style="font-size: 13px; text-align: left; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="createD3Graph(graph_research_faculty, graphContainer.clientWidth, graphContainer.clientHeight, 12000);"> 
+                Research | Faculty </button></li>
 
-                <!-- <li role="presentation"><a class="dropdown-item" role="menuitem" href="#"></a> -->
-          <!-- %%%%%%%%%%%%%%%%%%%%%%%%%% research overview: research direction and pillar %%%%%%%%%%%%%%%%%%%%%%%%%% -->
-                  <!-- <button style="font-size: 13px; text-align: center; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="window.open('x/index.html');">open in a new window -->
-                    <!-- Research Overview</button></a></li> -->
+              <li><button style="font-size: 13px; text-align: left; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="createD3Graph(graph_research_area, graphContainer.clientWidth, graphContainer.clientHeight, 12000);"> 
+                Research | Area </button></li>
 
-          <!-- %%%%%%%%%%%%%%%%%%%%%%%%%% major support + mentoring/advising %%%%%%%%%%%%%%%%%%%%%%%%%% -->
+              <li><button style="font-size: 13px; text-align: left; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="onAreaDetailClick();">
+                Research | Area-Detail </button></li>
 
-                <!-- <li role="presentation"><a class="dropdown-item" role="menuitem" href="#"></a> -->
-                <li><button style="font-size: 13px; text-align: left; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="createD3Graph(graph_research_faculty, graphContainer.clientWidth, graphContainer.clientHeight);"> 
-                  Research | Faculty </button></li>
-
-                <li><button style="font-size: 13px; text-align: left; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="createD3Graph(graph_research_area, graphContainer.clientWidth, graphContainer.clientHeight);"> 
-                  Research | Area </button></li>
-
-                <li><button style="font-size: 13px; text-align: center; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="createD3Graph(graph_teaching, graphContainer.clientWidth, graphContainer.clientHeight); ">
-                  <!-- onclick="window.location = 'x/index.html';">open in the current window -->
-                    Teaching</button></li>
-
-          <!-- %%%%%%%%%%%%%%%%%%%%%%%%%% Metrics for Individuals pages %%%%%%%%%%%%%%%%%%%%%%%%%% -->
-                <!-- design: interdisciplinary, centrality, distance, etc. -->
-          
-          <!-- %%%%%%%%%%%%%%%%%%%%%%%%%% Mentoring Matching System %%%%%%%%%%%%%%%%%%%%%%%%%% -->
-                <!-- Algorithm design: similarities (density coefficient), projection -->
-              
+              <li><button style="font-size: 13px; text-align: center; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="createD3Graph(graph_teaching, graphContainer.clientWidth, graphContainer.clientHeight, 8000); ">
+                  Teaching</button></li>
             </ul>
-
-            
+          </div>
+          <input id="search" type="search" class="form-control mr-1" placeholder="Search" onkeyup="searchByName()">
+          
+          <span class="input-group-btn" style="float: left; left:10px">
+            <button class="btn btn-outline-secondary" type="button" onclick="onHelpClick()">
+              <span class="glyphicon glyphicon-question-sign"></span>
+            </button>
+          </span>
+          
+          <!-- <span class="input-group-btn" id="detail-area-button">
+            <button class="btn btn-outline-secondary" type="button" onclick="onAreaDetailClick()">Detail</button>
+          </span> -->  
         </div>
-        
-  </label>
-  <!-- search -->
-    <div class="search-container">
-        <input id="search" type="search" placeholder="Search" onkeyup="searchByName()">
     </div>
-
-
+  </div>
 </div>
 
+<!-- Detail table of area -->
+<div class="container" id="detail-area-container" style="position: relative;">
+  <div class="row justify-content-center">
+        <div class="col-auto" style="font-size: 10px; color: #065e87; font-weight: 600; font-family:calibri; overflow-x: auto;overflow-y: scroll; max-height: 500px;">
+          <table class="table table-scroll table-responsive table-striped table-hover" style="overflow-x: auto;overflow-y: scroll; max-height: 500px;">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Research Direction</th>
+                <th scope="col">Name</th>
+                <th scope="col">Course Taught</th>
+                <th scope="col">Email</th>
+                <th scope="col">Research Interest</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody" >
+            </tbody>
+        </table>
+      </div>
+  </div>
+</div>
 
 <!-- Help & About -->
-<div class="help-container">
+<div id="help-container" style="position: relative; z-index: 50">
 
     <div class="help-tip" style="font-size: 18px; color: #065e87; font-weight: 600; font-family:calibri;">
         <div>
@@ -130,7 +126,7 @@
             </p>
             
             <p id="legendHeader">Color Code</p>
-            <!-- node -->
+
 
             <div class="legend-row">
                 <div id="search-match-node" class="node-symbol"></div>
@@ -189,10 +185,8 @@
             
             
         </div>
-    </div>
-    
+    </div>    
 </div>
-
 
 <!-- info card -->
 <div id="bottom_sheet" class="modal bottom-sheet modal-fixed-footer">
@@ -232,10 +226,8 @@
 
 <!-- Graph initialization -->
 <script>
-    <!-- initGraph(graph) -->
-    var graphContainer = document.getElementById("d3_selectable_force_directed_graph")
-    <!-- createD3Graph(graph, parentWidth, parentHeight) -->
-    createD3Graph(graph_research_faculty, graphContainer.clientWidth, graphContainer.clientHeight);
+    var graphContainer = document.getElementById("d3_selectable_force_directed_graph");
+    createD3Graph(graph_research_faculty, graphContainer.clientWidth, graphContainer.clientHeight, 12000);
 </script>
 
 <!-- custom by lai -->
@@ -243,17 +235,106 @@
 <script>
   $(document).ready(function(){
     // add active class if click and replace the Views of the current item
-    $(".switch .dropdown-menu li").click(function(){
+    $(".dropdown-menu li").click(function(){
       $(this).addClass("item-active");
       $(this).siblings().removeClass("item-active");
-      //console.log();
-      $("#dropdownMenuButton2 .switch-title").html($(this).text());
+      $("#dropdownMenuButton .switch-title").html($(this).text());
     });
 
   });
 </script>
-<style>
-  .search-container { left: 40px !important; }
-</style>
 
+<script>
+function onHelpClick() {
+  var x = document.getElementById("help-container");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  // Loop through the data and add rows to the table
+  for (var i = 0; i < research_area_detail.length; i++) {
+    var row = '<tr>';
+    row += '<td>' + research_area_detail[i].id + '</td>';
+    row += '<td>' + research_area_detail[i].research_direction + '</td>';
+    row += '<td>' + research_area_detail[i].name + '</td>';
+    row += '<td>' + research_area_detail[i].CourseTaught + '</td>';
+    row += '<td>' + research_area_detail[i].email + '</td>';
+    row += '<td>' + research_area_detail[i].research_interest + '</td>';
+    row += '</tr>';
+    $('#tableBody').append(row);
+  }
+});
+</script>
+
+<script>
+function onAreaDetailClick() {
+  var x = document.getElementById("detail-area-container");
+  var y = document.getElementById("d3_svg");
+  var z = document.getElementById("d3_selectable_force_directed_graph");
+  x.style.display = "block";
+  x.style.zIndex = 10;
+  y.style.display = "none";
+  z.style.zIndex = 1;
+  // var y = document.getElementById("d3_selectable_force_directed_graph");
+  // if (x.style.display === "none") {
+  //   x.style.display = "block";
+  //   y.style.display = "none";
+  // } else {
+  //   x.style.display = "none";
+  //   y.style.display = "block";
+  // }
+}
+</script>
+
+<style>
+  #help-container { 
+    display:none;
+  }
+  #detail-area-container { 
+    display:none;
+    margin:auto;
+  }
+  #detail-area-button {
+/*    display:none; */
+  }
+  .menu-container {
+    margin-top: 20px;
+  }
+  /* set the table color */
+  .table {
+      color: #fff;
+      background-color: #333333;
+  }
+
+  /* set the table header color */
+  .table thead th {
+      background-color: #555555;
+  }
+
+  /* set the table hover color */
+  .table-hover tbody tr:hover {
+      background-color: #444444;
+  }
+
+  /* set the table body color */
+  .table-striped tbody tr:nth-of-type(odd) {
+      background-color: #444444;
+  }
+  /* disable the focus */
+  input[type=search]:focus,
+    .input-group .form-control {
+    width: auto !important;
+    background-color: rgba(238, 238, 241, 0.732);
+  }
+  input[type=search] {
+    left: 5px;
+    padding: 7px 10px 8px 36px;
+  }
+</style>
 </body>
