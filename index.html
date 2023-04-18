@@ -55,18 +55,18 @@
                     <span class="caret"></span>
               </button>
               <ul class="dropdown-menu" style = "background-color:rgba(240, 240, 240, 0.829)" role="menu">
-                <li><button style="font-size: 13px; text-align: left; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="createD3Graph(graph_research_faculty, graphContainer.clientWidth, graphContainer.clientHeight, 12000);"> 
+                <li class="faculty-item"><button style="font-size: 13px; text-align: left; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="createD3Graph(graph_research_faculty, graphContainer.clientWidth, graphContainer.clientHeight, 12000);"> 
                   Research | Faculty </button></li>
   
-                <li><button style="font-size: 13px; text-align: left; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="createD3Graph(graph_research_area, graphContainer.clientWidth, graphContainer.clientHeight, 12000);"> 
+                <li class="area-item"><button style="font-size: 13px; text-align: left; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="createD3Graph(graph_research_area, graphContainer.clientWidth, graphContainer.clientHeight, 12000);"> 
                   Research | Area </button></li>
   
-                <li><button style="font-size: 13px; text-align: left; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="onAreaDetailClick();">
+                <li class="detail-item"><button style="font-size: 13px; text-align: left; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="onAreaDetailClick();">
                   Research | Area-Detail </button></li>
   
-                <li><button style="font-size: 13px; text-align: center; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="createD3Graph(graph_teaching, graphContainer.clientWidth, graphContainer.clientHeight, 8000); ">
+                <li class="teaching-item"><button style="font-size: 13px; text-align: center; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="createD3Graph(graph_teaching, graphContainer.clientWidth, graphContainer.clientHeight, 8000); ">
                     Teaching</button></li>
-                <li><button id="CollapsibleTree" style="font-size: 13px; text-align: center; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="onTreeClick(); ">
+                <li class="collapsi-item"><button id="CollapsibleTree" style="font-size: 13px; text-align: center; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="onTreeClick(); ">
                   CollapsibleTree</button></li>
               </ul>
             </div>
@@ -108,7 +108,7 @@
     </div>
   </div>
   <!-- collapsible-tree-container -->
-  <div class="observablehq" id="collapsible-tree-container" style="position: relative; overflow-x: auto;overflow-y: scroll; max-height: 500px;">
+  <div class="observablehq" id="collapsible-tree-container" style="position: relative; overflow-x: auto;overflow-y: scroll; max-height: 100%;">
   </div>
   <!-- Help & About -->
   <div id="help-container" style="position: relative; z-index: 50">
@@ -242,9 +242,16 @@
     $(document).ready(function(){
       // add active class if click and replace the Views of the current item
       $(".dropdown-menu li").click(function(){
-        $(this).addClass("item-active");
-        $(this).siblings().removeClass("item-active");
+        //$(this).addClass("item-active");
+        //$(this).siblings().removeClass("item-active");
         $("#dropdownMenuButton .switch-title").html($(this).text());
+        var itemName = $(this).attr('class');
+        console.log(itemName);
+        if(itemName == "teaching-item" || itemName == "faculty-item" || itemName == "area-item" || itemName == "detail-item") {
+          $("#collapsible-tree-container").addClass('d-none');
+        }else{
+          $("#collapsible-tree-container").removeClass('d-none');
+        };
       });
   
     });
@@ -357,6 +364,14 @@
       left: 5px;
       padding: 7px 10px 8px 36px;
     }
+
+  /*隐藏第二个类名后*/
+  .observablehq:nth-of-type(n+2) {
+    display: none;
+  }
+  .d-none {
+    display: none !important;
+  }
   </style>  
 
   </body>
