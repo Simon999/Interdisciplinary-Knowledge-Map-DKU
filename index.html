@@ -58,16 +58,15 @@
                 <li class="faculty-item"><button style="font-size: 13px; text-align: left; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="createD3Graph(graph_research_faculty, graphContainer.clientWidth, graphContainer.clientHeight, 12000);"> 
                   Research | Faculty </button></li>
   
-                <li class="area-item"><button style="font-size: 13px; text-align: left; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="createD3Graph(graph_research_area, graphContainer.clientWidth, graphContainer.clientHeight, 12000);"> 
+                <!-- <li class="area-item"><button style="font-size: 13px; text-align: left; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="createD3Graph(graph_research_area, graphContainer.clientWidth, graphContainer.clientHeight, 12000);"> 
                   Research | Area </button></li>
   
                 <li class="detail-item"><button style="font-size: 13px; text-align: left; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="onAreaDetailClick();">
-                  Research | Area-Detail </button></li>
-  
+                  Research | Area-Detail </button></li> -->
+                <li class="collapsi-item"><button id="CollapsibleTree" style="font-size: 13px; text-align: center; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="onTreeClick(); ">
+                  Research | Area</button></li>
                 <li class="teaching-item"><button style="font-size: 13px; text-align: center; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="createD3Graph(graph_teaching, graphContainer.clientWidth, graphContainer.clientHeight, 8000); ">
                     Teaching</button></li>
-                <li class="collapsi-item"><button id="CollapsibleTree" style="font-size: 13px; text-align: center; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="onTreeClick(); ">
-                  CollapsibleTree</button></li>
               </ul>
             </div>
             <input id="search" type="search" class="form-control mr-1" placeholder="Search" onkeyup="searchByName()" style="z-index: 20; position: relative;">

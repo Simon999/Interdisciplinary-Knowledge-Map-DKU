@@ -63,17 +63,23 @@ function _chart(d3,data,dy,margin,width,dx,tree,diagonal)
         .attr("transform", d => `translate(${source.y0},${source.x0})`)
         .attr("fill-opacity", 0)
         .attr("stroke-opacity", 0)
+        ;
+
+    nodeEnter.append("circle")
+        .attr("r", 2.5)
+        .attr("fill", d => d._children ? "#555" : "#999")
+        .attr("stroke-width", 10)
         .on("click", (event, d) => {
           d.children = d.children ? null : d._children;
           update(d);
         });
 
-    nodeEnter.append("circle")
-        .attr("r", 2.5)
-        .attr("fill", d => d._children ? "#555" : "#999")
-        .attr("stroke-width", 10);
-
     nodeEnter.append("text")
+        .on("click", (event, d) => {
+          if (d._children == null) {
+            location.href=d.data.url;
+          }
+        })
         .attr("dy", "0.31em")
         .attr("x", d => d._children ? -6 : 6)
         .attr("text-anchor", d => d._children ? "end" : "start")
@@ -81,7 +87,8 @@ function _chart(d3,data,dy,margin,width,dx,tree,diagonal)
       .clone(true).lower()
         .attr("stroke-linejoin", "round")
         .attr("stroke-width", 3)
-        .attr("stroke", "white");
+        .attr("stroke", "white")
+        ;
 
     // Transition nodes to their new position.
     const nodeUpdate = node.merge(nodeEnter).transition(transition)
@@ -139,7 +146,7 @@ d3.tree().nodeSize([dx, dy])
 )}
 
 function _data(FileAttachment){return(
-{
+  {
     "name": "Area",
     "children": [
       {
@@ -149,13 +156,16 @@ function _data(FileAttachment){return(
             "name": "Mathematical physics",
             "children": [
               {
-                "name": "Konstantinos Efstathiou"
+                "name": "Konstantinos Efstathiou",
+                "url": "https://www.efstathiou.gr/"
               },
               {
-                "name": "Marcus Werner"
+                "name": "Marcus Werner",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/werner-marcus/"
               },
               {
-                "name": "<a>Paul Stanley</a>"
+                "name": "Paul Stanley",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/stanley-paul/"
               }
             ]
           },
@@ -163,7 +173,8 @@ function _data(FileAttachment){return(
             "name": "Dynamical system",
             "children": [
               {
-                "name": "Konstantinos Efstathiou"
+                "name": "Konstantinos Efstathiou",
+                "url": "https://www.efstathiou.gr/"
               }
             ]
           },
@@ -171,10 +182,12 @@ function _data(FileAttachment){return(
             "name": "Nonlinear dynamics",
             "children": [
               {
-                "name": "Konstantinos Efstathiou"
+                "name": "Konstantinos Efstathiou",
+                "url": "https://www.efstathiou.gr/"
               },
               {
-                "name": "Kai Zhang"
+                "name": "Kai Zhang",
+                "url": "https://sites.google.com/site/kaizhangstatmech/"
               }
             ]
           },
@@ -182,7 +195,8 @@ function _data(FileAttachment){return(
             "name": "stochastic process",
             "children": [
               {
-                "name": "Konstantinos Efstathiou"
+                "name": "Konstantinos Efstathiou",
+                "url": "https://www.efstathiou.gr/"
               }
             ]
           },
@@ -190,7 +204,8 @@ function _data(FileAttachment){return(
             "name": "General relativistic theory",
             "children": [
               {
-                "name": "Marcus Werner"
+                "name": "Marcus Werner",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/werner-marcus/"
               }
             ]
           },
@@ -198,7 +213,8 @@ function _data(FileAttachment){return(
             "name": "Gravitational waves",
             "children": [
               {
-                "name": "Marcus Werner"
+                "name": "Marcus Werner",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/werner-marcus/"
               }
             ]
           },
@@ -206,7 +222,8 @@ function _data(FileAttachment){return(
             "name": "astrophysics",
             "children": [
               {
-                "name": "Marcus Werner"
+                "name": "Marcus Werner",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/werner-marcus/"
               }
             ]
           },
@@ -214,7 +231,8 @@ function _data(FileAttachment){return(
             "name": "Topology",
             "children": [
               {
-                "name": "Marcus Werner"
+                "name": "Marcus Werner",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/werner-marcus/"
               }
             ]
           },
@@ -222,7 +240,8 @@ function _data(FileAttachment){return(
             "name": "Mathematical modeling",
             "children": [
               {
-                "name": "Shixin Xu"
+                "name": "Shixin Xu",
+                "url": "https://sites.google.com/site/shixinxupage/"
               }
             ]
           },
@@ -230,13 +249,16 @@ function _data(FileAttachment){return(
             "name": "Biophysics",
             "children": [
               {
-                "name": "Shixin Xu"
+                "name": "Shixin Xu",
+                "url": "https://sites.google.com/site/shixinxupage/"
               },
               {
-                "name": "Domna Kotsifaki"
+                "name": "Domna Kotsifaki",
+                "url": "https://dkotsifaki.weebly.com/"
               },
               {
-                "name": "Kai Zhang"
+                "name": "Kai Zhang",
+                "url": "https://sites.google.com/site/kaizhangstatmech/"
               }
             ]
           },
@@ -244,7 +266,8 @@ function _data(FileAttachment){return(
             "name": "Fluid mechanics",
             "children": [
               {
-                "name": "Shixin Xu"
+                "name": "Shixin Xu",
+                "url": "https://sites.google.com/site/shixinxupage/"
               }
             ]
           },
@@ -252,22 +275,28 @@ function _data(FileAttachment){return(
             "name": "Machine learning",
             "children": [
               {
-                "name": "Shixin Xu"
+                "name": "Shixin Xu",
+                "url": "https://sites.google.com/site/shixinxupage/"
               },
               {
-                "name": "Ming Li"
+                "name": "Ming Li",
+                "url": "https://scholars.duke.edu/person/MingLi"
               },
               {
-                "name": "Mustafa Misir"
+                "name": "Mustafa Misir",
+                "url": "http://mustafamisir.github.io"
               },
               {
-                "name": "Pengzhan Guo"
+                "name": "Pengzhan Guo",
+                "url": "http://pengzhanguo.github.io"
               },
               {
-                "name": "Chi-Yeung(Jimmy) Choi"
+                "name": "Chi-Yeung(Jimmy) Choi",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/choi-chi-yeung-jimmy/"
               },
               {
-                "name": "Zuchuan Li"
+                "name": "Zuchuan Li",
+                "url": "https://sites.duke.edu/sagdku/"
               }
             ]
           },
@@ -275,7 +304,8 @@ function _data(FileAttachment){return(
             "name": "Complex fluids",
             "children": [
               {
-                "name": "Shixin Xu"
+                "name": "Shixin Xu",
+                "url": "https://sites.google.com/site/shixinxupage/"
               }
             ]
           },
@@ -283,7 +313,8 @@ function _data(FileAttachment){return(
             "name": "Mixing",
             "children": [
               {
-                "name": "Shixin Xu"
+                "name": "Shixin Xu",
+                "url": "https://sites.google.com/site/shixinxupage/"
               }
             ]
           },
@@ -291,7 +322,8 @@ function _data(FileAttachment){return(
             "name": "Murray \u00a8C von Neumann Algebras",
             "children": [
               {
-                "name": "Zhe Liu"
+                "name": "Zhe Liu",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/liu-zhe/"
               }
             ]
           },
@@ -299,7 +331,8 @@ function _data(FileAttachment){return(
             "name": "Analysis",
             "children": [
               {
-                "name": "Zhe Liu"
+                "name": "Zhe Liu",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/liu-zhe/"
               }
             ]
           },
@@ -307,7 +340,8 @@ function _data(FileAttachment){return(
             "name": "Operator algebra",
             "children": [
               {
-                "name": "Zhe Liu"
+                "name": "Zhe Liu",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/liu-zhe/"
               }
             ]
           },
@@ -315,7 +349,8 @@ function _data(FileAttachment){return(
             "name": "Probability",
             "children": [
               {
-                "name": "Italo Simonelli"
+                "name": "Italo Simonelli",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/simonelli-italo/"
               }
             ]
           },
@@ -323,10 +358,12 @@ function _data(FileAttachment){return(
             "name": "Statistics",
             "children": [
               {
-                "name": "Italo Simonelli"
+                "name": "Italo Simonelli",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/simonelli-italo/"
               },
               {
-                "name": "Zuchuan Li"
+                "name": "Zuchuan Li",
+                "url": "https://sites.duke.edu/sagdku/"
               }
             ]
           },
@@ -334,13 +371,16 @@ function _data(FileAttachment){return(
             "name": "Combinatorics",
             "children": [
               {
-                "name": "Italo Simonelli"
+                "name": "Italo Simonelli",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/simonelli-italo/"
               },
               {
-                "name": "Xingshi Cai"
+                "name": "Xingshi Cai",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cai-xing-shi/"
               },
               {
-                "name": "Lin Jiu"
+                "name": "Lin Jiu",
+                "url": "https://jiulin90.github.io/"
               }
             ]
           },
@@ -348,7 +388,8 @@ function _data(FileAttachment){return(
             "name": "Graph theory",
             "children": [
               {
-                "name": "Italo Simonelli"
+                "name": "Italo Simonelli",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/simonelli-italo/"
               }
             ]
           },
@@ -356,7 +397,8 @@ function _data(FileAttachment){return(
             "name": "Game theory",
             "children": [
               {
-                "name": "Italo Simonelli"
+                "name": "Italo Simonelli",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/simonelli-italo/"
               }
             ]
           },
@@ -364,7 +406,8 @@ function _data(FileAttachment){return(
             "name": "Self-organization",
             "children": [
               {
-                "name": "Italo Simonelli"
+                "name": "Italo Simonelli",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/simonelli-italo/"
               }
             ]
           },
@@ -372,7 +415,8 @@ function _data(FileAttachment){return(
             "name": "Symmetry",
             "children": [
               {
-                "name": "Italo Simonelli"
+                "name": "Italo Simonelli",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/simonelli-italo/"
               }
             ]
           },
@@ -380,7 +424,8 @@ function _data(FileAttachment){return(
             "name": "applied math",
             "children": [
               {
-                "name": "Xiaoqian Xu"
+                "name": "Xiaoqian Xu",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/xu-xiaoqian/"
               }
             ]
           },
@@ -388,7 +433,8 @@ function _data(FileAttachment){return(
             "name": "partial differential equations",
             "children": [
               {
-                "name": "Xiaoqian Xu"
+                "name": "Xiaoqian Xu",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/xu-xiaoqian/"
               }
             ]
           },
@@ -396,7 +442,8 @@ function _data(FileAttachment){return(
             "name": "fluid dynamics",
             "children": [
               {
-                "name": "Xiaoqian Xu"
+                "name": "Xiaoqian Xu",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/xu-xiaoqian/"
               }
             ]
           },
@@ -404,7 +451,8 @@ function _data(FileAttachment){return(
             "name": "active scalar",
             "children": [
               {
-                "name": "Xiaoqian Xu"
+                "name": "Xiaoqian Xu",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/xu-xiaoqian/"
               }
             ]
           },
@@ -412,7 +460,8 @@ function _data(FileAttachment){return(
             "name": "mixing",
             "children": [
               {
-                "name": "Xiaoqian Xu"
+                "name": "Xiaoqian Xu",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/xu-xiaoqian/"
               }
             ]
           },
@@ -420,7 +469,8 @@ function _data(FileAttachment){return(
             "name": "time-fractional equations",
             "children": [
               {
-                "name": "Xiaoqian Xu"
+                "name": "Xiaoqian Xu",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/xu-xiaoqian/"
               }
             ]
           },
@@ -428,7 +478,8 @@ function _data(FileAttachment){return(
             "name": "Probabilistic",
             "children": [
               {
-                "name": "Xingshi Cai"
+                "name": "Xingshi Cai",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cai-xing-shi/"
               }
             ]
           },
@@ -436,7 +487,8 @@ function _data(FileAttachment){return(
             "name": "random graphs",
             "children": [
               {
-                "name": "Xingshi Cai"
+                "name": "Xingshi Cai",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cai-xing-shi/"
               }
             ]
           },
@@ -444,7 +496,8 @@ function _data(FileAttachment){return(
             "name": "random trees",
             "children": [
               {
-                "name": "Xingshi Cai"
+                "name": "Xingshi Cai",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cai-xing-shi/"
               }
             ]
           },
@@ -452,7 +505,8 @@ function _data(FileAttachment){return(
             "name": "randomized algorithms",
             "children": [
               {
-                "name": "Xingshi Cai"
+                "name": "Xingshi Cai",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cai-xing-shi/"
               }
             ]
           },
@@ -460,7 +514,8 @@ function _data(FileAttachment){return(
             "name": "algorithm",
             "children": [
               {
-                "name": "Xingshi Cai"
+                "name": "Xingshi Cai",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cai-xing-shi/"
               }
             ]
           },
@@ -468,7 +523,8 @@ function _data(FileAttachment){return(
             "name": "probability",
             "children": [
               {
-                "name": "Xingshi Cai"
+                "name": "Xingshi Cai",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cai-xing-shi/"
               }
             ]
           },
@@ -476,7 +532,8 @@ function _data(FileAttachment){return(
             "name": "Discrete math",
             "children": [
               {
-                "name": "Xingshi Cai"
+                "name": "Xingshi Cai",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cai-xing-shi/"
               }
             ]
           },
@@ -484,7 +541,8 @@ function _data(FileAttachment){return(
             "name": "Symbolic Computation",
             "children": [
               {
-                "name": "Lin Jiu"
+                "name": "Lin Jiu",
+                "url": "https://jiulin90.github.io/"
               }
             ]
           },
@@ -492,7 +550,8 @@ function _data(FileAttachment){return(
             "name": "Number Theory",
             "children": [
               {
-                "name": "Lin Jiu"
+                "name": "Lin Jiu",
+                "url": "https://jiulin90.github.io/"
               }
             ]
           },
@@ -500,7 +559,8 @@ function _data(FileAttachment){return(
             "name": "Special Functions",
             "children": [
               {
-                "name": "Lin Jiu"
+                "name": "Lin Jiu",
+                "url": "https://jiulin90.github.io/"
               }
             ]
           },
@@ -508,7 +568,8 @@ function _data(FileAttachment){return(
             "name": "Complex analysis",
             "children": [
               {
-                "name": "Zhenghui Huo"
+                "name": "Zhenghui Huo",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huo-zhenghui/"
               }
             ]
           },
@@ -516,7 +577,8 @@ function _data(FileAttachment){return(
             "name": "Harmonic analysis",
             "children": [
               {
-                "name": "Zhenghui Huo"
+                "name": "Zhenghui Huo",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huo-zhenghui/"
               }
             ]
           },
@@ -524,7 +586,8 @@ function _data(FileAttachment){return(
             "name": "Operator theory",
             "children": [
               {
-                "name": "Zhenghui Huo"
+                "name": "Zhenghui Huo",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huo-zhenghui/"
               }
             ]
           },
@@ -532,7 +595,8 @@ function _data(FileAttachment){return(
             "name": "Bergman kernal function",
             "children": [
               {
-                "name": "Zhenghui Huo"
+                "name": "Zhenghui Huo",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huo-zhenghui/"
               }
             ]
           },
@@ -540,7 +604,8 @@ function _data(FileAttachment){return(
             "name": "financial mathematics",
             "children": [
               {
-                "name": "Dangxing Chen"
+                "name": "Dangxing Chen",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/chen-dang-xing/"
               }
             ]
           },
@@ -548,7 +613,8 @@ function _data(FileAttachment){return(
             "name": "numerical analysis",
             "children": [
               {
-                "name": "Dangxing Chen"
+                "name": "Dangxing Chen",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/chen-dang-xing/"
               }
             ]
           },
@@ -556,7 +622,8 @@ function _data(FileAttachment){return(
             "name": "fast algorithms",
             "children": [
               {
-                "name": "Dangxing Chen"
+                "name": "Dangxing Chen",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/chen-dang-xing/"
               }
             ]
           },
@@ -564,7 +631,8 @@ function _data(FileAttachment){return(
             "name": "computational physics",
             "children": [
               {
-                "name": "Dangxing Chen"
+                "name": "Dangxing Chen",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/chen-dang-xing/"
               }
             ]
           },
@@ -572,7 +640,8 @@ function _data(FileAttachment){return(
             "name": "computational quantum chemistry",
             "children": [
               {
-                "name": "Dangxing Chen"
+                "name": "Dangxing Chen",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/chen-dang-xing/"
               }
             ]
           },
@@ -580,7 +649,8 @@ function _data(FileAttachment){return(
             "name": "Mathematical finance",
             "children": [
               {
-                "name": "Dangxing Chen"
+                "name": "Dangxing Chen",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/chen-dang-xing/"
               }
             ]
           },
@@ -588,7 +658,8 @@ function _data(FileAttachment){return(
             "name": "parallel computing",
             "children": [
               {
-                "name": "Dangxing Chen"
+                "name": "Dangxing Chen",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/chen-dang-xing/"
               }
             ]
           },
@@ -596,7 +667,8 @@ function _data(FileAttachment){return(
             "name": "Applied Harmonic Analysis",
             "children": [
               {
-                "name": "Dongmian Zou"
+                "name": "Dongmian Zou",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/zou-dongmian/"
               }
             ]
           },
@@ -604,7 +676,8 @@ function _data(FileAttachment){return(
             "name": "Machine Learning",
             "children": [
               {
-                "name": "Dongmian Zou"
+                "name": "Dongmian Zou",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/zou-dongmian/"
               }
             ]
           },
@@ -612,7 +685,8 @@ function _data(FileAttachment){return(
             "name": "Data Science",
             "children": [
               {
-                "name": "Dongmian Zou"
+                "name": "Dongmian Zou",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/zou-dongmian/"
               }
             ]
           },
@@ -620,10 +694,12 @@ function _data(FileAttachment){return(
             "name": "Signal processing",
             "children": [
               {
-                "name": "Dongmian Zou"
+                "name": "Dongmian Zou",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/zou-dongmian/"
               },
               {
-                "name": "Peng Sun"
+                "name": "Peng Sun",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/sun-peng/"
               }
             ]
           },
@@ -631,7 +707,8 @@ function _data(FileAttachment){return(
             "name": "Neuron network",
             "children": [
               {
-                "name": "Dongmian Zou"
+                "name": "Dongmian Zou",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/zou-dongmian/"
               }
             ]
           },
@@ -639,7 +716,8 @@ function _data(FileAttachment){return(
             "name": "Out of equilibrium statistical physics",
             "children": [
               {
-                "name": "Pascal Grange"
+                "name": "Pascal Grange",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/grange-pascal/"
               }
             ]
           },
@@ -647,13 +725,16 @@ function _data(FileAttachment){return(
             "name": "Brain research",
             "children": [
               {
-                "name": "Pascal Grange"
+                "name": "Pascal Grange",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/grange-pascal/"
               },
               {
-                "name": "Szechai Kwok"
+                "name": "Szechai Kwok",
+                "url": "http://www.kwoklab.org/"
               },
               {
-                "name": "Pedro Rada"
+                "name": "Pedro Rada",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/rada-pedro/"
               }
             ]
           },
@@ -661,7 +742,8 @@ function _data(FileAttachment){return(
             "name": "Computational neuroscience",
             "children": [
               {
-                "name": "Pascal Grange"
+                "name": "Pascal Grange",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/grange-pascal/"
               }
             ]
           },
@@ -669,7 +751,8 @@ function _data(FileAttachment){return(
             "name": "Stochastic system",
             "children": [
               {
-                "name": "Pascal Grange"
+                "name": "Pascal Grange",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/grange-pascal/"
               }
             ]
           },
@@ -677,7 +760,8 @@ function _data(FileAttachment){return(
             "name": "Phase transitions",
             "children": [
               {
-                "name": "Pascal Grange"
+                "name": "Pascal Grange",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/grange-pascal/"
               }
             ]
           },
@@ -685,7 +769,8 @@ function _data(FileAttachment){return(
             "name": "Oncogenesis",
             "children": [
               {
-                "name": "Pascal Grange"
+                "name": "Pascal Grange",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/grange-pascal/"
               }
             ]
           },
@@ -693,7 +778,8 @@ function _data(FileAttachment){return(
             "name": "Acoustics",
             "children": [
               {
-                "name": "Paul Stanley"
+                "name": "Paul Stanley",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/stanley-paul/"
               }
             ]
           },
@@ -701,7 +787,8 @@ function _data(FileAttachment){return(
             "name": "Asian musical instruments",
             "children": [
               {
-                "name": "Paul Stanley"
+                "name": "Paul Stanley",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/stanley-paul/"
               }
             ]
           },
@@ -709,7 +796,8 @@ function _data(FileAttachment){return(
             "name": "Quantum systems and chaos",
             "children": [
               {
-                "name": "Paul Stanley"
+                "name": "Paul Stanley",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/stanley-paul/"
               }
             ]
           },
@@ -717,7 +805,8 @@ function _data(FileAttachment){return(
             "name": "Pattern formation",
             "children": [
               {
-                "name": "Paul Stanley"
+                "name": "Paul Stanley",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/stanley-paul/"
               }
             ]
           },
@@ -725,7 +814,8 @@ function _data(FileAttachment){return(
             "name": "Condense matter physics",
             "children": [
               {
-                "name": "Changcheng Zheng"
+                "name": "Changcheng Zheng",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/zheng-changcheng/"
               }
             ]
           },
@@ -733,7 +823,8 @@ function _data(FileAttachment){return(
             "name": "Nonlinear optics",
             "children": [
               {
-                "name": "Changcheng Zheng"
+                "name": "Changcheng Zheng",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/zheng-changcheng/"
               }
             ]
           },
@@ -741,7 +832,8 @@ function _data(FileAttachment){return(
             "name": "Materials characterization",
             "children": [
               {
-                "name": "Changcheng Zheng"
+                "name": "Changcheng Zheng",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/zheng-changcheng/"
               }
             ]
           },
@@ -749,7 +841,8 @@ function _data(FileAttachment){return(
             "name": "Luminescent / fluorescent materials",
             "children": [
               {
-                "name": "Changcheng Zheng"
+                "name": "Changcheng Zheng",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/zheng-changcheng/"
               }
             ]
           },
@@ -757,7 +850,8 @@ function _data(FileAttachment){return(
             "name": "Low dimensional systems",
             "children": [
               {
-                "name": "Changcheng Zheng"
+                "name": "Changcheng Zheng",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/zheng-changcheng/"
               }
             ]
           },
@@ -765,7 +859,8 @@ function _data(FileAttachment){return(
             "name": "Semiconductors and nanostructures",
             "children": [
               {
-                "name": "Changcheng Zheng"
+                "name": "Changcheng Zheng",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/zheng-changcheng/"
               }
             ]
           },
@@ -773,7 +868,8 @@ function _data(FileAttachment){return(
             "name": "Semi-conductors",
             "children": [
               {
-                "name": "Changcheng Zheng"
+                "name": "Changcheng Zheng",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/zheng-changcheng/"
               }
             ]
           },
@@ -781,7 +877,8 @@ function _data(FileAttachment){return(
             "name": "optical properties",
             "children": [
               {
-                "name": "Changcheng Zheng"
+                "name": "Changcheng Zheng",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/zheng-changcheng/"
               }
             ]
           },
@@ -789,7 +886,8 @@ function _data(FileAttachment){return(
             "name": "nanostructures",
             "children": [
               {
-                "name": "Changcheng Zheng"
+                "name": "Changcheng Zheng",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/zheng-changcheng/"
               }
             ]
           },
@@ -797,7 +895,8 @@ function _data(FileAttachment){return(
             "name": "fluorescent materials",
             "children": [
               {
-                "name": "Changcheng Zheng"
+                "name": "Changcheng Zheng",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/zheng-changcheng/"
               }
             ]
           },
@@ -805,7 +904,8 @@ function _data(FileAttachment){return(
             "name": "Microelectronics and nanoelectronics",
             "children": [
               {
-                "name": "Xiawa Wang"
+                "name": "Xiawa Wang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/wang-xiawa/"
               }
             ]
           },
@@ -813,10 +913,12 @@ function _data(FileAttachment){return(
             "name": "Metamaterials",
             "children": [
               {
-                "name": "Xiawa Wang"
+                "name": "Xiawa Wang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/wang-xiawa/"
               },
               {
-                "name": "Domna Kotsifaki"
+                "name": "Domna Kotsifaki",
+                "url": "https://dkotsifaki.weebly.com/"
               }
             ]
           },
@@ -824,7 +926,8 @@ function _data(FileAttachment){return(
             "name": "Photonics",
             "children": [
               {
-                "name": "Xiawa Wang"
+                "name": "Xiawa Wang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/wang-xiawa/"
               }
             ]
           },
@@ -832,7 +935,8 @@ function _data(FileAttachment){return(
             "name": "Device",
             "children": [
               {
-                "name": "Xiawa Wang"
+                "name": "Xiawa Wang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/wang-xiawa/"
               }
             ]
           },
@@ -840,7 +944,8 @@ function _data(FileAttachment){return(
             "name": "Energy systems",
             "children": [
               {
-                "name": "Xiawa Wang"
+                "name": "Xiawa Wang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/wang-xiawa/"
               }
             ]
           },
@@ -848,7 +953,8 @@ function _data(FileAttachment){return(
             "name": "Material science",
             "children": [
               {
-                "name": "Xiawa Wang"
+                "name": "Xiawa Wang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/wang-xiawa/"
               }
             ]
           },
@@ -856,7 +962,8 @@ function _data(FileAttachment){return(
             "name": "nuclear battery",
             "children": [
               {
-                "name": "Xiawa Wang"
+                "name": "Xiawa Wang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/wang-xiawa/"
               }
             ]
           },
@@ -864,7 +971,8 @@ function _data(FileAttachment){return(
             "name": "Quantum information",
             "children": [
               {
-                "name": "Myung-Joong Hwang"
+                "name": "Myung-Joong Hwang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/hwang-myung-joong/"
               }
             ]
           },
@@ -872,7 +980,8 @@ function _data(FileAttachment){return(
             "name": "Quantum Rabi model",
             "children": [
               {
-                "name": "Myung-Joong Hwang"
+                "name": "Myung-Joong Hwang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/hwang-myung-joong/"
               }
             ]
           },
@@ -880,7 +989,8 @@ function _data(FileAttachment){return(
             "name": "Quantum phase transitions",
             "children": [
               {
-                "name": "Myung-Joong Hwang"
+                "name": "Myung-Joong Hwang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/hwang-myung-joong/"
               }
             ]
           },
@@ -888,7 +998,8 @@ function _data(FileAttachment){return(
             "name": "Quantum electro-dynamics",
             "children": [
               {
-                "name": "Myung-Joong Hwang"
+                "name": "Myung-Joong Hwang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/hwang-myung-joong/"
               }
             ]
           },
@@ -896,7 +1007,8 @@ function _data(FileAttachment){return(
             "name": "Quantum sensing & computing",
             "children": [
               {
-                "name": "Myung-Joong Hwang"
+                "name": "Myung-Joong Hwang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/hwang-myung-joong/"
               }
             ]
           },
@@ -904,7 +1016,8 @@ function _data(FileAttachment){return(
             "name": "Nano-photonics",
             "children": [
               {
-                "name": "Domna Kotsifaki"
+                "name": "Domna Kotsifaki",
+                "url": "https://dkotsifaki.weebly.com/"
               }
             ]
           },
@@ -912,7 +1025,8 @@ function _data(FileAttachment){return(
             "name": "Optical tweezer",
             "children": [
               {
-                "name": "Domna Kotsifaki"
+                "name": "Domna Kotsifaki",
+                "url": "https://dkotsifaki.weebly.com/"
               }
             ]
           },
@@ -920,7 +1034,8 @@ function _data(FileAttachment){return(
             "name": "Plasmonics",
             "children": [
               {
-                "name": "Domna Kotsifaki"
+                "name": "Domna Kotsifaki",
+                "url": "https://dkotsifaki.weebly.com/"
               }
             ]
           },
@@ -928,7 +1043,8 @@ function _data(FileAttachment){return(
             "name": "Sensing",
             "children": [
               {
-                "name": "Domna Kotsifaki"
+                "name": "Domna Kotsifaki",
+                "url": "https://dkotsifaki.weebly.com/"
               }
             ]
           },
@@ -936,7 +1052,8 @@ function _data(FileAttachment){return(
             "name": "Optical tweezers",
             "children": [
               {
-                "name": "Domna Kotsifaki"
+                "name": "Domna Kotsifaki",
+                "url": "https://dkotsifaki.weebly.com/"
               }
             ]
           },
@@ -944,7 +1061,8 @@ function _data(FileAttachment){return(
             "name": "Equilibrium/non-equilibrium thermodynamics Statistical mechanics",
             "children": [
               {
-                "name": "Kai Zhang"
+                "name": "Kai Zhang",
+                "url": "https://sites.google.com/site/kaizhangstatmech/"
               }
             ]
           },
@@ -952,7 +1070,8 @@ function _data(FileAttachment){return(
             "name": "Stochastic processes",
             "children": [
               {
-                "name": "Kai Zhang"
+                "name": "Kai Zhang",
+                "url": "https://sites.google.com/site/kaizhangstatmech/"
               }
             ]
           },
@@ -960,10 +1079,12 @@ function _data(FileAttachment){return(
             "name": "Soft matter",
             "children": [
               {
-                "name": "Kai Huang"
+                "name": "Kai Huang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-kai/"
               },
               {
-                "name": "Kai Zhang"
+                "name": "Kai Zhang",
+                "url": "https://sites.google.com/site/kaizhangstatmech/"
               }
             ]
           },
@@ -971,7 +1092,8 @@ function _data(FileAttachment){return(
             "name": "Self-assembly",
             "children": [
               {
-                "name": "Kai Zhang"
+                "name": "Kai Zhang",
+                "url": "https://sites.google.com/site/kaizhangstatmech/"
               }
             ]
           },
@@ -979,7 +1101,8 @@ function _data(FileAttachment){return(
             "name": "Packing and jamming",
             "children": [
               {
-                "name": "Kai Zhang"
+                "name": "Kai Zhang",
+                "url": "https://sites.google.com/site/kaizhangstatmech/"
               }
             ]
           },
@@ -987,7 +1110,8 @@ function _data(FileAttachment){return(
             "name": "Glass",
             "children": [
               {
-                "name": "Kai Zhang"
+                "name": "Kai Zhang",
+                "url": "https://sites.google.com/site/kaizhangstatmech/"
               }
             ]
           },
@@ -995,10 +1119,12 @@ function _data(FileAttachment){return(
             "name": "Granular materials",
             "children": [
               {
-                "name": "Kai Huang"
+                "name": "Kai Huang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-kai/"
               },
               {
-                "name": "Kai Zhang"
+                "name": "Kai Zhang",
+                "url": "https://sites.google.com/site/kaizhangstatmech/"
               }
             ]
           },
@@ -1006,7 +1132,8 @@ function _data(FileAttachment){return(
             "name": "Polymer",
             "children": [
               {
-                "name": "Kai Zhang"
+                "name": "Kai Zhang",
+                "url": "https://sites.google.com/site/kaizhangstatmech/"
               }
             ]
           },
@@ -1014,7 +1141,8 @@ function _data(FileAttachment){return(
             "name": "Monte Carlo methods",
             "children": [
               {
-                "name": "Kai Zhang"
+                "name": "Kai Zhang",
+                "url": "https://sites.google.com/site/kaizhangstatmech/"
               }
             ]
           },
@@ -1022,7 +1150,8 @@ function _data(FileAttachment){return(
             "name": "MC simulations",
             "children": [
               {
-                "name": "Kai Zhang"
+                "name": "Kai Zhang",
+                "url": "https://sites.google.com/site/kaizhangstatmech/"
               }
             ]
           },
@@ -1030,7 +1159,8 @@ function _data(FileAttachment){return(
             "name": "molecular dynamics simulation",
             "children": [
               {
-                "name": "Kai Zhang"
+                "name": "Kai Zhang",
+                "url": "https://sites.google.com/site/kaizhangstatmech/"
               }
             ]
           },
@@ -1038,7 +1168,8 @@ function _data(FileAttachment){return(
             "name": "numerical computation",
             "children": [
               {
-                "name": "Kai Zhang"
+                "name": "Kai Zhang",
+                "url": "https://sites.google.com/site/kaizhangstatmech/"
               }
             ]
           },
@@ -1046,7 +1177,8 @@ function _data(FileAttachment){return(
             "name": "Atmospheric chemistry",
             "children": [
               {
-                "name": "Song Gao"
+                "name": "Song Gao",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/gao-song/"
               }
             ]
           },
@@ -1054,7 +1186,8 @@ function _data(FileAttachment){return(
             "name": "Aerosol dynamics (mechanisms characterization)Analytical chemistry",
             "children": [
               {
-                "name": "Song Gao"
+                "name": "Song Gao",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/gao-song/"
               }
             ]
           },
@@ -1062,7 +1195,8 @@ function _data(FileAttachment){return(
             "name": "Density functional theory",
             "children": [
               {
-                "name": "Song Gao"
+                "name": "Song Gao",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/gao-song/"
               }
             ]
           },
@@ -1070,7 +1204,8 @@ function _data(FileAttachment){return(
             "name": "Climate mitigation",
             "children": [
               {
-                "name": "Song Gao"
+                "name": "Song Gao",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/gao-song/"
               }
             ]
           },
@@ -1078,7 +1213,8 @@ function _data(FileAttachment){return(
             "name": "Climate pollutants",
             "children": [
               {
-                "name": "Song Gao"
+                "name": "Song Gao",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/gao-song/"
               }
             ]
           },
@@ -1086,10 +1222,12 @@ function _data(FileAttachment){return(
             "name": "Air pollution",
             "children": [
               {
-                "name": "Song Gao"
+                "name": "Song Gao",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/gao-song/"
               },
               {
-                "name": "William Winner"
+                "name": "William Winner",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/winner-william/"
               }
             ]
           },
@@ -1097,13 +1235,16 @@ function _data(FileAttachment){return(
             "name": "Water pollution",
             "children": [
               {
-                "name": "Song Gao"
+                "name": "Song Gao",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/gao-song/"
               },
               {
-                "name": "Eric Chen"
+                "name": "Eric Chen",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/chen-chia-chien-eric/"
               },
               {
-                "name": "Chuanhui Gu"
+                "name": "Chuanhui Gu",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/gu-chuanhui/"
               }
             ]
           },
@@ -1111,7 +1252,8 @@ function _data(FileAttachment){return(
             "name": "Materials synthesis",
             "children": [
               {
-                "name": "Weiwei Shi"
+                "name": "Weiwei Shi",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/shi-weiwei/"
               }
             ]
           },
@@ -1119,7 +1261,8 @@ function _data(FileAttachment){return(
             "name": "Bio-inspired materials",
             "children": [
               {
-                "name": "Weiwei Shi"
+                "name": "Weiwei Shi",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/shi-weiwei/"
               }
             ]
           },
@@ -1127,7 +1270,8 @@ function _data(FileAttachment){return(
             "name": "Water harvesting",
             "children": [
               {
-                "name": "Weiwei Shi"
+                "name": "Weiwei Shi",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/shi-weiwei/"
               }
             ]
           },
@@ -1135,7 +1279,8 @@ function _data(FileAttachment){return(
             "name": "Filtration",
             "children": [
               {
-                "name": "Weiwei Shi"
+                "name": "Weiwei Shi",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/shi-weiwei/"
               }
             ]
           },
@@ -1143,7 +1288,8 @@ function _data(FileAttachment){return(
             "name": "Bio-materials & soft materials",
             "children": [
               {
-                "name": "Weiwei Shi"
+                "name": "Weiwei Shi",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/shi-weiwei/"
               }
             ]
           },
@@ -1151,10 +1297,12 @@ function _data(FileAttachment){return(
             "name": "Materials engineering",
             "children": [
               {
-                "name": "Weiwei Shi"
+                "name": "Weiwei Shi",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/shi-weiwei/"
               },
               {
-                "name": "Kwang Leong Choy"
+                "name": "Kwang Leong Choy",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/kwang-leong-choy/"
               }
             ]
           },
@@ -1162,7 +1310,8 @@ function _data(FileAttachment){return(
             "name": "Polymer materials",
             "children": [
               {
-                "name": "Tan Zhang"
+                "name": "Tan Zhang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/zhang-tan/"
               }
             ]
           },
@@ -1170,7 +1319,8 @@ function _data(FileAttachment){return(
             "name": "Catalysis design",
             "children": [
               {
-                "name": "Tan Zhang"
+                "name": "Tan Zhang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/zhang-tan/"
               }
             ]
           },
@@ -1178,7 +1328,8 @@ function _data(FileAttachment){return(
             "name": "Colloids and interfaces",
             "children": [
               {
-                "name": "Tan Zhang"
+                "name": "Tan Zhang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/zhang-tan/"
               }
             ]
           },
@@ -1186,7 +1337,8 @@ function _data(FileAttachment){return(
             "name": "Metallic and inorganic nanomaterialsPolymer degeneration",
             "children": [
               {
-                "name": "Tan Zhang"
+                "name": "Tan Zhang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/zhang-tan/"
               }
             ]
           }
@@ -1199,7 +1351,8 @@ function _data(FileAttachment){return(
             "name": "Speech and language processing",
             "children": [
               {
-                "name": "Ming Li"
+                "name": "Ming Li",
+                "url": "https://scholars.duke.edu/person/MingLi"
               }
             ]
           },
@@ -1207,22 +1360,28 @@ function _data(FileAttachment){return(
             "name": "Machine learning",
             "children": [
               {
-                "name": "Shixin Xu"
+                "name": "Shixin Xu",
+                "url": "https://sites.google.com/site/shixinxupage/"
               },
               {
-                "name": "Ming Li"
+                "name": "Ming Li",
+                "url": "https://scholars.duke.edu/person/MingLi"
               },
               {
-                "name": "Mustafa Misir"
+                "name": "Mustafa Misir",
+                "url": "http://mustafamisir.github.io"
               },
               {
-                "name": "Pengzhan Guo"
+                "name": "Pengzhan Guo",
+                "url": "http://pengzhanguo.github.io"
               },
               {
-                "name": "Chi-Yeung(Jimmy) Choi"
+                "name": "Chi-Yeung(Jimmy) Choi",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/choi-chi-yeung-jimmy/"
               },
               {
-                "name": "Zuchuan Li"
+                "name": "Zuchuan Li",
+                "url": "https://sites.duke.edu/sagdku/"
               }
             ]
           },
@@ -1230,10 +1389,12 @@ function _data(FileAttachment){return(
             "name": "Statistical modeling",
             "children": [
               {
-                "name": "Ming Li"
+                "name": "Ming Li",
+                "url": "https://scholars.duke.edu/person/MingLi"
               },
               {
-                "name": "Pengzhan Guo"
+                "name": "Pengzhan Guo",
+                "url": "http://pengzhanguo.github.io"
               }
             ]
           },
@@ -1241,7 +1402,8 @@ function _data(FileAttachment){return(
             "name": "Structure health modeling",
             "children": [
               {
-                "name": "Ming Li"
+                "name": "Ming Li",
+                "url": "https://scholars.duke.edu/person/MingLi"
               }
             ]
           },
@@ -1249,7 +1411,8 @@ function _data(FileAttachment){return(
             "name": "Multi-model processing",
             "children": [
               {
-                "name": "Ming Li"
+                "name": "Ming Li",
+                "url": "https://scholars.duke.edu/person/MingLi"
               }
             ]
           },
@@ -1257,7 +1420,8 @@ function _data(FileAttachment){return(
             "name": "health monitoring",
             "children": [
               {
-                "name": "Ming Li"
+                "name": "Ming Li",
+                "url": "https://scholars.duke.edu/person/MingLi"
               }
             ]
           },
@@ -1265,7 +1429,8 @@ function _data(FileAttachment){return(
             "name": "Logic Synthesis",
             "children": [
               {
-                "name": "Jiang Long"
+                "name": "Jiang Long",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/long-jiang/"
               }
             ]
           },
@@ -1273,7 +1438,8 @@ function _data(FileAttachment){return(
             "name": "Formal Methods",
             "children": [
               {
-                "name": "Jiang Long"
+                "name": "Jiang Long",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/long-jiang/"
               }
             ]
           },
@@ -1281,7 +1447,8 @@ function _data(FileAttachment){return(
             "name": "Program Analysis",
             "children": [
               {
-                "name": "Jiang Long"
+                "name": "Jiang Long",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/long-jiang/"
               }
             ]
           },
@@ -1289,7 +1456,8 @@ function _data(FileAttachment){return(
             "name": "EDA tool",
             "children": [
               {
-                "name": "Jiang Long"
+                "name": "Jiang Long",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/long-jiang/"
               }
             ]
           },
@@ -1297,7 +1465,8 @@ function _data(FileAttachment){return(
             "name": "Computer Architecture",
             "children": [
               {
-                "name": "Jiang Long"
+                "name": "Jiang Long",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/long-jiang/"
               }
             ]
           },
@@ -1305,7 +1474,8 @@ function _data(FileAttachment){return(
             "name": "SoC design and Verification",
             "children": [
               {
-                "name": "Jiang Long"
+                "name": "Jiang Long",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/long-jiang/"
               }
             ]
           },
@@ -1313,7 +1483,8 @@ function _data(FileAttachment){return(
             "name": "System on Chip design",
             "children": [
               {
-                "name": "Jiang Long"
+                "name": "Jiang Long",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/long-jiang/"
               }
             ]
           },
@@ -1321,7 +1492,8 @@ function _data(FileAttachment){return(
             "name": "computer engine",
             "children": [
               {
-                "name": "Jiang Long"
+                "name": "Jiang Long",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/long-jiang/"
               }
             ]
           },
@@ -1329,7 +1501,8 @@ function _data(FileAttachment){return(
             "name": "Neural network",
             "children": [
               {
-                "name": "Feng Tian"
+                "name": "Feng Tian",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/tian-feng/"
               }
             ]
           },
@@ -1337,7 +1510,8 @@ function _data(FileAttachment){return(
             "name": "Deep learning",
             "children": [
               {
-                "name": "Feng Tian"
+                "name": "Feng Tian",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/tian-feng/"
               }
             ]
           },
@@ -1345,7 +1519,8 @@ function _data(FileAttachment){return(
             "name": "Artistic animation rendering",
             "children": [
               {
-                "name": "Feng Tian"
+                "name": "Feng Tian",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/tian-feng/"
               }
             ]
           },
@@ -1353,7 +1528,8 @@ function _data(FileAttachment){return(
             "name": "Augmented reality",
             "children": [
               {
-                "name": "Feng Tian"
+                "name": "Feng Tian",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/tian-feng/"
               }
             ]
           },
@@ -1361,7 +1537,8 @@ function _data(FileAttachment){return(
             "name": "Game design",
             "children": [
               {
-                "name": "Feng Tian"
+                "name": "Feng Tian",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/tian-feng/"
               }
             ]
           },
@@ -1369,7 +1546,8 @@ function _data(FileAttachment){return(
             "name": "Virtual reality",
             "children": [
               {
-                "name": "Feng Tian"
+                "name": "Feng Tian",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/tian-feng/"
               }
             ]
           },
@@ -1377,10 +1555,12 @@ function _data(FileAttachment){return(
             "name": "IoT",
             "children": [
               {
-                "name": "Ming-chun Huang"
+                "name": "Ming-chun Huang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-ming-chun/"
               },
               {
-                "name": "Bing Luo"
+                "name": "Bing Luo",
+                "url": "https://luobing1008.github.io/"
               }
             ]
           },
@@ -1388,7 +1568,8 @@ function _data(FileAttachment){return(
             "name": "Smart health",
             "children": [
               {
-                "name": "Ming-chun Huang"
+                "name": "Ming-chun Huang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-ming-chun/"
               }
             ]
           },
@@ -1396,7 +1577,8 @@ function _data(FileAttachment){return(
             "name": "Machine learning and informatics",
             "children": [
               {
-                "name": "Ming-chun Huang"
+                "name": "Ming-chun Huang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-ming-chun/"
               }
             ]
           },
@@ -1404,7 +1586,8 @@ function _data(FileAttachment){return(
             "name": "Motion and physiological signal sensing",
             "children": [
               {
-                "name": "Ming-chun Huang"
+                "name": "Ming-chun Huang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-ming-chun/"
               }
             ]
           },
@@ -1412,7 +1595,8 @@ function _data(FileAttachment){return(
             "name": "Automatic algorithm design",
             "children": [
               {
-                "name": "Mustafa Misir"
+                "name": "Mustafa Misir",
+                "url": "http://mustafamisir.github.io"
               }
             ]
           },
@@ -1420,10 +1604,12 @@ function _data(FileAttachment){return(
             "name": "Data mining",
             "children": [
               {
-                "name": "Mustafa Misir"
+                "name": "Mustafa Misir",
+                "url": "http://mustafamisir.github.io"
               },
               {
-                "name": "Pengzhan Guo"
+                "name": "Pengzhan Guo",
+                "url": "http://pengzhanguo.github.io"
               }
             ]
           },
@@ -1431,7 +1617,8 @@ function _data(FileAttachment){return(
             "name": "Evolutionary algorithm",
             "children": [
               {
-                "name": "Mustafa Misir"
+                "name": "Mustafa Misir",
+                "url": "http://mustafamisir.github.io"
               }
             ]
           },
@@ -1439,7 +1626,8 @@ function _data(FileAttachment){return(
             "name": "Combinatorial optimization",
             "children": [
               {
-                "name": "Mustafa Misir"
+                "name": "Mustafa Misir",
+                "url": "http://mustafamisir.github.io"
               }
             ]
           },
@@ -1447,7 +1635,8 @@ function _data(FileAttachment){return(
             "name": "Wireless sensor network",
             "children": [
               {
-                "name": "Peng Sun"
+                "name": "Peng Sun",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/sun-peng/"
               }
             ]
           },
@@ -1455,7 +1644,8 @@ function _data(FileAttachment){return(
             "name": "Autonomous driving",
             "children": [
               {
-                "name": "Peng Sun"
+                "name": "Peng Sun",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/sun-peng/"
               }
             ]
           },
@@ -1463,7 +1653,8 @@ function _data(FileAttachment){return(
             "name": "Ad-hoc network",
             "children": [
               {
-                "name": "Peng Sun"
+                "name": "Peng Sun",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/sun-peng/"
               }
             ]
           },
@@ -1471,10 +1662,12 @@ function _data(FileAttachment){return(
             "name": "Signal processing",
             "children": [
               {
-                "name": "Dongmian Zou"
+                "name": "Dongmian Zou",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/zou-dongmian/"
               },
               {
-                "name": "Peng Sun"
+                "name": "Peng Sun",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/sun-peng/"
               }
             ]
           },
@@ -1482,7 +1675,8 @@ function _data(FileAttachment){return(
             "name": "Sensors",
             "children": [
               {
-                "name": "Peng Sun"
+                "name": "Peng Sun",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/sun-peng/"
               }
             ]
           },
@@ -1490,7 +1684,8 @@ function _data(FileAttachment){return(
             "name": "Edge learning",
             "children": [
               {
-                "name": "Bing Luo"
+                "name": "Bing Luo",
+                "url": "https://luobing1008.github.io/"
               }
             ]
           },
@@ -1498,7 +1693,8 @@ function _data(FileAttachment){return(
             "name": "Networking",
             "children": [
               {
-                "name": "Bing Luo"
+                "name": "Bing Luo",
+                "url": "https://luobing1008.github.io/"
               }
             ]
           },
@@ -1506,7 +1702,8 @@ function _data(FileAttachment){return(
             "name": "Game Theory",
             "children": [
               {
-                "name": "Bing Luo"
+                "name": "Bing Luo",
+                "url": "https://luobing1008.github.io/"
               }
             ]
           },
@@ -1514,7 +1711,8 @@ function _data(FileAttachment){return(
             "name": "Optimization",
             "children": [
               {
-                "name": "Bing Luo"
+                "name": "Bing Luo",
+                "url": "https://luobing1008.github.io/"
               }
             ]
           },
@@ -1522,7 +1720,8 @@ function _data(FileAttachment){return(
             "name": "embedded AI",
             "children": [
               {
-                "name": "Bing Luo"
+                "name": "Bing Luo",
+                "url": "https://luobing1008.github.io/"
               }
             ]
           },
@@ -1530,10 +1729,12 @@ function _data(FileAttachment){return(
             "name": "Cancer research",
             "children": [
               {
-                "name": "Anastasia Tsigkou"
+                "name": "Anastasia Tsigkou",
+                "url": "https://euraxess.ec.europa.eu/worldwide/china/network-european-researchers-biology-and-medicine-china"
               },
               {
-                "name": "Jianbo Yue"
+                "name": "Jianbo Yue",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/yue-jianbo/"
               }
             ]
           },
@@ -1541,10 +1742,12 @@ function _data(FileAttachment){return(
             "name": "Microbiology",
             "children": [
               {
-                "name": "Anastasia Tsigkou"
+                "name": "Anastasia Tsigkou",
+                "url": "https://euraxess.ec.europa.eu/worldwide/china/network-european-researchers-biology-and-medicine-china"
               },
               {
-                "name": "Huansheng Cao"
+                "name": "Huansheng Cao",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cao-huansheng/"
               }
             ]
           },
@@ -1552,7 +1755,8 @@ function _data(FileAttachment){return(
             "name": "Ovarian cancer",
             "children": [
               {
-                "name": "Anastasia Tsigkou"
+                "name": "Anastasia Tsigkou",
+                "url": "https://euraxess.ec.europa.eu/worldwide/china/network-european-researchers-biology-and-medicine-china"
               }
             ]
           },
@@ -1560,7 +1764,8 @@ function _data(FileAttachment){return(
             "name": "Translational medicine",
             "children": [
               {
-                "name": "Anastasia Tsigkou"
+                "name": "Anastasia Tsigkou",
+                "url": "https://euraxess.ec.europa.eu/worldwide/china/network-european-researchers-biology-and-medicine-china"
               }
             ]
           }
@@ -1573,10 +1778,12 @@ function _data(FileAttachment){return(
             "name": "Infectious disease",
             "children": [
               {
-                "name": "Linfeng Huang"
+                "name": "Linfeng Huang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-linfeng/"
               },
               {
-                "name": "Yiu Wing Kam"
+                "name": "Yiu Wing Kam",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/kam-yiu-wing-jason/"
               }
             ]
           },
@@ -1584,10 +1791,12 @@ function _data(FileAttachment){return(
             "name": "Biochemistry",
             "children": [
               {
-                "name": "Linfeng Huang"
+                "name": "Linfeng Huang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-linfeng/"
               },
               {
-                "name": "Andrew Lin"
+                "name": "Andrew Lin",
+                "url": NaN
               }
             ]
           },
@@ -1595,10 +1804,12 @@ function _data(FileAttachment){return(
             "name": "Biotechnology",
             "children": [
               {
-                "name": "Linfeng Huang"
+                "name": "Linfeng Huang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-linfeng/"
               },
               {
-                "name": "Andrew Lin"
+                "name": "Andrew Lin",
+                "url": NaN
               }
             ]
           },
@@ -1606,7 +1817,8 @@ function _data(FileAttachment){return(
             "name": "Cellular and Molecular Biology",
             "children": [
               {
-                "name": "Linfeng Huang"
+                "name": "Linfeng Huang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-linfeng/"
               }
             ]
           },
@@ -1614,7 +1826,8 @@ function _data(FileAttachment){return(
             "name": "Synthetic Biology",
             "children": [
               {
-                "name": "Linfeng Huang"
+                "name": "Linfeng Huang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-linfeng/"
               }
             ]
           },
@@ -1622,7 +1835,8 @@ function _data(FileAttachment){return(
             "name": "RNA",
             "children": [
               {
-                "name": "Linfeng Huang"
+                "name": "Linfeng Huang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-linfeng/"
               }
             ]
           },
@@ -1630,7 +1844,8 @@ function _data(FileAttachment){return(
             "name": "Bacteria",
             "children": [
               {
-                "name": "Linfeng Huang"
+                "name": "Linfeng Huang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-linfeng/"
               }
             ]
           },
@@ -1638,7 +1853,8 @@ function _data(FileAttachment){return(
             "name": "Endosomal trafficking",
             "children": [
               {
-                "name": "Jianbo Yue"
+                "name": "Jianbo Yue",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/yue-jianbo/"
               }
             ]
           },
@@ -1646,7 +1862,8 @@ function _data(FileAttachment){return(
             "name": "Autophagy",
             "children": [
               {
-                "name": "Jianbo Yue"
+                "name": "Jianbo Yue",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/yue-jianbo/"
               }
             ]
           },
@@ -1654,7 +1871,8 @@ function _data(FileAttachment){return(
             "name": "cell cycle",
             "children": [
               {
-                "name": "Jianbo Yue"
+                "name": "Jianbo Yue",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/yue-jianbo/"
               }
             ]
           },
@@ -1662,7 +1880,8 @@ function _data(FileAttachment){return(
             "name": "metastasis",
             "children": [
               {
-                "name": "Jianbo Yue"
+                "name": "Jianbo Yue",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/yue-jianbo/"
               }
             ]
           },
@@ -1670,7 +1889,8 @@ function _data(FileAttachment){return(
             "name": "anticancer",
             "children": [
               {
-                "name": "Jianbo Yue"
+                "name": "Jianbo Yue",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/yue-jianbo/"
               }
             ]
           },
@@ -1678,7 +1898,8 @@ function _data(FileAttachment){return(
             "name": "immunity",
             "children": [
               {
-                "name": "Jianbo Yue"
+                "name": "Jianbo Yue",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/yue-jianbo/"
               }
             ]
           },
@@ -1686,7 +1907,8 @@ function _data(FileAttachment){return(
             "name": "virus infection",
             "children": [
               {
-                "name": "Jianbo Yue"
+                "name": "Jianbo Yue",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/yue-jianbo/"
               }
             ]
           },
@@ -1694,7 +1916,8 @@ function _data(FileAttachment){return(
             "name": "Ca2+ signaling",
             "children": [
               {
-                "name": "Jianbo Yue"
+                "name": "Jianbo Yue",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/yue-jianbo/"
               }
             ]
           },
@@ -1702,10 +1925,12 @@ function _data(FileAttachment){return(
             "name": "Cancer research",
             "children": [
               {
-                "name": "Anastasia Tsigkou"
+                "name": "Anastasia Tsigkou",
+                "url": "https://euraxess.ec.europa.eu/worldwide/china/network-european-researchers-biology-and-medicine-china"
               },
               {
-                "name": "Jianbo Yue"
+                "name": "Jianbo Yue",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/yue-jianbo/"
               }
             ]
           },
@@ -1713,7 +1938,8 @@ function _data(FileAttachment){return(
             "name": "Cell signaling",
             "children": [
               {
-                "name": "Jianbo Yue"
+                "name": "Jianbo Yue",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/yue-jianbo/"
               }
             ]
           },
@@ -1721,7 +1947,8 @@ function _data(FileAttachment){return(
             "name": "Immunology",
             "children": [
               {
-                "name": "Jianbo Yue"
+                "name": "Jianbo Yue",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/yue-jianbo/"
               }
             ]
           },
@@ -1729,7 +1956,8 @@ function _data(FileAttachment){return(
             "name": "Drug development",
             "children": [
               {
-                "name": "Jianbo Yue"
+                "name": "Jianbo Yue",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/yue-jianbo/"
               }
             ]
           },
@@ -1737,7 +1965,8 @@ function _data(FileAttachment){return(
             "name": "reactive oxygen species  (ROS) and drug developmentBiomedical science",
             "children": [
               {
-                "name": "Jianbo Yue"
+                "name": "Jianbo Yue",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/yue-jianbo/"
               }
             ]
           },
@@ -1745,7 +1974,8 @@ function _data(FileAttachment){return(
             "name": "drug development",
             "children": [
               {
-                "name": "Jianbo Yue"
+                "name": "Jianbo Yue",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/yue-jianbo/"
               }
             ]
           },
@@ -1753,7 +1983,8 @@ function _data(FileAttachment){return(
             "name": "metabolism",
             "children": [
               {
-                "name": "Jianbo Yue"
+                "name": "Jianbo Yue",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/yue-jianbo/"
               }
             ]
           },
@@ -1761,7 +1992,8 @@ function _data(FileAttachment){return(
             "name": "Physiological ecology",
             "children": [
               {
-                "name": "Renee Richer"
+                "name": "Renee Richer",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/richer-renee/"
               }
             ]
           },
@@ -1769,7 +2001,8 @@ function _data(FileAttachment){return(
             "name": "Human Health and Environment",
             "children": [
               {
-                "name": "Renee Richer"
+                "name": "Renee Richer",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/richer-renee/"
               }
             ]
           },
@@ -1777,7 +2010,8 @@ function _data(FileAttachment){return(
             "name": "sustainable development",
             "children": [
               {
-                "name": "Renee Richer"
+                "name": "Renee Richer",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/richer-renee/"
               }
             ]
           },
@@ -1785,7 +2019,8 @@ function _data(FileAttachment){return(
             "name": "Evolutionary biology",
             "children": [
               {
-                "name": "Renee Richer"
+                "name": "Renee Richer",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/richer-renee/"
               }
             ]
           },
@@ -1793,7 +2028,8 @@ function _data(FileAttachment){return(
             "name": "Plant biologist",
             "children": [
               {
-                "name": "Joohyun Lee"
+                "name": "Joohyun Lee",
+                "url": "jleelab.org"
               }
             ]
           },
@@ -1801,7 +2037,8 @@ function _data(FileAttachment){return(
             "name": "Epigenetics",
             "children": [
               {
-                "name": "Joohyun Lee"
+                "name": "Joohyun Lee",
+                "url": "jleelab.org"
               }
             ]
           },
@@ -1809,7 +2046,8 @@ function _data(FileAttachment){return(
             "name": "Plant physiology",
             "children": [
               {
-                "name": "Joohyun Lee"
+                "name": "Joohyun Lee",
+                "url": "jleelab.org"
               }
             ]
           },
@@ -1817,7 +2055,8 @@ function _data(FileAttachment){return(
             "name": "Genetic engineering",
             "children": [
               {
-                "name": "Joohyun Lee"
+                "name": "Joohyun Lee",
+                "url": "jleelab.org"
               }
             ]
           },
@@ -1825,7 +2064,8 @@ function _data(FileAttachment){return(
             "name": "Ecological genomics",
             "children": [
               {
-                "name": "Huansheng Cao"
+                "name": "Huansheng Cao",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cao-huansheng/"
               }
             ]
           },
@@ -1833,7 +2073,8 @@ function _data(FileAttachment){return(
             "name": "Systems biology",
             "children": [
               {
-                "name": "Huansheng Cao"
+                "name": "Huansheng Cao",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cao-huansheng/"
               }
             ]
           },
@@ -1841,7 +2082,8 @@ function _data(FileAttachment){return(
             "name": "?Bioinformatics",
             "children": [
               {
-                "name": "Huansheng Cao"
+                "name": "Huansheng Cao",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cao-huansheng/"
               }
             ]
           },
@@ -1849,7 +2091,8 @@ function _data(FileAttachment){return(
             "name": "Biocomplexity",
             "children": [
               {
-                "name": "Huansheng Cao"
+                "name": "Huansheng Cao",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cao-huansheng/"
               }
             ]
           },
@@ -1857,7 +2100,8 @@ function _data(FileAttachment){return(
             "name": "Ecology and Evolutionary Biology",
             "children": [
               {
-                "name": "Huansheng Cao"
+                "name": "Huansheng Cao",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cao-huansheng/"
               }
             ]
           },
@@ -1865,7 +2109,8 @@ function _data(FileAttachment){return(
             "name": "Evolutionary Genomics and Speciation",
             "children": [
               {
-                "name": "Huansheng Cao"
+                "name": "Huansheng Cao",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cao-huansheng/"
               }
             ]
           },
@@ -1873,7 +2118,8 @@ function _data(FileAttachment){return(
             "name": "Evolution",
             "children": [
               {
-                "name": "Huansheng Cao"
+                "name": "Huansheng Cao",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cao-huansheng/"
               }
             ]
           },
@@ -1881,7 +2127,8 @@ function _data(FileAttachment){return(
             "name": "Genomics",
             "children": [
               {
-                "name": "Huansheng Cao"
+                "name": "Huansheng Cao",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cao-huansheng/"
               }
             ]
           },
@@ -1889,10 +2136,12 @@ function _data(FileAttachment){return(
             "name": "Genetics",
             "children": [
               {
-                "name": "Hyun-Min Kim"
+                "name": "Hyun-Min Kim",
+                "url": "https://sites.duke.edu/kimlab"
               },
               {
-                "name": "Huansheng Cao"
+                "name": "Huansheng Cao",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cao-huansheng/"
               }
             ]
           },
@@ -1900,7 +2149,8 @@ function _data(FileAttachment){return(
             "name": "Life sciences",
             "children": [
               {
-                "name": "Huansheng Cao"
+                "name": "Huansheng Cao",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cao-huansheng/"
               }
             ]
           },
@@ -1908,10 +2158,12 @@ function _data(FileAttachment){return(
             "name": "Microbiology",
             "children": [
               {
-                "name": "Anastasia Tsigkou"
+                "name": "Anastasia Tsigkou",
+                "url": "https://euraxess.ec.europa.eu/worldwide/china/network-european-researchers-biology-and-medicine-china"
               },
               {
-                "name": "Huansheng Cao"
+                "name": "Huansheng Cao",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cao-huansheng/"
               }
             ]
           },
@@ -1919,7 +2171,8 @@ function _data(FileAttachment){return(
             "name": "Systems Biology",
             "children": [
               {
-                "name": "Huansheng Cao"
+                "name": "Huansheng Cao",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cao-huansheng/"
               }
             ]
           },
@@ -1927,10 +2180,12 @@ function _data(FileAttachment){return(
             "name": "Instrumental analysis",
             "children": [
               {
-                "name": "Huansheng Cao"
+                "name": "Huansheng Cao",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cao-huansheng/"
               },
               {
-                "name": "Floyd Beckford"
+                "name": "Floyd Beckford",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/beckford-floyd/"
               }
             ]
           },
@@ -1938,7 +2193,8 @@ function _data(FileAttachment){return(
             "name": "Inorganic chemistry",
             "children": [
               {
-                "name": "Huansheng Cao"
+                "name": "Huansheng Cao",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cao-huansheng/"
               }
             ]
           },
@@ -1946,10 +2202,12 @@ function _data(FileAttachment){return(
             "name": "bioinorganic chemistry",
             "children": [
               {
-                "name": "Huansheng Cao"
+                "name": "Huansheng Cao",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cao-huansheng/"
               },
               {
-                "name": "Floyd Beckford"
+                "name": "Floyd Beckford",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/beckford-floyd/"
               }
             ]
           },
@@ -1957,7 +2215,8 @@ function _data(FileAttachment){return(
             "name": "Molecular Genetics",
             "children": [
               {
-                "name": "Ferdinand Kappes"
+                "name": "Ferdinand Kappes",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/kappes-ferdinand/"
               }
             ]
           },
@@ -1965,7 +2224,8 @@ function _data(FileAttachment){return(
             "name": "Plant Physiology",
             "children": [
               {
-                "name": "Ferdinand Kappes"
+                "name": "Ferdinand Kappes",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/kappes-ferdinand/"
               }
             ]
           },
@@ -1973,7 +2233,8 @@ function _data(FileAttachment){return(
             "name": "Medical Chemistry",
             "children": [
               {
-                "name": "Ferdinand Kappes"
+                "name": "Ferdinand Kappes",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/kappes-ferdinand/"
               }
             ]
           },
@@ -1981,7 +2242,8 @@ function _data(FileAttachment){return(
             "name": "Biochemical Pharmacology",
             "children": [
               {
-                "name": "Ferdinand Kappes"
+                "name": "Ferdinand Kappes",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/kappes-ferdinand/"
               }
             ]
           },
@@ -1989,7 +2251,8 @@ function _data(FileAttachment){return(
             "name": "Biological Sciences",
             "children": [
               {
-                "name": "Andrew Lin"
+                "name": "Andrew Lin",
+                "url": NaN
               }
             ]
           },
@@ -1997,7 +2260,8 @@ function _data(FileAttachment){return(
             "name": "Biomedical Sciences",
             "children": [
               {
-                "name": "Andrew Lin"
+                "name": "Andrew Lin",
+                "url": NaN
               }
             ]
           },
@@ -2005,7 +2269,8 @@ function _data(FileAttachment){return(
             "name": "?RNA interactome",
             "children": [
               {
-                "name": "Andrew Lin"
+                "name": "Andrew Lin",
+                "url": NaN
               }
             ]
           },
@@ -2013,7 +2278,8 @@ function _data(FileAttachment){return(
             "name": "lncRNA function",
             "children": [
               {
-                "name": "Andrew Lin"
+                "name": "Andrew Lin",
+                "url": NaN
               }
             ]
           },
@@ -2021,7 +2287,8 @@ function _data(FileAttachment){return(
             "name": "Trafficking and localization",
             "children": [
               {
-                "name": "Andrew Lin"
+                "name": "Andrew Lin",
+                "url": NaN
               }
             ]
           },
@@ -2029,7 +2296,8 @@ function _data(FileAttachment){return(
             "name": "Cancer Biology",
             "children": [
               {
-                "name": "Andrew Lin"
+                "name": "Andrew Lin",
+                "url": NaN
               }
             ]
           },
@@ -2037,10 +2305,12 @@ function _data(FileAttachment){return(
             "name": "Soft matter",
             "children": [
               {
-                "name": "Kai Huang"
+                "name": "Kai Huang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-kai/"
               },
               {
-                "name": "Kai Zhang"
+                "name": "Kai Zhang",
+                "url": "https://sites.google.com/site/kaizhangstatmech/"
               }
             ]
           },
@@ -2048,7 +2318,8 @@ function _data(FileAttachment){return(
             "name": "Nonequilibrium systems",
             "children": [
               {
-                "name": "Kai Huang"
+                "name": "Kai Huang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-kai/"
               }
             ]
           },
@@ -2056,7 +2327,8 @@ function _data(FileAttachment){return(
             "name": "Phase transition",
             "children": [
               {
-                "name": "Kai Huang"
+                "name": "Kai Huang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-kai/"
               }
             ]
           },
@@ -2064,7 +2336,8 @@ function _data(FileAttachment){return(
             "name": "Collective dynamics",
             "children": [
               {
-                "name": "Kai Huang"
+                "name": "Kai Huang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-kai/"
               }
             ]
           },
@@ -2072,10 +2345,12 @@ function _data(FileAttachment){return(
             "name": "Granular materials",
             "children": [
               {
-                "name": "Kai Huang"
+                "name": "Kai Huang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-kai/"
               },
               {
-                "name": "Kai Zhang"
+                "name": "Kai Zhang",
+                "url": "https://sites.google.com/site/kaizhangstatmech/"
               }
             ]
           },
@@ -2083,7 +2358,8 @@ function _data(FileAttachment){return(
             "name": "Wetting",
             "children": [
               {
-                "name": "Kai Huang"
+                "name": "Kai Huang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-kai/"
               }
             ]
           },
@@ -2091,7 +2367,8 @@ function _data(FileAttachment){return(
             "name": "Impact mechanics",
             "children": [
               {
-                "name": "Kai Huang"
+                "name": "Kai Huang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-kai/"
               }
             ]
           },
@@ -2099,7 +2376,8 @@ function _data(FileAttachment){return(
             "name": "Particle tracking",
             "children": [
               {
-                "name": "Kai Huang"
+                "name": "Kai Huang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-kai/"
               }
             ]
           },
@@ -2107,7 +2385,8 @@ function _data(FileAttachment){return(
             "name": "Remote sensing (IoTRadar)",
             "children": [
               {
-                "name": "Kai Huang"
+                "name": "Kai Huang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-kai/"
               }
             ]
           },
@@ -2115,7 +2394,8 @@ function _data(FileAttachment){return(
             "name": "Digital twin",
             "children": [
               {
-                "name": "Kai Huang"
+                "name": "Kai Huang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-kai/"
               }
             ]
           },
@@ -2123,7 +2403,8 @@ function _data(FileAttachment){return(
             "name": "Room acoustics",
             "children": [
               {
-                "name": "Kai Huang"
+                "name": "Kai Huang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-kai/"
               }
             ]
           },
@@ -2131,7 +2412,8 @@ function _data(FileAttachment){return(
             "name": "human-machine interfact",
             "children": [
               {
-                "name": "Kai Huang"
+                "name": "Kai Huang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-kai/"
               }
             ]
           },
@@ -2139,10 +2421,12 @@ function _data(FileAttachment){return(
             "name": "Materials engineering",
             "children": [
               {
-                "name": "Weiwei Shi"
+                "name": "Weiwei Shi",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/shi-weiwei/"
               },
               {
-                "name": "Kwang Leong Choy"
+                "name": "Kwang Leong Choy",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/kwang-leong-choy/"
               }
             ]
           },
@@ -2150,7 +2434,8 @@ function _data(FileAttachment){return(
             "name": "Materials manufacturing",
             "children": [
               {
-                "name": "Kwang Leong Choy"
+                "name": "Kwang Leong Choy",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/kwang-leong-choy/"
               }
             ]
           },
@@ -2158,7 +2443,8 @@ function _data(FileAttachment){return(
             "name": "Chemical vapor deposition",
             "children": [
               {
-                "name": "Kwang Leong Choy"
+                "name": "Kwang Leong Choy",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/kwang-leong-choy/"
               }
             ]
           },
@@ -2166,7 +2452,8 @@ function _data(FileAttachment){return(
             "name": "Biomaterials",
             "children": [
               {
-                "name": "Kwang Leong Choy"
+                "name": "Kwang Leong Choy",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/kwang-leong-choy/"
               }
             ]
           },
@@ -2174,13 +2461,16 @@ function _data(FileAttachment){return(
             "name": "Brain research",
             "children": [
               {
-                "name": "Pascal Grange"
+                "name": "Pascal Grange",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/grange-pascal/"
               },
               {
-                "name": "Szechai Kwok"
+                "name": "Szechai Kwok",
+                "url": "http://www.kwoklab.org/"
               },
               {
-                "name": "Pedro Rada"
+                "name": "Pedro Rada",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/rada-pedro/"
               }
             ]
           },
@@ -2188,7 +2478,8 @@ function _data(FileAttachment){return(
             "name": "Cognitive neuroscience",
             "children": [
               {
-                "name": "Szechai Kwok"
+                "name": "Szechai Kwok",
+                "url": "http://www.kwoklab.org/"
               }
             ]
           },
@@ -2196,7 +2487,8 @@ function _data(FileAttachment){return(
             "name": "Memory researchGeoscience",
             "children": [
               {
-                "name": "Szechai Kwok"
+                "name": "Szechai Kwok",
+                "url": "http://www.kwoklab.org/"
               }
             ]
           },
@@ -2204,7 +2496,8 @@ function _data(FileAttachment){return(
             "name": "Neuroscience",
             "children": [
               {
-                "name": "Pedro Rada"
+                "name": "Pedro Rada",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/rada-pedro/"
               }
             ]
           },
@@ -2212,7 +2505,8 @@ function _data(FileAttachment){return(
             "name": "Behavioral Physiology",
             "children": [
               {
-                "name": "Pedro Rada"
+                "name": "Pedro Rada",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/rada-pedro/"
               }
             ]
           },
@@ -2220,7 +2514,8 @@ function _data(FileAttachment){return(
             "name": "Sleep physiology",
             "children": [
               {
-                "name": "Pedro Rada"
+                "name": "Pedro Rada",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/rada-pedro/"
               }
             ]
           },
@@ -2228,10 +2523,12 @@ function _data(FileAttachment){return(
             "name": "Hydrology",
             "children": [
               {
-                "name": "Pedro Rada"
+                "name": "Pedro Rada",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/rada-pedro/"
               },
               {
-                "name": "Chuanhui Gu"
+                "name": "Chuanhui Gu",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/gu-chuanhui/"
               }
             ]
           },
@@ -2239,7 +2536,8 @@ function _data(FileAttachment){return(
             "name": "Neurobiology",
             "children": [
               {
-                "name": "Eric Chen"
+                "name": "Eric Chen",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/chen-chia-chien-eric/"
               }
             ]
           },
@@ -2247,7 +2545,8 @@ function _data(FileAttachment){return(
             "name": "Neuropsychology",
             "children": [
               {
-                "name": "Eric Chen"
+                "name": "Eric Chen",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/chen-chia-chien-eric/"
               }
             ]
           },
@@ -2255,7 +2554,8 @@ function _data(FileAttachment){return(
             "name": "Aging",
             "children": [
               {
-                "name": "Eric Chen"
+                "name": "Eric Chen",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/chen-chia-chien-eric/"
               }
             ]
           },
@@ -2263,10 +2563,12 @@ function _data(FileAttachment){return(
             "name": "Psychiatry",
             "children": [
               {
-                "name": "Eric Chen"
+                "name": "Eric Chen",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/chen-chia-chien-eric/"
               },
               {
-                "name": "Rebecca Hock"
+                "name": "Rebecca Hock",
+                "url": NaN
               }
             ]
           },
@@ -2274,7 +2576,8 @@ function _data(FileAttachment){return(
             "name": "Psychology",
             "children": [
               {
-                "name": "Eric Chen"
+                "name": "Eric Chen",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/chen-chia-chien-eric/"
               }
             ]
           },
@@ -2282,13 +2585,16 @@ function _data(FileAttachment){return(
             "name": "Water pollution",
             "children": [
               {
-                "name": "Song Gao"
+                "name": "Song Gao",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/gao-song/"
               },
               {
-                "name": "Eric Chen"
+                "name": "Eric Chen",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/chen-chia-chien-eric/"
               },
               {
-                "name": "Chuanhui Gu"
+                "name": "Chuanhui Gu",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/gu-chuanhui/"
               }
             ]
           },
@@ -2296,7 +2602,8 @@ function _data(FileAttachment){return(
             "name": "Mental and behavioral health",
             "children": [
               {
-                "name": "Rebecca Hock"
+                "name": "Rebecca Hock",
+                "url": NaN
               }
             ]
           },
@@ -2304,7 +2611,8 @@ function _data(FileAttachment){return(
             "name": "Health inequities",
             "children": [
               {
-                "name": "Rebecca Hock"
+                "name": "Rebecca Hock",
+                "url": NaN
               }
             ]
           },
@@ -2312,7 +2620,8 @@ function _data(FileAttachment){return(
             "name": "Child Development",
             "children": [
               {
-                "name": "Rebecca Hock"
+                "name": "Rebecca Hock",
+                "url": NaN
               }
             ]
           },
@@ -2320,7 +2629,8 @@ function _data(FileAttachment){return(
             "name": "Child Health",
             "children": [
               {
-                "name": "Rebecca Hock"
+                "name": "Rebecca Hock",
+                "url": NaN
               }
             ]
           },
@@ -2328,7 +2638,8 @@ function _data(FileAttachment){return(
             "name": "Clinical Research",
             "children": [
               {
-                "name": "Rebecca Hock"
+                "name": "Rebecca Hock",
+                "url": NaN
               }
             ]
           },
@@ -2336,7 +2647,8 @@ function _data(FileAttachment){return(
             "name": "Community Health",
             "children": [
               {
-                "name": "Rebecca Hock"
+                "name": "Rebecca Hock",
+                "url": NaN
               }
             ]
           },
@@ -2344,7 +2656,8 @@ function _data(FileAttachment){return(
             "name": "Community Sociology",
             "children": [
               {
-                "name": "Rebecca Hock"
+                "name": "Rebecca Hock",
+                "url": NaN
               }
             ]
           },
@@ -2352,7 +2665,8 @@ function _data(FileAttachment){return(
             "name": "Developmental Psychology",
             "children": [
               {
-                "name": "Rebecca Hock"
+                "name": "Rebecca Hock",
+                "url": NaN
               }
             ]
           },
@@ -2360,10 +2674,12 @@ function _data(FileAttachment){return(
             "name": "Epidemiology",
             "children": [
               {
-                "name": "Rebecca Hock"
+                "name": "Rebecca Hock",
+                "url": NaN
               },
               {
-                "name": "Sajid Umar"
+                "name": "Sajid Umar",
+                "url": NaN
               }
             ]
           },
@@ -2371,7 +2687,8 @@ function _data(FileAttachment){return(
             "name": "Family Services",
             "children": [
               {
-                "name": "Rebecca Hock"
+                "name": "Rebecca Hock",
+                "url": NaN
               }
             ]
           },
@@ -2379,10 +2696,12 @@ function _data(FileAttachment){return(
             "name": "Global Health",
             "children": [
               {
-                "name": "Rebecca Hock"
+                "name": "Rebecca Hock",
+                "url": NaN
               },
               {
-                "name": "Sajid Umar"
+                "name": "Sajid Umar",
+                "url": NaN
               }
             ]
           },
@@ -2390,7 +2709,8 @@ function _data(FileAttachment){return(
             "name": "Health Medicine and Society",
             "children": [
               {
-                "name": "Rebecca Hock"
+                "name": "Rebecca Hock",
+                "url": NaN
               }
             ]
           },
@@ -2398,7 +2718,8 @@ function _data(FileAttachment){return(
             "name": "Health Sciences",
             "children": [
               {
-                "name": "Rebecca Hock"
+                "name": "Rebecca Hock",
+                "url": NaN
               }
             ]
           },
@@ -2406,7 +2727,8 @@ function _data(FileAttachment){return(
             "name": "Human Development",
             "children": [
               {
-                "name": "Rebecca Hock"
+                "name": "Rebecca Hock",
+                "url": NaN
               }
             ]
           },
@@ -2414,7 +2736,8 @@ function _data(FileAttachment){return(
             "name": "Qualitative Methods",
             "children": [
               {
-                "name": "Rebecca Hock"
+                "name": "Rebecca Hock",
+                "url": NaN
               }
             ]
           },
@@ -2422,10 +2745,12 @@ function _data(FileAttachment){return(
             "name": "Land degradation",
             "children": [
               {
-                "name": "Rebecca Hock"
+                "name": "Rebecca Hock",
+                "url": NaN
               },
               {
-                "name": "Chuanhui Gu"
+                "name": "Chuanhui Gu",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/gu-chuanhui/"
               }
             ]
           },
@@ -2433,7 +2758,8 @@ function _data(FileAttachment){return(
             "name": "Quantitative Methods",
             "children": [
               {
-                "name": "Rebecca Hock"
+                "name": "Rebecca Hock",
+                "url": NaN
               }
             ]
           },
@@ -2441,7 +2767,8 @@ function _data(FileAttachment){return(
             "name": "Global health",
             "children": [
               {
-                "name": "Yiu Wing Kam"
+                "name": "Yiu Wing Kam",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/kam-yiu-wing-jason/"
               }
             ]
           },
@@ -2449,7 +2776,8 @@ function _data(FileAttachment){return(
             "name": "Virus-host interaction",
             "children": [
               {
-                "name": "Yiu Wing Kam"
+                "name": "Yiu Wing Kam",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/kam-yiu-wing-jason/"
               }
             ]
           },
@@ -2457,7 +2785,8 @@ function _data(FileAttachment){return(
             "name": "Biomarker identification",
             "children": [
               {
-                "name": "Yiu Wing Kam"
+                "name": "Yiu Wing Kam",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/kam-yiu-wing-jason/"
               }
             ]
           },
@@ -2465,7 +2794,8 @@ function _data(FileAttachment){return(
             "name": "Immune response in patients",
             "children": [
               {
-                "name": "Yiu Wing Kam"
+                "name": "Yiu Wing Kam",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/kam-yiu-wing-jason/"
               }
             ]
           },
@@ -2473,7 +2803,8 @@ function _data(FileAttachment){return(
             "name": "Anti-viral drug development",
             "children": [
               {
-                "name": "Yiu Wing Kam"
+                "name": "Yiu Wing Kam",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/kam-yiu-wing-jason/"
               }
             ]
           },
@@ -2481,7 +2812,8 @@ function _data(FileAttachment){return(
             "name": "One Health",
             "children": [
               {
-                "name": "Sajid Umar"
+                "name": "Sajid Umar",
+                "url": NaN
               }
             ]
           },
@@ -2489,7 +2821,8 @@ function _data(FileAttachment){return(
             "name": "Virology",
             "children": [
               {
-                "name": "Sajid Umar"
+                "name": "Sajid Umar",
+                "url": NaN
               }
             ]
           },
@@ -2497,7 +2830,8 @@ function _data(FileAttachment){return(
             "name": "infectious diseases",
             "children": [
               {
-                "name": "Sajid Umar"
+                "name": "Sajid Umar",
+                "url": NaN
               }
             ]
           },
@@ -2505,7 +2839,8 @@ function _data(FileAttachment){return(
             "name": "Pathology",
             "children": [
               {
-                "name": "Sajid Umar"
+                "name": "Sajid Umar",
+                "url": NaN
               }
             ]
           },
@@ -2513,7 +2848,8 @@ function _data(FileAttachment){return(
             "name": "Respiratory viruses",
             "children": [
               {
-                "name": "Sajid Umar"
+                "name": "Sajid Umar",
+                "url": NaN
               }
             ]
           },
@@ -2521,7 +2857,8 @@ function _data(FileAttachment){return(
             "name": "Paras+A51:M59itology",
             "children": [
               {
-                "name": "Sajid Umar"
+                "name": "Sajid Umar",
+                "url": NaN
               }
             ]
           }
@@ -2534,7 +2871,8 @@ function _data(FileAttachment){return(
             "name": "Cell and Molecular Biology",
             "children": [
               {
-                "name": "Hyun-Min Kim"
+                "name": "Hyun-Min Kim",
+                "url": "https://sites.duke.edu/kimlab"
               }
             ]
           },
@@ -2542,10 +2880,12 @@ function _data(FileAttachment){return(
             "name": "Genetics",
             "children": [
               {
-                "name": "Hyun-Min Kim"
+                "name": "Hyun-Min Kim",
+                "url": "https://sites.duke.edu/kimlab"
               },
               {
-                "name": "Huansheng Cao"
+                "name": "Huansheng Cao",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cao-huansheng/"
               }
             ]
           },
@@ -2553,7 +2893,8 @@ function _data(FileAttachment){return(
             "name": "Microbiology and Biochemistry",
             "children": [
               {
-                "name": "Hyun-Min Kim"
+                "name": "Hyun-Min Kim",
+                "url": "https://sites.duke.edu/kimlab"
               }
             ]
           },
@@ -2561,7 +2902,8 @@ function _data(FileAttachment){return(
             "name": "DNA damage and repair",
             "children": [
               {
-                "name": "Hyun-Min Kim"
+                "name": "Hyun-Min Kim",
+                "url": "https://sites.duke.edu/kimlab"
               }
             ]
           },
@@ -2569,7 +2911,8 @@ function _data(FileAttachment){return(
             "name": "Biology",
             "children": [
               {
-                "name": "Eunyu Kim"
+                "name": "Eunyu Kim",
+                "url": "http://eunyu.kim.lab.com/"
               }
             ]
           },
@@ -2577,7 +2920,8 @@ function _data(FileAttachment){return(
             "name": "Environmental Sciences",
             "children": [
               {
-                "name": "Eunyu Kim"
+                "name": "Eunyu Kim",
+                "url": "http://eunyu.kim.lab.com/"
               }
             ]
           },
@@ -2585,7 +2929,8 @@ function _data(FileAttachment){return(
             "name": "Plant Molecular Biology",
             "children": [
               {
-                "name": "Eunyu Kim"
+                "name": "Eunyu Kim",
+                "url": "http://eunyu.kim.lab.com/"
               }
             ]
           },
@@ -2593,7 +2938,8 @@ function _data(FileAttachment){return(
             "name": "Plant Biology",
             "children": [
               {
-                "name": "Eunyu Kim"
+                "name": "Eunyu Kim",
+                "url": "http://eunyu.kim.lab.com/"
               }
             ]
           },
@@ -2601,7 +2947,8 @@ function _data(FileAttachment){return(
             "name": "Epigenetic",
             "children": [
               {
-                "name": "Eunyu Kim"
+                "name": "Eunyu Kim",
+                "url": "http://eunyu.kim.lab.com/"
               }
             ]
           },
@@ -2609,7 +2956,8 @@ function _data(FileAttachment){return(
             "name": "Inorganic medicinal chemistry",
             "children": [
               {
-                "name": "Floyd Beckford"
+                "name": "Floyd Beckford",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/beckford-floyd/"
               }
             ]
           },
@@ -2617,7 +2965,8 @@ function _data(FileAttachment){return(
             "name": "Inorganic/Environmental Chemistry",
             "children": [
               {
-                "name": "Floyd Beckford"
+                "name": "Floyd Beckford",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/beckford-floyd/"
               }
             ]
           },
@@ -2625,7 +2974,8 @@ function _data(FileAttachment){return(
             "name": "Catalysts development for environmental science",
             "children": [
               {
-                "name": "Floyd Beckford"
+                "name": "Floyd Beckford",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/beckford-floyd/"
               }
             ]
           },
@@ -2633,7 +2983,8 @@ function _data(FileAttachment){return(
             "name": "Pharmaceutical",
             "children": [
               {
-                "name": "Floyd Beckford"
+                "name": "Floyd Beckford",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/beckford-floyd/"
               }
             ]
           },
@@ -2641,7 +2992,8 @@ function _data(FileAttachment){return(
             "name": "Personal products in the environment",
             "children": [
               {
-                "name": "Floyd Beckford"
+                "name": "Floyd Beckford",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/beckford-floyd/"
               }
             ]
           },
@@ -2649,7 +3001,8 @@ function _data(FileAttachment){return(
             "name": "Natural products chemistry",
             "children": [
               {
-                "name": "Floyd Beckford"
+                "name": "Floyd Beckford",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/beckford-floyd/"
               }
             ]
           },
@@ -2657,10 +3010,12 @@ function _data(FileAttachment){return(
             "name": "Instrumental analysis",
             "children": [
               {
-                "name": "Huansheng Cao"
+                "name": "Huansheng Cao",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cao-huansheng/"
               },
               {
-                "name": "Floyd Beckford"
+                "name": "Floyd Beckford",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/beckford-floyd/"
               }
             ]
           },
@@ -2668,10 +3023,12 @@ function _data(FileAttachment){return(
             "name": "bioinorganic chemistry",
             "children": [
               {
-                "name": "Huansheng Cao"
+                "name": "Huansheng Cao",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cao-huansheng/"
               },
               {
-                "name": "Floyd Beckford"
+                "name": "Floyd Beckford",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/beckford-floyd/"
               }
             ]
           },
@@ -2679,10 +3036,12 @@ function _data(FileAttachment){return(
             "name": "Organic chemistry",
             "children": [
               {
-                "name": "Mark Spaller"
+                "name": "Mark Spaller",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/spaller-mark/"
               },
               {
-                "name": "Xinrong Lin"
+                "name": "Xinrong Lin",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/xinrong-lin/"
               }
             ]
           },
@@ -2690,7 +3049,8 @@ function _data(FileAttachment){return(
             "name": "Medicinal chemistry",
             "children": [
               {
-                "name": "Mark Spaller"
+                "name": "Mark Spaller",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/spaller-mark/"
               }
             ]
           },
@@ -2698,7 +3058,8 @@ function _data(FileAttachment){return(
             "name": "Protein biochemistry",
             "children": [
               {
-                "name": "Mark Spaller"
+                "name": "Mark Spaller",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/spaller-mark/"
               }
             ]
           },
@@ -2706,7 +3067,8 @@ function _data(FileAttachment){return(
             "name": "Biophysics of protein-ligand interactions",
             "children": [
               {
-                "name": "Mark Spaller"
+                "name": "Mark Spaller",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/spaller-mark/"
               }
             ]
           },
@@ -2714,7 +3076,8 @@ function _data(FileAttachment){return(
             "name": "Molecular therapeutics",
             "children": [
               {
-                "name": "Mark Spaller"
+                "name": "Mark Spaller",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/spaller-mark/"
               }
             ]
           },
@@ -2722,7 +3085,8 @@ function _data(FileAttachment){return(
             "name": "Drug discovery",
             "children": [
               {
-                "name": "Mark Spaller"
+                "name": "Mark Spaller",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/spaller-mark/"
               }
             ]
           },
@@ -2730,7 +3094,8 @@ function _data(FileAttachment){return(
             "name": "Peptides",
             "children": [
               {
-                "name": "Mark Spaller"
+                "name": "Mark Spaller",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/spaller-mark/"
               }
             ]
           },
@@ -2738,7 +3103,8 @@ function _data(FileAttachment){return(
             "name": "Bioorganic",
             "children": [
               {
-                "name": "Mark Spaller"
+                "name": "Mark Spaller",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/spaller-mark/"
               }
             ]
           },
@@ -2746,7 +3112,8 @@ function _data(FileAttachment){return(
             "name": "Medicinal",
             "children": [
               {
-                "name": "Mark Spaller"
+                "name": "Mark Spaller",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/spaller-mark/"
               }
             ]
           },
@@ -2754,7 +3121,8 @@ function _data(FileAttachment){return(
             "name": "Cancer",
             "children": [
               {
-                "name": "Mark Spaller"
+                "name": "Mark Spaller",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/spaller-mark/"
               }
             ]
           },
@@ -2762,7 +3130,8 @@ function _data(FileAttachment){return(
             "name": "Polymer chemistry",
             "children": [
               {
-                "name": "Xinrong Lin"
+                "name": "Xinrong Lin",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/xinrong-lin/"
               }
             ]
           },
@@ -2770,7 +3139,8 @@ function _data(FileAttachment){return(
             "name": "Electrochemical energy storage",
             "children": [
               {
-                "name": "Xinrong Lin"
+                "name": "Xinrong Lin",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/xinrong-lin/"
               }
             ]
           },
@@ -2778,7 +3148,8 @@ function _data(FileAttachment){return(
             "name": "Energy Materials",
             "children": [
               {
-                "name": "Xinrong Lin"
+                "name": "Xinrong Lin",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/xinrong-lin/"
               }
             ]
           },
@@ -2786,7 +3157,8 @@ function _data(FileAttachment){return(
             "name": "Psychology of pain",
             "children": [
               {
-                "name": "Shan Wang"
+                "name": "Shan Wang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/wang-shan/"
               }
             ]
           },
@@ -2794,7 +3166,8 @@ function _data(FileAttachment){return(
             "name": "Quantitative psychology",
             "children": [
               {
-                "name": "Shan Wang"
+                "name": "Shan Wang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/wang-shan/"
               }
             ]
           },
@@ -2802,7 +3175,8 @@ function _data(FileAttachment){return(
             "name": "Aging research",
             "children": [
               {
-                "name": "Shan Wang"
+                "name": "Shan Wang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/wang-shan/"
               }
             ]
           },
@@ -2810,7 +3184,8 @@ function _data(FileAttachment){return(
             "name": "Cognitive psychology",
             "children": [
               {
-                "name": "Shan Wang"
+                "name": "Shan Wang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/wang-shan/"
               }
             ]
           },
@@ -2818,10 +3193,12 @@ function _data(FileAttachment){return(
             "name": "Environmental science",
             "children": [
               {
-                "name": "Shan Wang"
+                "name": "Shan Wang",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/wang-shan/"
               },
               {
-                "name": "Chuanhui Gu"
+                "name": "Chuanhui Gu",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/gu-chuanhui/"
               }
             ]
           },
@@ -2829,7 +3206,8 @@ function _data(FileAttachment){return(
             "name": "Geoscience",
             "children": [
               {
-                "name": "Chuanhui Gu"
+                "name": "Chuanhui Gu",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/gu-chuanhui/"
               }
             ]
           },
@@ -2837,10 +3215,12 @@ function _data(FileAttachment){return(
             "name": "Hydrology",
             "children": [
               {
-                "name": "Pedro Rada"
+                "name": "Pedro Rada",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/rada-pedro/"
               },
               {
-                "name": "Chuanhui Gu"
+                "name": "Chuanhui Gu",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/gu-chuanhui/"
               }
             ]
           },
@@ -2848,13 +3228,16 @@ function _data(FileAttachment){return(
             "name": "Water pollution",
             "children": [
               {
-                "name": "Song Gao"
+                "name": "Song Gao",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/gao-song/"
               },
               {
-                "name": "Eric Chen"
+                "name": "Eric Chen",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/chen-chia-chien-eric/"
               },
               {
-                "name": "Chuanhui Gu"
+                "name": "Chuanhui Gu",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/gu-chuanhui/"
               }
             ]
           },
@@ -2862,10 +3245,12 @@ function _data(FileAttachment){return(
             "name": "Land degradation",
             "children": [
               {
-                "name": "Rebecca Hock"
+                "name": "Rebecca Hock",
+                "url": NaN
               },
               {
-                "name": "Chuanhui Gu"
+                "name": "Chuanhui Gu",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/gu-chuanhui/"
               }
             ]
           },
@@ -2873,7 +3258,8 @@ function _data(FileAttachment){return(
             "name": "Environmental management",
             "children": [
               {
-                "name": "Chuanhui Gu"
+                "name": "Chuanhui Gu",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/gu-chuanhui/"
               }
             ]
           },
@@ -2881,7 +3267,8 @@ function _data(FileAttachment){return(
             "name": "Biodiversity",
             "children": [
               {
-                "name": "Chuanhui Gu"
+                "name": "Chuanhui Gu",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/gu-chuanhui/"
               }
             ]
           },
@@ -2889,7 +3276,8 @@ function _data(FileAttachment){return(
             "name": "Aqueous geochemistry",
             "children": [
               {
-                "name": "Chuanhui Gu"
+                "name": "Chuanhui Gu",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/gu-chuanhui/"
               }
             ]
           },
@@ -2897,10 +3285,12 @@ function _data(FileAttachment){return(
             "name": "Ecology",
             "children": [
               {
-                "name": "Chuanhui Gu"
+                "name": "Chuanhui Gu",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/gu-chuanhui/"
               },
               {
-                "name": "Chi-Yeung(Jimmy) Choi"
+                "name": "Chi-Yeung(Jimmy) Choi",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/choi-chi-yeung-jimmy/"
               }
             ]
           },
@@ -2908,7 +3298,8 @@ function _data(FileAttachment){return(
             "name": "Global change biology",
             "children": [
               {
-                "name": "Chi-Yeung(Jimmy) Choi"
+                "name": "Chi-Yeung(Jimmy) Choi",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/choi-chi-yeung-jimmy/"
               }
             ]
           },
@@ -2916,7 +3307,8 @@ function _data(FileAttachment){return(
             "name": "Landscape ecology",
             "children": [
               {
-                "name": "Chi-Yeung(Jimmy) Choi"
+                "name": "Chi-Yeung(Jimmy) Choi",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/choi-chi-yeung-jimmy/"
               }
             ]
           },
@@ -2924,7 +3316,8 @@ function _data(FileAttachment){return(
             "name": "Population biology",
             "children": [
               {
-                "name": "Chi-Yeung(Jimmy) Choi"
+                "name": "Chi-Yeung(Jimmy) Choi",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/choi-chi-yeung-jimmy/"
               }
             ]
           },
@@ -2932,7 +3325,8 @@ function _data(FileAttachment){return(
             "name": "Ecosystem ecology",
             "children": [
               {
-                "name": "Chi-Yeung(Jimmy) Choi"
+                "name": "Chi-Yeung(Jimmy) Choi",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/choi-chi-yeung-jimmy/"
               }
             ]
           },
@@ -2940,7 +3334,8 @@ function _data(FileAttachment){return(
             "name": "Ornithology",
             "children": [
               {
-                "name": "Chi-Yeung(Jimmy) Choi"
+                "name": "Chi-Yeung(Jimmy) Choi",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/choi-chi-yeung-jimmy/"
               }
             ]
           },
@@ -2948,22 +3343,28 @@ function _data(FileAttachment){return(
             "name": "Machine learning",
             "children": [
               {
-                "name": "Shixin Xu"
+                "name": "Shixin Xu",
+                "url": "https://sites.google.com/site/shixinxupage/"
               },
               {
-                "name": "Ming Li"
+                "name": "Ming Li",
+                "url": "https://scholars.duke.edu/person/MingLi"
               },
               {
-                "name": "Mustafa Misir"
+                "name": "Mustafa Misir",
+                "url": "http://mustafamisir.github.io"
               },
               {
-                "name": "Pengzhan Guo"
+                "name": "Pengzhan Guo",
+                "url": "http://pengzhanguo.github.io"
               },
               {
-                "name": "Chi-Yeung(Jimmy) Choi"
+                "name": "Chi-Yeung(Jimmy) Choi",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/choi-chi-yeung-jimmy/"
               },
               {
-                "name": "Zuchuan Li"
+                "name": "Zuchuan Li",
+                "url": "https://sites.duke.edu/sagdku/"
               }
             ]
           },
@@ -2971,7 +3372,8 @@ function _data(FileAttachment){return(
             "name": "Environmental data analysis",
             "children": [
               {
-                "name": "Zuchuan Li"
+                "name": "Zuchuan Li",
+                "url": "https://sites.duke.edu/sagdku/"
               }
             ]
           },
@@ -2979,7 +3381,8 @@ function _data(FileAttachment){return(
             "name": "Remote sensing",
             "children": [
               {
-                "name": "Zuchuan Li"
+                "name": "Zuchuan Li",
+                "url": "https://sites.duke.edu/sagdku/"
               }
             ]
           },
@@ -2987,7 +3390,8 @@ function _data(FileAttachment){return(
             "name": "Ocean carbon and oxygen cycling",
             "children": [
               {
-                "name": "Zuchuan Li"
+                "name": "Zuchuan Li",
+                "url": "https://sites.duke.edu/sagdku/"
               }
             ]
           },
@@ -2995,7 +3399,8 @@ function _data(FileAttachment){return(
             "name": "Ocean physics",
             "children": [
               {
-                "name": "Zuchuan Li"
+                "name": "Zuchuan Li",
+                "url": "https://sites.duke.edu/sagdku/"
               }
             ]
           },
@@ -3003,7 +3408,8 @@ function _data(FileAttachment){return(
             "name": "Biogeochemistry",
             "children": [
               {
-                "name": "Zuchuan Li"
+                "name": "Zuchuan Li",
+                "url": "https://sites.duke.edu/sagdku/"
               }
             ]
           },
@@ -3011,10 +3417,12 @@ function _data(FileAttachment){return(
             "name": "Statistics",
             "children": [
               {
-                "name": "Italo Simonelli"
+                "name": "Italo Simonelli",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/simonelli-italo/"
               },
               {
-                "name": "Zuchuan Li"
+                "name": "Zuchuan Li",
+                "url": "https://sites.duke.edu/sagdku/"
               }
             ]
           },
@@ -3022,7 +3430,8 @@ function _data(FileAttachment){return(
             "name": "Water Management in Cities",
             "children": [
               {
-                "name": "Ka Leung Lam"
+                "name": "Ka Leung Lam",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/lam-ka-leung/"
               }
             ]
           },
@@ -3030,7 +3439,8 @@ function _data(FileAttachment){return(
             "name": "Environmental sustainability",
             "children": [
               {
-                "name": "Ka Leung Lam"
+                "name": "Ka Leung Lam",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/lam-ka-leung/"
               }
             ]
           },
@@ -3038,7 +3448,8 @@ function _data(FileAttachment){return(
             "name": "Industrial ecology",
             "children": [
               {
-                "name": "Ka Leung Lam"
+                "name": "Ka Leung Lam",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/lam-ka-leung/"
               }
             ]
           },
@@ -3046,7 +3457,8 @@ function _data(FileAttachment){return(
             "name": "Water Resources",
             "children": [
               {
-                "name": "Ka Leung Lam"
+                "name": "Ka Leung Lam",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/lam-ka-leung/"
               }
             ]
           },
@@ -3054,7 +3466,8 @@ function _data(FileAttachment){return(
             "name": "Environmental Engineering",
             "children": [
               {
-                "name": "Ka Leung Lam"
+                "name": "Ka Leung Lam",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/lam-ka-leung/"
               }
             ]
           },
@@ -3062,7 +3475,8 @@ function _data(FileAttachment){return(
             "name": "Environmental Management",
             "children": [
               {
-                "name": "Ka Leung Lam"
+                "name": "Ka Leung Lam",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/lam-ka-leung/"
               }
             ]
           },
@@ -3070,7 +3484,8 @@ function _data(FileAttachment){return(
             "name": "Environmental Policy",
             "children": [
               {
-                "name": "Ka Leung Lam"
+                "name": "Ka Leung Lam",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/lam-ka-leung/"
               }
             ]
           },
@@ -3078,7 +3493,8 @@ function _data(FileAttachment){return(
             "name": "Environmental Economics and Policy",
             "children": [
               {
-                "name": "Ka Leung Lam"
+                "name": "Ka Leung Lam",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/lam-ka-leung/"
               }
             ]
           },
@@ -3086,7 +3502,8 @@ function _data(FileAttachment){return(
             "name": "Sustainability",
             "children": [
               {
-                "name": "Ka Leung Lam"
+                "name": "Ka Leung Lam",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/lam-ka-leung/"
               }
             ]
           },
@@ -3094,7 +3511,8 @@ function _data(FileAttachment){return(
             "name": "Water Managerment",
             "children": [
               {
-                "name": "Ka Leung Lam"
+                "name": "Ka Leung Lam",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/lam-ka-leung/"
               }
             ]
           },
@@ -3102,7 +3520,8 @@ function _data(FileAttachment){return(
             "name": "Atmospheric dynamics",
             "children": [
               {
-                "name": "Ding Ma"
+                "name": "Ding Ma",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/ma-ding/"
               }
             ]
           },
@@ -3110,7 +3529,8 @@ function _data(FileAttachment){return(
             "name": "Climate model",
             "children": [
               {
-                "name": "Ding Ma"
+                "name": "Ding Ma",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/ma-ding/"
               }
             ]
           },
@@ -3118,7 +3538,8 @@ function _data(FileAttachment){return(
             "name": "Climate variability",
             "children": [
               {
-                "name": "Ding Ma"
+                "name": "Ding Ma",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/ma-ding/"
               }
             ]
           },
@@ -3126,7 +3547,8 @@ function _data(FileAttachment){return(
             "name": "Extreme weather events",
             "children": [
               {
-                "name": "Ding Ma"
+                "name": "Ding Ma",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/ma-ding/"
               }
             ]
           },
@@ -3134,7 +3556,8 @@ function _data(FileAttachment){return(
             "name": "Monsoons",
             "children": [
               {
-                "name": "Ding Ma"
+                "name": "Ding Ma",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/ma-ding/"
               }
             ]
           },
@@ -3142,7 +3565,8 @@ function _data(FileAttachment){return(
             "name": "Madden-Julian Oscillation (MJO)",
             "children": [
               {
-                "name": "Ding Ma"
+                "name": "Ding Ma",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/ma-ding/"
               }
             ]
           },
@@ -3150,7 +3574,8 @@ function _data(FileAttachment){return(
             "name": "Annular modes",
             "children": [
               {
-                "name": "Ding Ma"
+                "name": "Ding Ma",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/ma-ding/"
               }
             ]
           },
@@ -3158,7 +3583,8 @@ function _data(FileAttachment){return(
             "name": "Eddy-jet interaction",
             "children": [
               {
-                "name": "Ding Ma"
+                "name": "Ding Ma",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/ma-ding/"
               }
             ]
           },
@@ -3166,7 +3592,8 @@ function _data(FileAttachment){return(
             "name": "Energy",
             "children": [
               {
-                "name": "William Winner"
+                "name": "William Winner",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/winner-william/"
               }
             ]
           },
@@ -3174,7 +3601,8 @@ function _data(FileAttachment){return(
             "name": "Environment",
             "children": [
               {
-                "name": "William Winner"
+                "name": "William Winner",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/winner-william/"
               }
             ]
           },
@@ -3182,7 +3610,8 @@ function _data(FileAttachment){return(
             "name": "sustainability",
             "children": [
               {
-                "name": "William Winner"
+                "name": "William Winner",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/winner-william/"
               }
             ]
           },
@@ -3190,10 +3619,12 @@ function _data(FileAttachment){return(
             "name": "Air pollution",
             "children": [
               {
-                "name": "Song Gao"
+                "name": "Song Gao",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/gao-song/"
               },
               {
-                "name": "William Winner"
+                "name": "William Winner",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/winner-william/"
               }
             ]
           },
@@ -3201,7 +3632,8 @@ function _data(FileAttachment){return(
             "name": "Plant scientist",
             "children": [
               {
-                "name": "William Winner"
+                "name": "William Winner",
+                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/winner-william/"
               }
             ]
           }
