@@ -19,7 +19,7 @@ function _chart(d3,data,dy,margin,width,dx,tree,diagonal)
 
   const svg = d3.create("svg")
       .attr("viewBox", [-margin.left, -margin.top, width, dx])
-      .style("font", "10px sans-serif")
+      .style("font", "12px sans-serif")
       .style("user-select", "none");
 
   const gLink = svg.append("g")
@@ -55,6 +55,13 @@ function _chart(d3,data,dy,margin,width,dx,tree,diagonal)
         .tween("resize", window.ResizeObserver ? null : () => () => svg.dispatch("toggle"));
 
     // Update the nodes…
+    nodes.forEach(function(d) {
+      if (d.depth < 3) {
+        d.y = d.depth * 250;
+      } else {
+        d.y = d.depth * 280;
+      }
+    });
     const node = gNode.selectAll("g")
       .data(nodes, d => d.id);
 
@@ -66,7 +73,7 @@ function _chart(d3,data,dy,margin,width,dx,tree,diagonal)
         ;
 
     nodeEnter.append("circle")
-        .attr("r", 2.5)
+        .attr("r", 4.5)
         .attr("fill", d => d._children ? "#555" : "#999")
         .attr("stroke-width", 10)
         .on("click", (event, d) => {
@@ -81,10 +88,10 @@ function _chart(d3,data,dy,margin,width,dx,tree,diagonal)
           }
         })
         .attr("dy", "0.31em")
-        .attr("x", d => d._children ? -6 : 6)
-        .attr("text-anchor", d => d._children ? "end" : "start")
+        .attr("x", d => d._children ? 6 : 6)
+        .attr("text-anchor", d => d._children ? "start" : "start")
         .text(d => d.data.name)
-      .clone(true).lower()
+        .clone(true).lower()
         .attr("stroke-linejoin", "round")
         .attr("stroke-width", 3)
         .attr("stroke", "white")
