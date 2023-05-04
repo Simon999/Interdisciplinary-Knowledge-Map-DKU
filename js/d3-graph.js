@@ -46,7 +46,7 @@ function createD3Graph(graph, parentWidth, parentHeight, reasonableScreenSizeSca
     // var reasonableScreenSizeScaleMultiple = 11600 * 1
     var initScale = Math.max(parentWidth, parentHeight) / (reasonableScreenSizeScaleMultiple);
     var initXTransform = parentWidth / 2 - initScale * 800;
-    var initYTransform = parentHeight / 3;
+    var initYTransform = parentHeight / 2.3;
     var gDraw = gMain.append('g')
     .attr("transform","translate("+ initXTransform + ", " + initYTransform + ") scale(" + initScale + ")");
 
@@ -67,7 +67,6 @@ function createD3Graph(graph, parentWidth, parentHeight, reasonableScreenSizeSca
     // Add zoom callback
     var zoom = d3v4.zoom()
     .on('zoom', zoomed);
-
     gMain.call(zoom).call(zoom.transform, d3v4.zoomIdentity.translate(initXTransform, initYTransform).scale(initScale));
 
     function zoomed() {

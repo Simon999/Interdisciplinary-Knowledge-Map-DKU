@@ -4,11 +4,12 @@ md`# Collapsible Tree
 
 Click a black node to expand or collapse [the tree](/@d3/tidy-tree).`
 )}
+var treeRoot = null;
 
 function _chart(d3,data,dy,margin,width,dx,tree,diagonal)
 {
   const root = d3.hierarchy(data);
-
+  treeRoot = root;
   root.x0 = dy / 2;
   root.y0 = 0;
   root.descendants().forEach((d, i) => {
@@ -19,7 +20,7 @@ function _chart(d3,data,dy,margin,width,dx,tree,diagonal)
 
   const svg = d3.create("svg")
       .attr("viewBox", [-margin.left, -margin.top, width, dx])
-      .style("font", "12px sans-serif")
+      .style("font", "11px sans-serif")
       .style("user-select", "none");
 
   const gLink = svg.append("g")
@@ -62,6 +63,7 @@ function _chart(d3,data,dy,margin,width,dx,tree,diagonal)
         d.y = d.depth * 280;
       }
     });
+
     const node = gNode.selectAll("g")
       .data(nodes, d => d.id);
 
@@ -84,7 +86,11 @@ function _chart(d3,data,dy,margin,width,dx,tree,diagonal)
     nodeEnter.append("text")
         .on("click", (event, d) => {
           if (d._children == null) {
-            location.href=d.data.url;
+            //location.href=d.data.url;
+            window.open(d.data.url, "_blank");
+          } else {
+            d.children = d.children ? null : d._children;
+            update(d);
           }
         })
         .attr("dy", "0.31em")
@@ -152,449 +158,457 @@ function _tree(d3,dx,dy){return(
 d3.tree().nodeSize([dx, dy])
 )}
 
-function _data(FileAttachment){return(
-  {
-    "name": "Area",
-    "children": [
-      {
-        "name": "Biological, Behavioral sciences and Health",
-        "children": [
-          {
-            "name": "BIOCHEMISTRY & MOLECULAR BIOLOGY",
-            "children": [
-              {
-                "name": "Kwang Leong Choy",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/kwang-leong-choy/"
-              }
-            ]
-          },
-          {
-            "name": "Biology",
-            "children": [
-              {
-                "name": "Rebecca Hock",
-                "url": NaN
-              },
-              {
-                "name": "Sajid Umar",
-                "url": NaN
-              }
-            ]
-          },
-          {
-            "name": "Green & Sustainable Science & Technology",
-            "children": [
-              {
-                "name": "Ding Ma",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/ma-ding/"
-              },
-              {
-                "name": "Yiu Wing Kam",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/kam-yiu-wing-jason/"
-              }
-            ]
-          },
-          {
-            "name": "Molecular Biology",
-            "children": [
-              {
-                "name": "Andrew Lin",
-                "url": NaN
-              },
-              {
-                "name": "Eunyu Kim",
-                "url": "http://eunyu.kim.lab.com/"
-              },
-              {
-                "name": "Ferdinand Kappes",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/kappes-ferdinand/"
-              },
-              {
-                "name": "Huansheng Cao",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cao-huansheng/"
-              },
-              {
-                "name": "Jianbo Yue",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/yue-jianbo/"
-              },
-              {
-                "name": "Joohyun Lee",
-                "url": "jleelab.org"
-              },
-              {
-                "name": "Kai Huang",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-kai/"
-              },
-              {
-                "name": "Linfeng Huang",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-linfeng/"
-              },
-              {
-                "name": "Renee Richer",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/richer-renee/"
-              }
-            ]
-          },
-          {
-            "name": "NEUROSCIENCES",
-            "children": [
-              {
-                "name": "Eric Chen",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/chen-chia-chien-eric/"
-              },
-              {
-                "name": "Pedro Rada",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/rada-pedro/"
-              }
-            ]
-          },
-          {
-            "name": "PSYCHOLOGY, BIOLOGICAL",
-            "children": [
-              {
-                "name": "Rebecca Hock",
-                "url": NaN
-              },
-              {
-                "name": "Szechai Kwok",
-                "url": "http://www.kwoklab.org/"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Data and computer sciences",
-        "children": [
-          {
-            "name": "COMPUTER SCIENCE",
-            "children": [
-              {
-                "name": "Anastasia Tsigkou",
-                "url": "https://euraxess.ec.europa.eu/worldwide/china/network-european-researchers-biology-and-medicine-china"
-              },
-              {
-                "name": "Bing Luo",
-                "url": "https://luobing1008.github.io/"
-              },
-              {
-                "name": "Feng Tian",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/tian-feng/"
-              },
-              {
-                "name": "Jiang Long",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/long-jiang/"
-              },
-              {
-                "name": "Ming Li",
-                "url": "https://scholars.duke.edu/person/MingLi"
-              },
-              {
-                "name": "Ming-chun Huang",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-ming-chun/"
-              },
-              {
-                "name": "Mustafa Misir",
-                "url": "http://mustafamisir.github.io"
-              },
-              {
-                "name": "Peng Sun",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/sun-peng/"
-              },
-              {
-                "name": "Pengzhan Guo",
-                "url": "http://pengzhanguo.github.io"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Environmental science and sustainability",
-        "children": [
-          {
-            "name": "ENVIRONMENTAL SCIENCES",
-            "children": [
-              {
-                "name": "Chi-Yeung(Jimmy) Choi",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/choi-chi-yeung-jimmy/"
-              },
-              {
-                "name": "Ka Leung Lam",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/lam-ka-leung/"
-              },
-              {
-                "name": "Zuchuan Li",
-                "url": "https://sites.duke.edu/sagdku/"
-              }
-            ]
-          },
-          {
-            "name": "Environmental Science",
-            "children": [
-              {
-                "name": "Floyd Beckford",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/beckford-floyd/"
-              },
-              {
-                "name": "William Winner",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/winner-william/"
-              }
-            ]
-          },
-          {
-            "name": "Environmental science",
-            "children": [
-              {
-                "name": "Hyun-Min Kim",
-                "url": "https://sites.duke.edu/kimlab"
-              }
-            ]
-          },
-          {
-            "name": "Green & Sustainable Science & Technology",
-            "children": [
-              {
-                "name": "Ding Ma",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/ma-ding/"
-              },
-              {
-                "name": "Yiu Wing Kam",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/kam-yiu-wing-jason/"
-              }
-            ]
-          },
-          {
-            "name": "MATERIALS SCIENCE, COATINGS & FILMS",
-            "children": [
-              {
-                "name": "Xinrong Lin",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/xinrong-lin/"
-              }
-            ]
-          },
-          {
-            "name": "Molecular Biology",
-            "children": [
-              {
-                "name": "Andrew Lin",
-                "url": NaN
-              },
-              {
-                "name": "Eunyu Kim",
-                "url": "http://eunyu.kim.lab.com/"
-              },
-              {
-                "name": "Ferdinand Kappes",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/kappes-ferdinand/"
-              },
-              {
-                "name": "Huansheng Cao",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cao-huansheng/"
-              },
-              {
-                "name": "Jianbo Yue",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/yue-jianbo/"
-              },
-              {
-                "name": "Joohyun Lee",
-                "url": "jleelab.org"
-              },
-              {
-                "name": "Kai Huang",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-kai/"
-              },
-              {
-                "name": "Linfeng Huang",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-linfeng/"
-              },
-              {
-                "name": "Renee Richer",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/richer-renee/"
-              }
-            ]
-          },
-          {
-            "name": "POLYMER SCIENCE",
-            "children": [
-              {
-                "name": "Mark Spaller",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/spaller-mark/"
-              },
-              {
-                "name": "Shan Wang",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/wang-shan/"
-              }
-            ]
-          },
-          {
-            "name": "PSYCHIATRY",
-            "children": [
-              {
-                "name": "Chuanhui Gu",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/gu-chuanhui/"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Math, physical and materials sciences",
-        "children": [
-          {
-            "name": "Applied Math",
-            "children": [
-              {
-                "name": "Konstantinos Efstathiou",
-                "url": "https://www.efstathiou.gr/"
-              },
-              {
-                "name": "Marcus Werner",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/werner-marcus/"
-              },
-              {
-                "name": "Shixin Xu",
-                "url": "https://sites.google.com/site/shixinxupage/"
-              },
-              {
-                "name": "Xiaoqian Xu",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/xu-xiaoqian/"
-              }
-            ]
-          },
-          {
-            "name": "BIOPHYSICS",
-            "children": [
-              {
-                "name": "Kai Zhang",
-                "url": "https://sites.google.com/site/kaizhangstatmech/"
-              }
-            ]
-          },
-          {
-            "name": "CHEMISTRY, MEDICINAL",
-            "children": [
-              {
-                "name": "Weiwei Shi",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/shi-weiwei/"
-              }
-            ]
-          },
-          {
-            "name": "CHEMISTRY, PHYSICAL",
-            "children": [
-              {
-                "name": "Song Gao",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/gao-song/"
-              }
-            ]
-          },
-          {
-            "name": "EDUCATION & EDUCATIONAL RESEARCH",
-            "children": [
-              {
-                "name": "Changcheng Zheng",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/zheng-changcheng/"
-              }
-            ]
-          },
-          {
-            "name": "MATERIALS SCIENCE, BIOMATERIALS",
-            "children": [
-              {
-                "name": "Tan Zhang",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/zhang-tan/"
-              }
-            ]
-          },
-          {
-            "name": "MATERIALS SCIENCE, CHARACTERIZATION & TESTING",
-            "children": [
-              {
-                "name": "Xiawa Wang",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/wang-xiawa/"
-              }
-            ]
-          },
-          {
-            "name": "MATERIALS SCIENCE, MULTIDISCIPLINARY",
-            "children": [
-              {
-                "name": "Myung-Joong Hwang",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/hwang-myung-joong/"
-              }
-            ]
-          },
-          {
-            "name": "MATHEMATICS, INTERDISCIPLINARY APPLICATIONS",
-            "children": [
-              {
-                "name": "Dangxing Chen",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/chen-dang-xing/"
-              },
-              {
-                "name": "Pascal Grange",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/grange-pascal/"
-              }
-            ]
-          },
-          {
-            "name": "PHYSICS, CONDENSED MATTER",
-            "children": [
-              {
-                "name": "Domna Kotsifaki",
-                "url": "https://dkotsifaki.weebly.com/"
-              }
-            ]
-          },
-          {
-            "name": "PHYSICS, MULTIDISCIPLINARY",
-            "children": [
-              {
-                "name": "Paul Stanley",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/stanley-paul/"
-              }
-            ]
-          },
-          {
-            "name": "Pure Math",
-            "children": [
-              {
-                "name": "Zhe Liu",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/liu-zhe/"
-              },
-              {
-                "name": "Zhenghui Huo",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huo-zhenghui/"
-              }
-            ]
-          },
-          {
-            "name": "STATISTICS & PROBABILITY",
-            "children": [
-              {
-                "name": "Dongmian Zou",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/zou-dongmian/"
-              },
-              {
-                "name": "Italo Simonelli",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/simonelli-italo/"
-              },
-              {
-                "name": "Lin Jiu",
-                "url": "https://jiulin90.github.io/"
-              },
-              {
-                "name": "Xingshi Cai",
-                "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cai-xing-shi/"
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
-)}
+function _data(FileAttachment){return({
+  "name": "Area",
+  "children": [
+    {
+      "name": "Biological, behavioral sciences and health",
+      "children": [
+        {
+          "name": "Biochemistry & molecular biology",
+          "children": [
+            {
+              "name": "Kwang Leong Choy",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/kwang-leong-choy/"
+            }
+          ]
+        },
+        {
+          "name": "Biology",
+          "children": [
+            {
+              "name": "Rebecca Hock",
+              "url": NaN
+            },
+            {
+              "name": "Sajid Umar",
+              "url": NaN
+            }
+          ]
+        },
+        {
+          "name": "Green & sustainable science & technology",
+          "children": [
+            {
+              "name": "Ding Ma",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/ma-ding/"
+            },
+            {
+              "name": "Yiu Wing Kam",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/kam-yiu-wing-jason/"
+            }
+          ]
+        },
+        {
+          "name": "Molecular biology",
+          "children": [
+            {
+              "name": "Andrew Lin",
+              "url": NaN
+            },
+            {
+              "name": "Eunyu Kim",
+              "url": "http://eunyu.kim.lab.com/"
+            },
+            {
+              "name": "Ferdinand Kappes",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/kappes-ferdinand/"
+            },
+            {
+              "name": "Huansheng Cao",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cao-huansheng/"
+            },
+            {
+              "name": "Jianbo Yue",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/yue-jianbo/"
+            },
+            {
+              "name": "Joohyun Lee",
+              "url": "jleelab.org"
+            },
+            {
+              "name": "Kai Huang",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-kai/"
+            },
+            {
+              "name": "Linfeng Huang",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-linfeng/"
+            },
+            {
+              "name": "Renee Richer",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/richer-renee/"
+            }
+          ]
+        },
+        {
+          "name": "Neurosciences",
+          "children": [
+            {
+              "name": "Eric Chen",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/chen-chia-chien-eric/"
+            },
+            {
+              "name": "Pedro Rada",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/rada-pedro/"
+            }
+          ]
+        },
+        {
+          "name": "Psychology, biological",
+          "children": [
+            {
+              "name": "Rebecca Hock",
+              "url": NaN
+            },
+            {
+              "name": "Szechai Kwok",
+              "url": "http://www.kwoklab.org/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Data and computer sciences",
+      "children": [
+        {
+          "name": "Artificial intelligence",
+          "children": [
+            {
+              "name": "Anastasia Tsigkou",
+              "url": "https://euraxess.ec.europa.eu/worldwide/china/network-european-researchers-biology-and-medicine-china"
+            },
+            {
+              "name": "Bing Luo",
+              "url": "https://luobing1008.github.io/"
+            },
+            {
+              "name": "Feng Tian",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/tian-feng/"
+            },
+            {
+              "name": "Ming Li",
+              "url": "https://scholars.duke.edu/person/MingLi"
+            },
+            {
+              "name": "Ming-chun Huang",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-ming-chun/"
+            },
+            {
+              "name": "Mustafa Misir",
+              "url": "http://mustafamisir.github.io"
+            }
+          ]
+        },
+        {
+          "name": "Computer communication",
+          "children": [
+            {
+              "name": "Peng Sun",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/sun-peng/"
+            }
+          ]
+        },
+        {
+          "name": "Data mining",
+          "children": [
+            {
+              "name": "Pengzhan Guo",
+              "url": "http://pengzhanguo.github.io"
+            }
+          ]
+        },
+        {
+          "name": "Software engineering",
+          "children": [
+            {
+              "name": "Jiang Long",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/long-jiang/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Environmental science and sustainability",
+      "children": [
+        {
+          "name": "Environmental science",
+          "children": [
+            {
+              "name": "Floyd Beckford",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/beckford-floyd/"
+            },
+            {
+              "name": "Hyun-Min Kim",
+              "url": "https://sites.duke.edu/kimlab"
+            },
+            {
+              "name": "William Winner",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/winner-william/"
+            }
+          ]
+        },
+        {
+          "name": "Environmental sciences",
+          "children": [
+            {
+              "name": "Chi-Yeung(Jimmy) Choi",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/choi-chi-yeung-jimmy/"
+            },
+            {
+              "name": "Ka Leung Lam",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/lam-ka-leung/"
+            },
+            {
+              "name": "Zuchuan Li",
+              "url": "https://sites.duke.edu/sagdku/"
+            }
+          ]
+        },
+        {
+          "name": "Green & sustainable science & technology",
+          "children": [
+            {
+              "name": "Ding Ma",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/ma-ding/"
+            },
+            {
+              "name": "Yiu Wing Kam",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/kam-yiu-wing-jason/"
+            }
+          ]
+        },
+        {
+          "name": "Materials science, coatings & films",
+          "children": [
+            {
+              "name": "Xinrong Lin",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/xinrong-lin/"
+            }
+          ]
+        },
+        {
+          "name": "Molecular biology",
+          "children": [
+            {
+              "name": "Andrew Lin",
+              "url": NaN
+            },
+            {
+              "name": "Eunyu Kim",
+              "url": "http://eunyu.kim.lab.com/"
+            },
+            {
+              "name": "Ferdinand Kappes",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/kappes-ferdinand/"
+            },
+            {
+              "name": "Huansheng Cao",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cao-huansheng/"
+            },
+            {
+              "name": "Jianbo Yue",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/yue-jianbo/"
+            },
+            {
+              "name": "Joohyun Lee",
+              "url": "jleelab.org"
+            },
+            {
+              "name": "Kai Huang",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-kai/"
+            },
+            {
+              "name": "Linfeng Huang",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-linfeng/"
+            },
+            {
+              "name": "Renee Richer",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/richer-renee/"
+            }
+          ]
+        },
+        {
+          "name": "Polymer science",
+          "children": [
+            {
+              "name": "Mark Spaller",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/spaller-mark/"
+            },
+            {
+              "name": "Shan Wang",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/wang-shan/"
+            }
+          ]
+        },
+        {
+          "name": "Psychiatry",
+          "children": [
+            {
+              "name": "Chuanhui Gu",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/gu-chuanhui/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Math, physical and materials sciences",
+      "children": [
+        {
+          "name": "Applied math",
+          "children": [
+            {
+              "name": "Konstantinos Efstathiou",
+              "url": "https://www.efstathiou.gr/"
+            },
+            {
+              "name": "Marcus Werner",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/werner-marcus/"
+            },
+            {
+              "name": "Shixin Xu",
+              "url": "https://sites.google.com/site/shixinxupage/"
+            },
+            {
+              "name": "Xiaoqian Xu",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/xu-xiaoqian/"
+            }
+          ]
+        },
+        {
+          "name": "Biophysics",
+          "children": [
+            {
+              "name": "Kai Zhang",
+              "url": "https://sites.google.com/site/kaizhangstatmech/"
+            }
+          ]
+        },
+        {
+          "name": "Chemistry, medicinal",
+          "children": [
+            {
+              "name": "Weiwei Shi",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/shi-weiwei/"
+            }
+          ]
+        },
+        {
+          "name": "Chemistry, physical",
+          "children": [
+            {
+              "name": "Song Gao",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/gao-song/"
+            }
+          ]
+        },
+        {
+          "name": "Education & educational research",
+          "children": [
+            {
+              "name": "Changcheng Zheng",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/zheng-changcheng/"
+            }
+          ]
+        },
+        {
+          "name": "Materials science, biomaterials",
+          "children": [
+            {
+              "name": "Tan Zhang",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/zhang-tan/"
+            }
+          ]
+        },
+        {
+          "name": "Materials science, characterization & testing",
+          "children": [
+            {
+              "name": "Xiawa Wang",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/wang-xiawa/"
+            }
+          ]
+        },
+        {
+          "name": "Materials science, multidisciplinary",
+          "children": [
+            {
+              "name": "Myung-Joong Hwang",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/hwang-myung-joong/"
+            }
+          ]
+        },
+        {
+          "name": "Mathematics, interdisciplinary applications",
+          "children": [
+            {
+              "name": "Dangxing Chen",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/chen-dang-xing/"
+            },
+            {
+              "name": "Pascal Grange",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/grange-pascal/"
+            }
+          ]
+        },
+        {
+          "name": "Physics, condensed matter",
+          "children": [
+            {
+              "name": "Domna Kotsifaki",
+              "url": "https://dkotsifaki.weebly.com/"
+            }
+          ]
+        },
+        {
+          "name": "Physics, multidisciplinary",
+          "children": [
+            {
+              "name": "Paul Stanley",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/stanley-paul/"
+            }
+          ]
+        },
+        {
+          "name": "Pure math",
+          "children": [
+            {
+              "name": "Zhe Liu",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/liu-zhe/"
+            },
+            {
+              "name": "Zhenghui Huo",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huo-zhenghui/"
+            }
+          ]
+        },
+        {
+          "name": "Statistics & probability",
+          "children": [
+            {
+              "name": "Dongmian Zou",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/zou-dongmian/"
+            },
+            {
+              "name": "Italo Simonelli",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/simonelli-italo/"
+            },
+            {
+              "name": "Lin Jiu",
+              "url": "https://jiulin90.github.io/"
+            },
+            {
+              "name": "Xingshi Cai",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cai-xing-shi/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+})}
 
 function _dx(){return(
 30
@@ -611,6 +625,53 @@ function _margin(){return(
 function _d3(require){return(
 require("d3@6")
 )}
+
+function searchTreeByName() {
+  var searchText = document.getElementById("search").value;
+  var paths = searchTree(treeRoot, searchText,[]);
+  if(typeof(paths) !== "undefined"){
+      openPaths(paths);
+  }
+  else{
+      alert(searchText + " not found!");
+  }
+}
+
+function openPaths(paths){
+  for(var i=0;i<paths.length;i++){
+      if(paths[i].id !== "1"){//i.e. not root
+          paths[i].class = 'found';
+          if(paths[i]._children){ //if children are hidden: open them, otherwise: don't do anything
+              paths[i].children = paths[i]._children;
+              paths[i]._children = null;
+          }
+          update(paths[i]);
+      }
+   }
+}
+
+function searchTree(obj,search,path){
+  if(obj.name === search){ //if search is found return, add the object to the path and return it
+      path.push(obj);
+      return path;
+  }
+  else if(obj.children || obj._children){ //if children are collapsed d3 object will have them instantiated as _children
+     var children = (obj.children) ? obj.children : obj._children;
+     for(var i=0;i<children.length;i++){
+          path.push(obj);// we assume this path is the right one
+          var found = searchTree(children[i],search,path);
+          if(found){// we were right, this should return the bubbled-up path from the first if statement
+              return found;
+          }
+          else{//we were wrong, remove this parent from the path and continue iterating
+              path.pop();
+          }
+      }
+  }
+  else{//not the right object, return false so it will continue to iterate in the loop
+      return false;
+  }
+}
 
 export default function define(runtime, observer) {
   const main = runtime.module();
