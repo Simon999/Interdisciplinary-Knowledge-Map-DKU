@@ -178,11 +178,11 @@ function _data(FileAttachment){return({
           "children": [
             {
               "name": "Rebecca Hock",
-              "url": NaN
+              "url": "https://dku-cn.academia.edu/RebeccaHockPhD"
             },
             {
               "name": "Sajid Umar",
-              "url": NaN
+              "url": "https://newstatic.dukekunshan.edu.cn/dkumain/wp-content/uploads/2022/05/25170246/CV-SAJID-UMAR-2022.pdf"
             }
           ]
         },
@@ -258,7 +258,7 @@ function _data(FileAttachment){return({
           "children": [
             {
               "name": "Rebecca Hock",
-              "url": NaN
+              "url": "https://dku-cn.academia.edu/RebeccaHockPhD"
             },
             {
               "name": "Szechai Kwok",
