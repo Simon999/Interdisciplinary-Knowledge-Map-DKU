@@ -36,11 +36,11 @@
     <script src="vendor/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
     <script src="js/collapsible-tree/index.js"></script>
     <script src="js/collapsible-tree/runtime.js"></script>
-    <script src="js/collapsible-tree/e257f81c745be447@360.js"></script>
+    <script src="js/collapsible-tree/e257f81c745be447@360.js" type="module"></script>
 </head>
 
 <body style="min-height: 100%; overflow-y:auto;">
-
+  
   <!-- D3 graph -->
   <div id="d3_selectable_force_directed_graph">
       <svg id="d3_svg"/>
@@ -70,7 +70,7 @@
                     Teaching</button></li>
               </ul>
             </div>
-            <input id="search" type="search" class="form-control mr-1" placeholder="Search" onkeyup="searchTreeByName()" style="z-index: 20; position: relative;">
+            <input id="search" type="search" class="form-control mr-1" placeholder="Search" style="z-index: 20; position: relative;">
             
             <span class="input-group-btn" style="float: left; left:10px; z-index: 20; position: relative;" >
               <button class="btn btn-outline-secondary" type="button" onclick="onHelpClick()">
@@ -237,7 +237,9 @@
   
   <!-- custom by lai -->
   
-  <script>
+  <script type="module">
+    import {searchTreeByName} from "./js/collapsible-tree/e257f81c745be447@360.js"
+    //import{*} from "./js/d3-graph.js"
     $(document).ready(function(){
       // add active class if click and replace the Views of the current item
       $(".dropdown-menu li").click(function(){
@@ -250,10 +252,30 @@
           $("#collapsible-tree-container").addClass('d-none');
           $("#detail-area-container").removeClass('d-none');
         }else{
-          $("#collapsible-tree-container").removeClass('d-none');
           $("#detail-area-container").addClass('d-none');
+          $("#collapsible-tree-container").removeClass('d-none');
         };
-        
+        if (itemName != "collapsi-item") {
+          document.getElementById("search").addEventListener("keypress", function(event) {
+            // If the user presses the "Enter" key on the keyboard
+            if (event.key === "Enter") {
+              // Cancel the default action, if needed
+              event.preventDefault();
+              // Trigger the search function
+              searchByName();
+            }
+          });
+        } else {
+          document.getElementById("search").addEventListener("keypress", function(event) {
+            // If the user presses the "Enter" key on the keyboard
+            if (event.key === "Enter") {
+              // Cancel the default action, if needed
+              event.preventDefault();
+              // Trigger the search function
+              searchTreeByName();
+            }
+          });
+        }
       });
   
     });
@@ -309,6 +331,7 @@
   <script type="module">
     import define from "./js/collapsible-tree/index.js";
     import {Runtime, Library, Inspector} from "./js/collapsible-tree/runtime.js";
+    
     function onTreeClick() {
       var x = document.getElementById("collapsible-tree-container");
       var y = document.getElementById("d3_svg");
@@ -320,7 +343,7 @@
       const runtime = new Runtime();
       const main = runtime.module(define, Inspector.into(x));
     }
-    document.querySelector('#CollapsibleTree').addEventListener('click', onTreeClick)
+    document.querySelector('#CollapsibleTree').addEventListener('click', onTreeClick);
   </script>
   <style>
     #help-container { 

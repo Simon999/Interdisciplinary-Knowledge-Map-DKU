@@ -4,12 +4,22 @@ md`# Collapsible Tree
 
 Click a black node to expand or collapse [the tree](/@d3/tidy-tree).`
 )}
-var treeRoot = null;
+var rootGlobal = null;
+var treeGlobal = null;
+var svgGlobal = null;
+var diagonalGlobal = null;
+var marginGlobal = null;
+var widthGlobal = null;
+var dxGloabl = null;
 
 function _chart(d3,data,dy,margin,width,dx,tree,diagonal)
 {
   const root = d3.hierarchy(data);
-  treeRoot = root;
+  rootGlobal = root;
+  treeGlobal = tree;
+  marginGlobal = margin;
+  widthGlobal = width;
+  dxGloabl = dx;
   root.x0 = dy / 2;
   root.y0 = 0;
   root.descendants().forEach((d, i) => {
@@ -17,12 +27,15 @@ function _chart(d3,data,dy,margin,width,dx,tree,diagonal)
     d._children = d.children;
     if (d.depth && d.data.name.length !== 7) d.children = null;
   });
+  
+  var diagonalGlobal = diagonal;
 
   const svg = d3.create("svg")
       .attr("viewBox", [-margin.left, -margin.top, width, dx])
       .style("font", "11px sans-serif")
       .style("user-select", "none");
-
+  svgGlobal = svg;
+  
   const gLink = svg.append("g")
       .attr("fill", "none")
       .attr("stroke", "#555")
@@ -626,9 +639,9 @@ function _d3(require){return(
 require("d3@6")
 )}
 
-function searchTreeByName() {
+export function searchTreeByName() {
   var searchText = document.getElementById("search").value;
-  var paths = searchTree(treeRoot, searchText,[]);
+  var paths = searchTree(rootGlobal, searchText,[]);
   if(typeof(paths) !== "undefined"){
       openPaths(paths);
   }
@@ -638,20 +651,24 @@ function searchTreeByName() {
 }
 
 function openPaths(paths){
+  var fullPath = '';
   for(var i=0;i<paths.length;i++){
+      fullPath += paths[i].data.name + '/';
       if(paths[i].id !== "1"){//i.e. not root
           paths[i].class = 'found';
           if(paths[i]._children){ //if children are hidden: open them, otherwise: don't do anything
               paths[i].children = paths[i]._children;
               paths[i]._children = null;
           }
-          update(paths[i]);
+          //update(paths[i], treeGlobal, rootGlobal, svgGlobal, diagonalGlobal, marginGlobal, widthGlobal, dxGloabl);
       }
-   }
+  }
+  alert("Found, the path is: " + fullPath);
 }
 
 function searchTree(obj,search,path){
-  if(obj.name === search){ //if search is found return, add the object to the path and return it
+  //alert("obj.data.name:" + obj.data.name);
+  if(obj.data.name.trim().toLowerCase() === search.trim().toLowerCase()){ //if search is found return, add the object to the path and return it
       path.push(obj);
       return path;
   }
