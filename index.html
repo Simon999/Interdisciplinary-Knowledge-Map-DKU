@@ -248,8 +248,10 @@
         console.log(itemName);
         if(itemName == "teaching-item" || itemName == "faculty-item" || itemName == "area-item" || itemName == "detail-item") {
           $("#collapsible-tree-container").addClass('d-none');
+          $("#detail-area-container").removeClass('d-none');
         }else{
           $("#collapsible-tree-container").removeClass('d-none');
+          $("#detail-area-container").addClass('d-none');
         };
         
       });
