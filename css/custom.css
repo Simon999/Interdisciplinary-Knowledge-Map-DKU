@@ -3,8 +3,14 @@ body, html{
     
     overflow-y: visible !important;
 }
+/*custom menu begin*/
+
+/*custom menu end*/
 #help-container {
     height: calc(100% - 90px);
+    width: 100%;
+    position: absolute !important;
+    bottom: 10px;
 }
 .help-tip {
     border: none !important;
@@ -21,12 +27,35 @@ body, html{
     overflow-y: scroll;
     width: 100%;
 }
+.help-tip > div .glyphicon.glyphicon-remove {
+  position: absolute;
+  top: 9px;
+  right: 13px;
+}
+.help-tip > div .glyphicon.glyphicon-remove:hover {
+    cursor: pointer;
+}
 @media screen and (max-width: 1919px) {}
 @media screen and (max-width: 1279px) {}
 @media screen and (max-width: 1023px) {
-    .help-tip {
-        width: 50%;
+    .help-tip,#bottom_sheet {
+        width: 40%;
+        max-width: 40%;
     }
 }
-@media screen and (max-width: 767px) {}
-@media screen and (max-width: 595px) {}
+@media screen and (max-width: 767px) {
+    #bottom_sheet {
+        width: 60%;
+        max-width: 60%;
+    }
+}
+@media screen and (max-width: 595px) {
+    .help-tip,#bottom_sheet {
+        width: 90%;
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 478px) {
+    
+}

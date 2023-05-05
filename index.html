@@ -38,6 +38,7 @@
     <script src="js/collapsible-tree/index.js"></script>
     <script src="js/collapsible-tree/runtime.js"></script>
     <script src="js/collapsible-tree/e257f81c745be447@360.js" type="module"></script>
+    <script src="js/custom.js"></script>
 </head>
 
 <body style="min-height: 100%; overflow-y:auto;">
@@ -73,11 +74,16 @@
             </div>
             <input id="search" type="search" class="form-control mr-1" placeholder="Search" style="z-index: 20; position: relative;">
             
-            <span class="input-group-btn" style="float: left; left:10px; z-index: 20; position: relative;" >
+            <div class="input-group-btn" style="float: left; left:10px; z-index: 20; position: relative;" >
               <button class="btn btn-outline-secondary" type="button" onclick="onHelpClick()">
                 <span class="glyphicon glyphicon-question-sign"></span>
               </button>
-            </span>
+            </div>
+            <div class="input-group-btn" style="float: left; left:10px; z-index: 20; position: relative;" >
+              <button class="btn btn-outline-secondary" type="button" onclick="onHelpClick()">
+                <span class="glyphicon glyphicon-question-sign"></span>
+              </button>
+            </div>
             
             <!-- <span class="input-group-btn" id="detail-area-button">
               <button class="btn btn-outline-secondary" type="button" onclick="onAreaDetailClick()">Detail</button>
@@ -112,9 +118,10 @@
   <div class="observablehq" id="collapsible-tree-container" style="position: relative; overflow-x: auto;overflow-y: scroll; max-height: 100%;">
   </div>
   <!-- Help & About -->
-  <div id="help-container" style="position: relative; z-index: 50">
+  <div id="help-container" style="position: relative; z-index: 50; display:none;">
       <div class="help-tip" style="font-size: 18px; color: #065e87; font-weight: 600; font-family:calibri;">
           <div>
+            <span class="glyphicon glyphicon-remove"></span>
             <p>Contributors: <a href="mailto:junyi.tao@dukekunshan.edu.cn">Junyi Tao</a>;<a href="mailto:peng.lai@dukekunshan.edu.cn">Peng Lai</a>;<a href="mailto:shuai.dong@dukekunshan.edu.cn">Shuai Dong</a>;</p>
               <p style = "line-height: 20px; margin-left: 0px;">
                   ★ <strong>Shift views</strong> (research & teaching)
@@ -266,6 +273,8 @@
       $(".dropdown-menu li").click(function(){
         //$(this).addClass("item-active");
         //$(this).siblings().removeClass("item-active");
+        $("#bottom_sheet").css('display', 'none');
+        $("#help-container").css('display', 'none');
         $("#dropdownMenuButton .switch-title").html($(this).text());
         var itemName = $(this).attr('class');
         console.log(itemName);
