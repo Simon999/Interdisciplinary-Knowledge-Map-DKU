@@ -1,0 +1,20 @@
+/* Custom Css by Lai */
+body, html{
+    min-height: 800px !important;
+    overflow-y: visible !important;
+}
+#help-container {
+    height: calc(100% - 90px);
+}
+.help-tip {
+    border: none !important;
+    height: 100%;
+    overflow: hidden;
+    min-height: 700px;
+    width: 30vw;
+    border-radius: unset;
+}
+.help-tip > div {
+    height: auto !important;
+    bottom: 0;
+}
