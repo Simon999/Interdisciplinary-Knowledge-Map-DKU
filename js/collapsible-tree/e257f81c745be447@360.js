@@ -29,7 +29,8 @@ function _chart(d3,data,dy,margin,width,dx,tree,diagonal)
   });
   
   var diagonalGlobal = diagonal;
-
+  // zoom according to the screen size
+  width = width / (width / 1024);
   const svg = d3.create("svg")
       .attr("viewBox", [-margin.left, -margin.top, width, dx])
       .style("font", "11px sans-serif")
@@ -71,9 +72,9 @@ function _chart(d3,data,dy,margin,width,dx,tree,diagonal)
     // Update the nodes…
     nodes.forEach(function(d) {
       if (d.depth < 3) {
-        d.y = d.depth * 250;
-      } else {
-        d.y = d.depth * 280;
+        d.y = d.depth * (width / 6);
+      } else{
+        d.y = (d.depth - 1) * (width / 6) + width / 3;
       }
     });
 
