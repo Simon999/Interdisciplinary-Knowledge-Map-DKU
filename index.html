@@ -238,8 +238,28 @@
   <!-- custom by lai -->
   
   <script type="module">
+
     import {searchTreeByName} from "./js/collapsible-tree/e257f81c745be447@360.js"
-    //import{*} from "./js/d3-graph.js"
+
+    function onSearchByName(event) {
+      if (event.key === "Enter") {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the search function
+        searchByName();
+      }
+    };
+
+    function onSearchTreeByName(event) {
+      if (event.key === "Enter") {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the search function
+        searchTreeByName();
+      }
+    };
+    document.getElementById("search").addEventListener("keypress", onSearchByName);
+
     $(document).ready(function(){
       // add active class if click and replace the Views of the current item
       $(".dropdown-menu li").click(function(){
@@ -255,30 +275,19 @@
           $("#detail-area-container").addClass('d-none');
           $("#collapsible-tree-container").removeClass('d-none');
         };
+        
         if (itemName != "collapsi-item") {
-          document.getElementById("search").addEventListener("keypress", function(event) {
-            // If the user presses the "Enter" key on the keyboard
-            if (event.key === "Enter") {
-              // Cancel the default action, if needed
-              event.preventDefault();
-              // Trigger the search function
-              searchByName();
-            }
-          });
+          document.getElementById("search").removeEventListener("keypress", onSearchTreeByName);
+          document.getElementById("search").addEventListener("keypress", onSearchByName);
         } else {
-          document.getElementById("search").addEventListener("keypress", function(event) {
-            // If the user presses the "Enter" key on the keyboard
-            if (event.key === "Enter") {
-              // Cancel the default action, if needed
-              event.preventDefault();
-              // Trigger the search function
-              searchTreeByName();
-            }
-          });
+          document.getElementById("search").removeEventListener("keypress", onSearchByName);
+          document.getElementById("search").addEventListener("keypress", onSearchTreeByName);
         }
       });
   
     });
+
+    
   </script>
   
   <script>
