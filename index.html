@@ -294,6 +294,8 @@
         //$(this).addClass("item-active");
         //$(this).siblings().removeClass("item-active");
         $("#bottom_sheet").css('opacity', '0');
+        $("#bottom_sheet").css('bottom', '-100%');
+        $("#bottom_sheet").removeClass("open");
         $("#help-container").css('display', 'none');
         $(".main-menu-item").addClass("d-none");
         $("#dropdownMenuButton .switch-title").html($(this).text());
