@@ -32,6 +32,7 @@ body, html{
   background: #021D54DE;
   width: 30%;
   min-width: 180px;
+  max-width: 290px;
   color: #ffffff;
 }
 .main-menu-item .elementor-nav-menu li, .main-menu-item .elementor-nav-menu ul {
