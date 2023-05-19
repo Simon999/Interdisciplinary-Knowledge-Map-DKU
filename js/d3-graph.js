@@ -371,7 +371,7 @@ function showPeopleInfo(node) {
     
     $('.modal').modal('open');
     // $('#PeopleImg').attr("src", node.img); 
-    $('#PeopleName').attr("href", "here is a link!" + node.id);
+    //$('#PeopleName').attr("href", "here is a link!" + node.id);
     $('#PeopleName').text(node.properties.name);
     $('#PeopleDescription')
         .html(
@@ -393,7 +393,7 @@ function showConceptInfo(node) {
     
     $('.modal').modal('open');
     // $('#PeopleImg').attr("src", node.img); 
-    $('#PeopleName').attr("href", "here is a link!" + node.id);
+    // $('#PeopleName').attr("href", "here is a link!" + node.id);
     $('#PeopleName').text(node.properties.name);
     $('#PeopleDescription')
         .html(

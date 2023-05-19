@@ -346,6 +346,14 @@ function _data(FileAttachment){return({
           "name": "Environmental science",
           "children": [
             {
+              "name": "Chi-Yeung(Jimmy) Choi",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/choi-chi-yeung-jimmy/"
+            },
+            {
+              "name": "Chuanhui Gu",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/gu-chuanhui/"
+            },
+            {
               "name": "Ding Ma",
               "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/ma-ding/"
             },
@@ -356,19 +364,6 @@ function _data(FileAttachment){return({
             {
               "name": "Song Gao",
               "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/gao-song/"
-            }
-          ]
-        },
-        {
-          "name": "Environmental sciences",
-          "children": [
-            {
-              "name": "Chi-Yeung(Jimmy) Choi",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/choi-chi-yeung-jimmy/"
-            },
-            {
-              "name": "Chuanhui Gu",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/gu-chuanhui/"
             },
             {
               "name": "Zuchuan Li",
