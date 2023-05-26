@@ -376,7 +376,7 @@ function showPeopleInfo(node) {
     $('#PeopleDescription')
         .html(
             "<br/><i><strong>"+ node.properties.title + " at " + node.properties.affiliation + "</i></strong>"+
-            "<br/><i><strong>"+ node.properties.divition + " Division </i></strong>" +
+            "<br/><i><strong>"+ node.properties.division + " Division </i></strong>" +
             "<br/><i>"+ node.properties.email  +"</i>" +
             "<br/><i>Personal Website: "+ node.properties.website_link  +"</i>" + "<br>" +
             "<br/><strong>Primary Research Direction</strong>: <i>"+ node.properties.research_direction + "</i>" +
@@ -384,8 +384,8 @@ function showPeopleInfo(node) {
             "<br/><strong>Research Interests</strong>: <br/><i>"+ node.properties.research_interest + "</i>" +
 
             "<br/><br/><strong>Support Major</strong>: <i>"+ node.properties.major_support_primary + " (primary), "+ node.properties.major_support_secondary +" (secondary)</i>" +
-            "<br><strong>Teaching</strong>: " + node.properties.course_taught +
-            "<br/><strong>Advising</strong>: to be updated!<br/>"
+            "<br><strong>Teaching</strong>: " + node.properties.course_taught 
+            // + "<br/><strong>Advising</strong>: to be updated!<br/>"
         );
 }
 

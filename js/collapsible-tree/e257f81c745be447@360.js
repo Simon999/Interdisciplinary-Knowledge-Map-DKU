@@ -221,10 +221,6 @@ function _data(FileAttachment){return({
               "url": "https://euraxess.ec.europa.eu/worldwide/china/network-european-researchers-biology-and-medicine-china"
             },
             {
-              "name": "Andrew Lin",
-              "url": NaN
-            },
-            {
               "name": "Eunyu Kim",
               "url": "http://eunyu.kim.lab.com/"
             },
@@ -251,6 +247,10 @@ function _data(FileAttachment){return({
             {
               "name": "Linfeng Huang",
               "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-linfeng/"
+            },
+            {
+              "name": "Xianzhi Lin",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/lin-xianzhi/"
             }
           ]
         },
@@ -262,7 +262,7 @@ function _data(FileAttachment){return({
               "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/rada-pedro/"
             },
             {
-              "name": "Szechai Kwok",
+              "name": "Sze Chai Kwok",
               "url": "http://www.kwoklab.org/"
             }
           ]
@@ -401,10 +401,6 @@ function _data(FileAttachment){return({
               "url": "https://euraxess.ec.europa.eu/worldwide/china/network-european-researchers-biology-and-medicine-china"
             },
             {
-              "name": "Andrew Lin",
-              "url": NaN
-            },
-            {
               "name": "Eunyu Kim",
               "url": "http://eunyu.kim.lab.com/"
             },
@@ -431,6 +427,10 @@ function _data(FileAttachment){return({
             {
               "name": "Linfeng Huang",
               "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-linfeng/"
+            },
+            {
+              "name": "Xianzhi Lin",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/lin-xianzhi/"
             }
           ]
         },
