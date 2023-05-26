@@ -1,0 +1,148 @@
+/* Custom css by Lai */
+body, html{  
+  overflow-y: visible !important;
+}
+/*custom menu begin*/
+.menu-container .input-group.mb-3 {
+  display: flex;
+}
+.menu-container .input-group-btn {
+  width: auto;
+}
+.menu-container #search {
+  padding-top: 0;
+  padding-bottom: 0;
+  display: block;
+}
+.menu-container #search:focus {
+  box-shadow: 0 1px 0 0 #9e9e9e;
+  border-bottom: 1px solid #9e9e9e;
+}
+.input-group-btn.main-menu {
+  left: 5px;
+}
+
+.main-menu-item {
+  z-index: 60;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 30px;
+  height: 100%;
+  background: #021D54DE;
+  width: 30%;
+  min-width: 180px;
+  max-width: 290px;
+  color: #ffffff;
+}
+.main-menu-item .elementor-nav-menu li, .main-menu-item .elementor-nav-menu ul {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.main-menu-item .elementor-item, .main-menu-item .elementor-nav-menu--dropdown .elementor-sub-item {
+  font-family: Sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #ffffff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+.main-menu-item #sm-16833426637388433-2 {
+  padding-left: 10px;
+}
+.main-menu-item .elementor-item-active {
+  color: #E97F33;
+}
+.main-menu-item i.material-icons {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+/*custom menu end*/
+#help-container {
+  height: calc(100% - 90px);
+  width: 100%;
+  position: absolute !important;
+  bottom: 10px;
+}
+.help-tip {
+  border: none !important;
+  height: 100%;
+  overflow: hidden;
+  width: 30vw;
+  border-radius: unset;
+}
+.help-tip > div {
+  height: 500px !important;
+  bottom: 0;
+  font-size: 12px;
+  padding-top: 20px;
+  overflow-y: scroll;
+  width: 100%;
+}
+.help-tip > div .glyphicon.glyphicon-remove {
+  position: absolute;
+  top: 9px;
+  right: 13px;
+}
+.help-tip > div .glyphicon.glyphicon-remove:hover {
+  cursor: pointer;
+}
+@media screen and (max-width: 1919px) {}
+@media screen and (max-width: 1279px) {}
+@media screen and (max-width: 1023px) {
+  .help-tip,#bottom_sheet {
+    width: 40%;
+    max-width: 40%;
+  }
+}
+@media screen and (max-width: 767px) {
+  #bottom_sheet {
+    width: 60%;
+    max-width: 60%;
+  }
+}
+@media screen and (max-width: 595px) {
+  .help-tip,#bottom_sheet {
+    width: 90%;
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 478px) {
+  .menu-container {
+    width: 100%;
+  }
+  .menu-container #search {
+    padding-left: 5px;
+  }
+  .menu-container, .menu-container .switch-title {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 420px) {
+  #dropdownMenuButton {
+    padding: 5px;
+  }
+  .container.menu-container {
+    padding: 0;
+  }
+  .container.menu-container > .row {
+    margin: 0 auto;
+  }
+  .container.menu-container > .row .col-md-6 {
+    padding: 0;
+  }
+  .menu-container #search {
+    padding: 5px;
+  }
+}

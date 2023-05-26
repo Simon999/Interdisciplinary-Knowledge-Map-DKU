@@ -19,6 +19,7 @@
     <link rel='stylesheet' href='css/switch.css'>
     <link rel='stylesheet' href='css/search.css'>
     <link rel='stylesheet' href='css/info.css'>
+    <link rel='stylesheet' href='css/custom.css'>
     <!-- js -->
     <script src="vendor/d3js.org/d3.v4.js"></script>
     <!-- data -->
@@ -37,6 +38,7 @@
     <script src="js/collapsible-tree/index.js"></script>
     <script src="js/collapsible-tree/runtime.js"></script>
     <script src="js/collapsible-tree/e257f81c745be447@360.js" type="module"></script>
+    <script src="js/custom.js"></script>
 </head>
 
 <body style="min-height: 100%; overflow-y:auto;">
@@ -72,11 +74,16 @@
             </div>
             <input id="search" type="search" class="form-control mr-1" placeholder="Search" style="z-index: 20; position: relative;">
             
-            <span class="input-group-btn" style="float: left; left:10px; z-index: 20; position: relative;" >
+            <div class="input-group-btn" style="z-index: 20; position: relative;" >
               <button class="btn btn-outline-secondary" type="button" onclick="onHelpClick()">
                 <span class="glyphicon glyphicon-question-sign"></span>
               </button>
-            </span>
+            </div>
+            <div class="input-group-btn main-menu" style="z-index: 20; position: relative;" >
+              <button class="btn btn-outline-secondary menu-ico" type="button">
+                <span class="glyphicon glyphicon-menu-hamburger"></span>
+              </button>
+            </div>
             
             <!-- <span class="input-group-btn" id="detail-area-button">
               <button class="btn btn-outline-secondary" type="button" onclick="onAreaDetailClick()">Detail</button>
@@ -111,9 +118,10 @@
   <div class="observablehq" id="collapsible-tree-container" style="position: relative; overflow-x: auto;overflow-y: scroll; max-height: 100%;">
   </div>
   <!-- Help & About -->
-  <div id="help-container" style="position: relative; z-index: 50">
+  <div id="help-container" style="position: relative; z-index: 50; display:none;">
       <div class="help-tip" style="font-size: 18px; color: #065e87; font-weight: 600; font-family:calibri;">
           <div>
+            <span class="glyphicon glyphicon-remove"></span>
             <p>Contributors: <a href="mailto:junyi.tao@dukekunshan.edu.cn">Junyi Tao</a>;<a href="mailto:peng.lai@dukekunshan.edu.cn">Peng Lai</a>;<a href="mailto:shuai.dong@dukekunshan.edu.cn">Shuai Dong</a>;</p>
               <p style = "line-height: 20px; margin-left: 0px;">
                   ★ <strong>Shift views</strong> (research & teaching)
@@ -215,6 +223,26 @@
           </a>
       </div>
   </div>
+
+  <!-- main menu -->
+  <div class="main-menu-item d-none">
+    <i class="material-icons white-text small">close</i>
+    <ul id="menu-1-2155a271" class="elementor-nav-menu" data-smartmenus-id="16833426637388433">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-890 current_page_item menu-item-1060"><a href="https://dnas.dukekunshan.edu.cn/" class="elementor-item">Home</a></li>
+      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-440"><a href="#" class="elementor-item elementor-item-anchor has-submenu" id="sm-16833426637388433-1" >Faculty<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
+      <ul class="sub-menu elementor-nav-menu--dropdown d-none" id="sm-16833426637388433-2" role="group">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-592"><a href="https://dnas.dukekunshan.edu.cn/biology/" class="elementor-sub-item">Biology</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-591"><a href="https://dnas.dukekunshan.edu.cn/chemistry/" class="elementor-sub-item">Chemistry</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-590"><a href="https://dnas.dukekunshan.edu.cn/data-science/" class="elementor-sub-item">Data Science</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-588"><a href="https://dnas.dukekunshan.edu.cn/am/" class="elementor-sub-item">Mathematics</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-589"><a href="https://dnas.dukekunshan.edu.cn/physics/" class="elementor-sub-item">Physics</a></li>
+      </ul>
+      </li>
+      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-283"><a href="#" class="elementor-item  elementor-item-active">Research</a></li>
+      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-284"><a href="https://ugstudies.dukekunshan.edu.cn/" class="elementor-item">Education</a></li>
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1091"><a href="https://dnas.dukekunshan.edu.cn/events/" class="elementor-item">Events</a></li>
+    </ul>
+  </div>
   
   <script>
       $('.modal').modal({
@@ -265,6 +293,11 @@
       $(".dropdown-menu li").click(function(){
         //$(this).addClass("item-active");
         //$(this).siblings().removeClass("item-active");
+        $("#bottom_sheet").css('opacity', '0');
+        $("#bottom_sheet").css('bottom', '-100%');
+        $("#bottom_sheet").removeClass("open");
+        $("#help-container").css('display', 'none');
+        $(".main-menu-item").addClass("d-none");
         $("#dropdownMenuButton .switch-title").html($(this).text());
         var itemName = $(this).attr('class');
         console.log(itemName);
