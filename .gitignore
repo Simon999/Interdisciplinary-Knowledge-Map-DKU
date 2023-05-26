@@ -1,5 +1,1 @@
 # Ignore other files and folders whithout d3-graph.js, custom.js and init.js
-js/*
-!js/d3-graph.js
-!js/init.js
-!js/custom.js
