@@ -207,7 +207,40 @@ body, html{
 .custom-research-page .nav-header nav .dropdown-item:hover {
   background-color: #E97f33;
 }
+.custom-research-page .nav-header nav button:focus {
+  background-color: transparent;
+}
 
 .custom-research-page #d3_selectable_force_directed_graph {
   top: unset;
+}
+
+@media (max-width: 1024px) {
+  .custom-research-page .nav-header nav ul li a.nav-link, .custom-research-page .nav-header nav .dropdown-item {
+    font-size: 14px !important;
+    font-weight: 500;
+    padding: 10px 20px;
+    line-height: 20px;
+  }
+  .custom-research-page .navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+  
+}
+@media screen and (max-width: 767px) {
+  .custom-research-page .nav-header nav {
+    padding: 10px 20px 10px 20px;
+  }
+  .custom-research-page .container.menu-research .logo {
+    width: 100%;
+  }
+  .heading-title {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 595px) {
+  .custom-research-page .nav-header nav button {
+    border: unset;
+  }
 }
