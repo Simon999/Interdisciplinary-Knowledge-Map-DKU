@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<head>
+    <title>dkuKnowledgeMap</title>
+
+    <meta name="description" content="Duke Kunshan University Knowledge Mapping">
+    <meta name="author" content="Junyi Tao">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <link rel='stylesheet' href='vendor/ajax/libs/materialize/0.98.1/css/materialize.min.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+    <!-- Load bootstrap -->
+    <link rel="stylesheet" href="vendor/bootstrap/4.6.2/css/bootstrap.min.css">
+    <script src="vendor/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="vendor/bootstrap/4.6.2/js/bootstrap.min.js"></script>
+    
+    <!-- css -->
+    <link rel='stylesheet' href='css/graph.css'>
+    <link rel='stylesheet' href='css/style.css'>
+    <link rel='stylesheet' href='css/switch.css'>
+    <link rel='stylesheet' href='css/search.css'>
+    <link rel='stylesheet' href='css/info.css'>
+    <link rel='stylesheet' href='css/custom.css'>
+    <!-- js -->
+    <script src="vendor/d3js.org/d3.v4.js"></script>
+    <!-- data -->
+    <!-- graph -->
+    <script src="js\02-16-2023\research-faculty.js"></script>
+    <script src="js\02-16-2023\research-area.js"></script>
+    <script src="js\02-16-2023\teaching.js"></script>
+    <script src="js\02-16-2023\research-area-detail.js"></script>
+
+    <!-- js -->
+    <script src="js/init.js"></script>
+    <script src="js/d3-graph.js"></script>
+    <script src="vendor/d3js.org/d3-selection-multi.v0.4.min.js"></script>
+    <script src="vendor/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="vendor/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+    <script src="js/collapsible-tree/index.js"></script>
+    <script src="js/collapsible-tree/runtime.js"></script>
+    <script src="js/collapsible-tree/e257f81c745be447@360.js" type="module"></script>
+    <script src="js/custom.js"></script>
+</head>
+
+<body style="min-height: 100%; overflow-y:auto;" class="custom-research-page">
+  
+  <header>
+    <div class="container menu-research">
+      <div class="row">
+          <div class="logo">
+            <img src="https://dku-web-admissions.s3.cn-north-1.amazonaws.com.cn/wp-content/uploads/dnas/2022/02/15172049/logo-footer-768x330.png">
+          </div>
+          <div class="heading-title">
+            <h2 class="elementor-heading-title elementor-size-default">Division of <br>Natural and Applied Sciences</h2>
+          </div>
+      </div>
+    </div>
+    <div class="nav-header">
+      <div class="container nav-bar-custom">
+        <dvi class="row">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </dvi>
+      </div>
+    </div>
+  </header>
+  <!-- D3 graph -->
+  
+  <div id="d3_selectable_force_directed_graph">
+      <svg id="d3_svg"/>
+  </div>
+  
+  
+  
+  <!-- Detail table of area -->
+  <div class="container" id="detail-area-container" style="position: relative;">
+    <div class="row justify-content-center">
+          <div class="col-auto" style="font-size: 10px; color: #065e87; font-weight: 600; font-family:calibri; overflow-x: auto;overflow-y: scroll; max-height: 500px;">
+            <table class="table table-scroll table-responsive table-striped table-hover" style="overflow-x: auto;overflow-y: scroll; max-height: 500px;">
+              <thead>
+                <tr>
+                  <th scope="col">Id</th>
+                  <th scope="col">Research Direction</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Course Taught</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Research Interest</th>
+                </tr>
+              </thead>
+              <tbody id="tableBody" >
+              </tbody>
+          </table>
+        </div>
+    </div>
+  </div>
+  <!-- collapsible-tree-container -->
+  <div class="observablehq" id="collapsible-tree-container" style="position: relative; overflow-x: auto;overflow-y: scroll; max-height: 100%;">
+  </div>
+  <!-- Help & About -->
+  <div id="help-container" style="position: relative; z-index: 50; display:none;">
+      <div class="help-tip" style="font-size: 18px; color: #065e87; font-weight: 600; font-family:calibri;">
+          <div>
+            <span class="glyphicon glyphicon-remove"></span>
+            <p>Contributors: <a href="mailto:junyi.tao@dukekunshan.edu.cn">Junyi Tao</a>;<a href="mailto:peng.lai@dukekunshan.edu.cn">Peng Lai</a>;<a href="mailto:shuai.dong@dukekunshan.edu.cn">Shuai Dong</a>;</p>
+              <p style = "line-height: 20px; margin-left: 0px;">
+                  ★ <strong>Shift views</strong> (research & teaching)
+                  <br>★ <strong>Click on nodes to access more info</strong>
+                  <br>★ <strong>Search keywords to target nodes</strong>
+              </p>
+  
+  
+              <p id="legendHeader">Four Primary Research Pillar (big circles)</p>
+              <p style = "line-height: 18px; margin-left: 20px;"> 
+                1. Biological Sciences and Health
+                <br>2. Physical and applied sciences
+                <br>3. Environmental science and sustainability
+                <br>4. Data and computer sciences
+              </p>
+              
+              <p id="legendHeader">Color Code</p>
+  
+  
+              <div class="legend-row">
+                  <div id="search-match-node" class="node-symbol"></div>
+                  <p>Node matched by search or selected</p>
+              </div>
+  
+              <div class="legend-row">
+                  <div id="regular-node" class="node-symbol"></div>
+                  <p>Research Interest</p>
+              </div>
+              
+  
+              <p>Faculty, grouped by research directions</p>
+              
+              <div class="legend-row">
+                <div id="area-math-node" class="node-symbol"></div>
+                <p>Faculty | Mathematics</p>
+              </div>
+              <div class="legend-row">
+                <div id="area-ds-node" class="node-symbol"></div>
+                <p>Faculty | Data Science</p>
+              </div>
+              <p></p>
+              <div class="legend-row">
+                <div id="area-phys-node" class="node-symbol"></div>
+                <p>Faculty | Physics</p>
+              </div>
+              <div class="legend-row">
+                <div id="area-chem-node" class="node-symbol"></div>
+                <p>Faculty | Chemistry</p>
+              </div>
+              <div class="legend-row">
+                <div id="area-biol-node" class="node-symbol"></div>
+                <p>Faculty | Biology</p>
+              </div>
+              <p></p>
+              <div class="legend-row">
+                <div id="area-gh-node" class="node-symbol"></div>
+                <p>Faculty | Global Health</p>
+              </div>
+              <div class="legend-row">
+                <div id="area-beha-node" class="node-symbol"></div>
+                <p>Faculty | Behavoural Science</p>
+              </div>
+              <div class="legend-row">
+                <div id="area-envi-node" class="node-symbol"></div>
+                <p>Faculty | Environmental Science</p>
+              </div>
+              
+  
+              <div class="legend-row">
+                <div id="area-mult-node" class="node-symbol"></div>
+                <p>Faculty | More Than One Directions</p>
+              </div>
+              
+              
+              
+          </div>
+      </div>    
+  </div>
+  
+  <!-- info card -->
+  <div id="bottom_sheet" class="modal bottom-sheet modal-fixed-footer">
+      <div id="modalContent" class="modal-content">
+          <!-- <img id="peopleImg"> -->
+          <div id="PeopleBio">
+              <a id="PeopleName" target="_blank"></a>
+              <p id="PeopleDescription"></p>
+          </div>
+      </div>
+      <!-- close the info card -->
+      <!-- reference: 
+              https://www.freetimelearning.com/materialize-css/materialize-css-buttons.php
+              https://www.freetimelearning.com/materialize-css/materialize-css-icons.php -->
+      <div class="modal-footer">
+          
+          <a id="closeButton" class="btn-floating btn-small btn-flat modal-action modal-close">
+              <!-- the icon -->
+              <i class="material-icons white-text tiny">close</i>
+              <!-- close -->
+          </a>
+      </div>
+  </div>
+
+  
+  <script>
+      $('.modal').modal({
+              dismissible: false,
+              preventScrolling: false,
+              opacity: .0,
+              inDuration: 500,
+              outDuration: 200,
+              startingTop: '50%',
+              endingTop: '50%'
+          }
+      );
+  </script>
+  
+  <!-- Graph initialization -->
+  <script>
+      var graphContainer = document.getElementById("d3_selectable_force_directed_graph");
+      createD3Graph(graph_teaching, graphContainer.clientWidth, graphContainer.clientHeight, 9000);
+  </script>
+  
+  <!-- custom by lai -->
+  
+  <script type="module">
+
+    import {searchTreeByName} from "./js/collapsible-tree/e257f81c745be447@360.js"
+
+    function onSearchByName(event) {
+      if (event.key === "Enter") {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the search function
+        searchByName();
+      }
+    };
+
+    function onSearchTreeByName(event) {
+      if (event.key === "Enter") {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the search function
+        searchTreeByName();
+      }
+    };
+    document.getElementById("search").addEventListener("keypress", onSearchByName);
+
+    $(document).ready(function(){
+      // add active class if click and replace the Views of the current item
+      $(".dropdown-menu li").click(function(){
+        //$(this).addClass("item-active");
+        //$(this).siblings().removeClass("item-active");
+        $("#bottom_sheet").css('opacity', '0');
+        $("#bottom_sheet").css('bottom', '-100%');
+        $("#bottom_sheet").removeClass("open");
+        $("#help-container").css('display', 'none');
+        $(".main-menu-item").addClass("d-none");
+        $("#dropdownMenuButton .switch-title").html($(this).text());
+        var itemName = $(this).attr('class');
+        console.log(itemName);
+        if(itemName == "teaching-item" || itemName == "faculty-item" || itemName == "area-item" || itemName == "detail-item") {
+          $("#collapsible-tree-container").addClass('d-none');
+          $("#detail-area-container").removeClass('d-none');
+        }else{
+          $("#detail-area-container").addClass('d-none');
+          $("#collapsible-tree-container").removeClass('d-none');
+        };
+        
+        if (itemName != "collapsi-item") {
+          document.getElementById("search").removeEventListener("keypress", onSearchTreeByName);
+          document.getElementById("search").addEventListener("keypress", onSearchByName);
+        } else {
+          document.getElementById("search").removeEventListener("keypress", onSearchByName);
+          document.getElementById("search").addEventListener("keypress", onSearchTreeByName);
+        }
+      });
+  
+    });
+
+    
+  </script>
+  
+  <script>
+  function onHelpClick() {
+    var x = document.getElementById("help-container");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+  </script>
+  
+  <script>
+  $(document).ready(function() {
+    // Loop through the data and add rows to the table
+    for (var i = 0; i < research_area_detail.length; i++) {
+      var row = '<tr>';
+      row += '<td>' + research_area_detail[i].id + '</td>';
+      row += '<td>' + research_area_detail[i].research_direction + '</td>';
+      row += '<td>' + research_area_detail[i].name + '</td>';
+      row += '<td>' + research_area_detail[i].CourseTaught + '</td>';
+      row += '<td>' + research_area_detail[i].email + '</td>';
+      row += '<td>' + research_area_detail[i].research_interest + '</td>';
+      row += '</tr>';
+      $('#tableBody').append(row);
+    }
+  });
+  </script>
+  
+  <script>
+  function onAreaDetailClick() {
+    var x = document.getElementById("detail-area-container");
+    var y = document.getElementById("d3_svg");
+    var z = document.getElementById("d3_selectable_force_directed_graph");
+    x.style.display = "block";
+    x.style.zIndex = 10;
+    y.style.display = "none";
+    z.style.zIndex = 1;
+    // var y = document.getElementById("d3_selectable_force_directed_graph");
+    // if (x.style.display === "none") {
+    //   x.style.display = "block";
+    //   y.style.display = "none";
+    // } else {
+    //   x.style.display = "none";
+    //   y.style.display = "block";
+    // }
+  }
+  </script>
+  <script type="module">
+    import define from "./js/collapsible-tree/index.js";
+    import {Runtime, Library, Inspector} from "./js/collapsible-tree/runtime.js";
+    
+    function onTreeClick() {
+      var x = document.getElementById("collapsible-tree-container");
+      var y = document.getElementById("d3_svg");
+      var z = document.getElementById("d3_selectable_force_directed_graph");
+      x.style.display = "block";
+      x.style.zIndex = 10;
+      y.style.display = "none";
+      z.style.zIndex = 1;
+      const runtime = new Runtime();
+      const main = runtime.module(define, Inspector.into(x));
+    }
+    document.querySelector('#CollapsibleTree').addEventListener('click', onTreeClick);
+  </script>
+  <style>
+    #help-container { 
+      display:none;
+    }
+    #detail-area-container { 
+      display:none;
+      margin:auto;
+    }
+    #detail-area-button {
+  /*    display:none; */
+    }
+    .menu-container {
+      margin-top: 20px;
+    }
+    /* set the table color */
+    .table {
+        color: #fff;
+        background-color: #333333;
+    }
+  
+    /* set the table header color */
+    .table thead th {
+        background-color: #555555;
+    }
+  
+    /* set the table hover color */
+    .table-hover tbody tr:hover {
+        background-color: #444444;
+    }
+  
+    /* set the table body color */
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: #444444;
+    }
+    /* disable the focus */
+    input[type=search]:focus,
+      .input-group .form-control {
+      width: auto !important;
+      background-color: rgba(238, 238, 241, 0.732);
+    }
+    input[type=search] {
+      left: 5px;
+      padding: 7px 10px 8px 36px;
+    }
+
+  /*隐藏第二个类名后*/
+  .observablehq:nth-of-type(n+2) {
+    display: none;
+  }
+  .d-none {
+    display: none !important;
+  }
+  </style>  
+
+  </body>

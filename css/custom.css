@@ -146,3 +146,33 @@ body, html{
     padding: 5px;
   }
 }
+/*Menu for Research Page*/
+.custom-research-page header {
+  background-color: #003399ED;
+}
+.custom-research-page header img {
+  max-width: 100%;
+  height: auto;
+}
+.custom-research-page header .row {
+  margin-bottom: 0;
+}
+.custom-research-page .container.menu-research .logo{
+  width: 25%;
+}
+.custom-research-page .container.menu-research .heading-title {
+  align-self: center;
+  border-left: #FFFFFFCC 1px solid;
+  padding-left: 15px;
+}
+.custom-research-page .container.menu-research h2 {
+  color: #FFFFFFCC;
+  font-family: "Roboto", Sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+  line-height: normal;
+}
+.custom-research-page #d3_selectable_force_directed_graph {
+  top: unset;
+}
