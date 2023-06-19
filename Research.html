@@ -57,30 +57,45 @@
     <div class="nav-header">
       <div class="container nav-bar-custom">
         <dvi class="row">
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <!-- <a class="navbar-brand" href="https://dnas.dukekunshan.edu.cn">Home</a> -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
           
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
+              <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
+                  <a class="nav-link" href="https://dnas.dukekunshan.edu.cn">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                    Dropdown
+                    Faculty
                   </a>
                   <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="https://dnas.dukekunshan.edu.cn/biology/">Biology</a>
+                    <a class="dropdown-item" href="https://dnas.dukekunshan.edu.cn/chemistry/">Chemistry</a>
+                    <!--<div class="dropdown-divider"></div> -->
+                    <a class="dropdown-item" href="https://dnas.dukekunshan.edu.cn/data-science/">Data Science</a>
+                    <a class="dropdown-item" href="https://dnas.dukekunshan.edu.cn/am/">Mathematics</a>
+                    <a class="dropdown-item" href="https://dnas.dukekunshan.edu.cn/physics/">Physics</a>
                   </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://dnas.dukekunshan.edu.cn/research/">Research</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                    Education
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="https://ugstudies.dukekunshan.edu.cn/">UG Education</a>
+                    <a class="dropdown-item" href="https://ugstudies.dukekunshan.edu.cn/academics/majors/">Majors</a>
+                    <a class="dropdown-item  active" href="#">Teaching</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://dnas.dukekunshan.edu.cn/events/">Events</a>
                 </li>
               </ul>
             </div>
@@ -90,11 +105,11 @@
     </div>
   </header>
   <!-- D3 graph -->
-  
-  <div id="d3_selectable_force_directed_graph">
+  <div class="d3_view">
+    <div id="d3_selectable_force_directed_graph">
       <svg id="d3_svg"/>
+    </div>
   </div>
-  
   
   
   <!-- Detail table of area -->
@@ -227,7 +242,15 @@
           </a>
       </div>
   </div>
-
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="logo">
+          <img src="https://dku-web-admissions.s3.cn-north-1.amazonaws.com.cn/wp-content/uploads/dnas/2022/02/15172049/logo-footer-768x330.png">
+        </div>
+      </div>
+    </div>
+  </footer>
   
   <script>
       $('.modal').modal({

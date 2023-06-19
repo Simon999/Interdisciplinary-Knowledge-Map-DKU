@@ -173,6 +173,41 @@ body, html{
   margin: 0;
   line-height: normal;
 }
+.custom-research-page .nav-header {
+  background-color: #003399;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+.custom-research-page .nav-header nav,
+.custom-research-page .nav-header nav .dropdown-menu {
+  height: auto;
+  padding: 0;
+  background-color: #003399;
+  margin-top: 0;
+  border-top: none;
+  box-shadow: none;
+}
+.custom-research-page #navbarSupportedContent {
+  justify-content: center;
+}
+.custom-research-page .nav-header nav ul li {
+  float: unset;
+}
+.custom-research-page .nav-header nav ul li a.nav-link,
+.custom-research-page .nav-header nav .dropdown-item {
+  line-height: normal;
+  color: #ffffff !important;
+  padding: 15px 20px;
+  font-size: 18px !important;
+  font-family: "Roboto", Sans-serif;
+}
+.dropdown-item.active, .dropdown-item:active {
+  background-color: #E97F33;
+}
+.custom-research-page .nav-header nav ul li a.nav-link:hover,
+.custom-research-page .nav-header nav .dropdown-item:hover {
+  background-color: #E97f33;
+}
+
 .custom-research-page #d3_selectable_force_directed_graph {
   top: unset;
 }
