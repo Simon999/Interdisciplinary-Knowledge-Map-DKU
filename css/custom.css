@@ -157,8 +157,15 @@ body, html{
 .custom-research-page header .row {
   margin-bottom: 0;
 }
+.custom-research-page .container.menu-research {
+  padding: 0;
+}
+.custom-research-page .container.menu-research .row {
+  margin: 0;
+}
 .custom-research-page .container.menu-research .logo{
   width: 25%;
+  margin: 5px;
 }
 .custom-research-page .container.menu-research .heading-title {
   align-self: center;
@@ -171,7 +178,7 @@ body, html{
   font-size: 18px;
   font-weight: 500;
   margin: 0;
-  line-height: normal;
+  line-height: 1;
 }
 .custom-research-page .nav-header {
   background-color: #003399;
