@@ -58,7 +58,7 @@
                     <span class="caret"></span>
               </button>
               <ul class="dropdown-menu" id="dropdown-menu-id" style = "background-color:rgba(240, 240, 240, 0.829)" role="menu">
-                <li class="faculty-item"><button style="font-size: 13px; text-align: left; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="createD3Graph(graph_research_faculty, graphContainer.clientWidth, graphContainer.clientHeight , 15600);"> 
+                <li class="faculty-item"><button style="font-size: 13px; text-align: left; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="createD3Graph(graph_research_faculty, graphContainer.clientWidth, graphContainer.clientHeight , 'faculty');"> 
                   Research | Faculty </button></li>
   
                 <!-- <li class="area-item"><button style="font-size: 13px; text-align: left; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="createD3Graph(graph_research_area, graphContainer.clientWidth, graphContainer.clientHeight, 12000);"> 
@@ -68,7 +68,7 @@
                   Research | Area-Detail </button></li> -->
                 <li class="collapsi-item"><button id="CollapsibleTree" style="font-size: 13px; text-align: center; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="onTreeClick(); ">
                   Research | Area</button></li>
-                <li class="teaching-item"><button style="font-size: 13px; text-align: center; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="createD3Graph(graph_teaching, graphContainer.clientWidth, graphContainer.clientHeight, 8000); ">
+                <li class="teaching-item"><button style="font-size: 13px; text-align: center; border: none; color:rgba(10, 29, 53, 0.889); background-color:rgba(0, 0, 255, 0);" onclick="createD3Graph(graph_teaching, graphContainer.clientWidth, graphContainer.clientHeight, 'teaching'); ">
                     Teaching</button></li>
               </ul>
             </div>
@@ -76,7 +76,8 @@
             
             <div class="input-group-btn" style="z-index: 20; position: relative;" >
               <button class="btn btn-outline-secondary" type="button" onclick="onHelpClick()">
-                <span class="glyphicon glyphicon-question-sign"></span>
+                <!-- <span class="glyphicon glyphicon-question-sign"></span> -->
+                Help
               </button>
             </div>
             <div class="input-group-btn main-menu" style="z-index: 20; position: relative;" >
@@ -260,7 +261,7 @@
   <!-- Graph initialization -->
   <script>
       var graphContainer = document.getElementById("d3_selectable_force_directed_graph");
-      createD3Graph(graph_research_faculty, graphContainer.clientWidth, graphContainer.clientHeight, 15600);
+      createD3Graph(graph_research_faculty, graphContainer.clientWidth, graphContainer.clientHeight, 'faculty');
   </script>
   
   <!-- custom by lai -->

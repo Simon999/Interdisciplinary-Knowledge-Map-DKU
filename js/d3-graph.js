@@ -16,7 +16,7 @@ var showingHighlight = true;
 
 // Shift Views 
 
-function createD3Graph(graph, parentWidth, parentHeight, reasonableScreenSizeScaleMultiple) {
+function createD3Graph(graph, parentWidth, parentHeight, pageType) {
     var x = document.getElementById("detail-area-container");
     var y = document.getElementById("d3_svg");
     var z = document.getElementById("d3_selectable_force_directed_graph");
@@ -43,10 +43,20 @@ function createD3Graph(graph, parentWidth, parentHeight, reasonableScreenSizeSca
 
     // add graph
     // give graph a reasonable size and position for different screen sizes / aspect ratios using shallow trickery
-    // var reasonableScreenSizeScaleMultiple = 11600 * 1
+    var reasonableScreenSizeScaleMultiple = 1;
+    var initXTransform = 1;
+    var initYTransform = 1;
+    if (pageType == 'faculty') {
+        reasonableScreenSizeScaleMultiple = 16000;
+        initXTransform = parentWidth / 2;
+        initYTransform = parentHeight / 2;
+    } else {
+        reasonableScreenSizeScaleMultiple = 8000;
+        initXTransform = parentWidth / 3;
+        initYTransform = parentHeight / 3.8;
+    }
     var initScale = Math.max(parentWidth, parentHeight) / (reasonableScreenSizeScaleMultiple);
-    var initXTransform = parentWidth / 2 - initScale * 800;
-    var initYTransform = parentHeight / 2.3;
+
     var gDraw = gMain.append('g')
     .attr("transform","translate("+ initXTransform + ", " + initYTransform + ") scale(" + initScale + ")");
 
