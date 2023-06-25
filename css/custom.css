@@ -153,6 +153,7 @@ body, html{
 .custom-research-page header img {
   max-width: 100%;
   height: auto;
+  padding-right: 10px;
 }
 .custom-research-page header .row {
   margin-bottom: 0;
@@ -170,7 +171,8 @@ body, html{
 .custom-research-page .container.menu-research .heading-title {
   align-self: center;
   border-left: #FFFFFFCC 1px solid;
-  padding-left: 15px;
+  padding-left: 20px;
+  margin-left: -10px;
 }
 .custom-research-page .container.menu-research h2 {
   color: #FFFFFFCC;
@@ -220,6 +222,11 @@ body, html{
 
 .custom-research-page #d3_selectable_force_directed_graph {
   top: unset;
+}
+
+.custom-research-page .d3_view {
+  position: relative;
+  height: 100%;
 }
 
 @media (max-width: 1024px) {
