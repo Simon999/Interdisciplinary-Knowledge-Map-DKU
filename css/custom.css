@@ -44,7 +44,7 @@ body, html{
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 .main-menu-item .elementor-item, .main-menu-item .elementor-nav-menu--dropdown .elementor-sub-item {
-  font-family: Sans-serif;
+  font-family: 'Roboto', Sans-serif;
   font-size: 16px;
   font-weight: 500;
   text-decoration: none;
@@ -203,7 +203,7 @@ body, html{
 }
 .custom-research-page .nav-header nav ul li a.nav-link,
 .custom-research-page .nav-header nav .dropdown-item {
-  line-height: normal;
+  line-height: 20px;
   color: #ffffff !important;
   padding: 15px 20px;
   font-size: 18px !important;
@@ -227,6 +227,65 @@ body, html{
 .custom-research-page .d3_view {
   position: relative;
   height: 100%;
+}
+
+.custom-research-page footer {
+  background-color: #303030;
+  color: #fff;
+  padding: 30px 0;
+}
+.custom-research-page footer .container-fluid {
+  padding: 10px;
+}
+.custom-research-page footer .container-fluid .row {
+  margin: 0;
+}
+.custom-research-page footer .container-fluid .row .col-md-4 {
+  padding-left: 0;
+  padding-right: 0;
+}
+.custom-research-page footer .footer-icon {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.custom-research-page footer ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  -webkit-box-pack: center;
+  font-family: "Roboto", Sans-serif;
+  margin-bottom: 0;
+  margin-right: -8px;
+  margin-left: -8px;
+  list-style: none;
+}
+.custom-research-page footer ul li {
+  margin-left: 10.5px;
+  margin-right: 10.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", Sans-serif;
+}
+.custom-research-page footer ul li a {
+  font-family: "Roboto", Sans-serif;
+  display: flex;
+}
+.custom-research-page footer ul li a span {
+  display: flex;
+}
+.custom-research-page footer i {
+  color: #FFFFFF;
+  transition: color 0.3s;
+  width: 1.25em;
+  font-size: 30px;
+}
+.custom-research-page footer p {
+  color: #FFFFFF;
+  font-family: "Roboto", Sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
 }
 
 @media (max-width: 1024px) {
