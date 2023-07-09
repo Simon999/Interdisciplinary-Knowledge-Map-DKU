@@ -55,7 +55,9 @@ body, html{
   justify-content: space-between;
   padding: 5px 0;
 }
-.main-menu-item #sm-16833426637388433-2 {
+.main-menu-item #sm-16833426637388433-2,
+.main-menu-item #sm-16888786101748198-2,
+.main-menu-item #sm-16833426637388438-2 {
   padding-left: 10px;
 }
 .main-menu-item .elementor-item-active {
@@ -309,6 +311,10 @@ body, html{
   }
   .heading-title {
     display: none;
+  }
+  .custom-research-page .nav-header nav .dropdown-menu {
+    border: none !important;
+    padding-left: 10px;
   }
 }
 
