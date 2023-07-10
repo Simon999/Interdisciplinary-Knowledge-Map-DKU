@@ -51,9 +51,9 @@ function createD3Graph(graph, parentWidth, parentHeight, pageType) {
         initXTransform = parentWidth / 2;
         initYTransform = parentHeight / 2;
     } else {
-        reasonableScreenSizeScaleMultiple = 8000;
-        initXTransform = parentWidth / 3;
-        initYTransform = parentHeight / 3.8;
+        reasonableScreenSizeScaleMultiple = 9000;
+        initXTransform = parentWidth / 2.5;
+        initYTransform = parentHeight / 3.6;
     }
     var initScale = Math.max(parentWidth, parentHeight) / (reasonableScreenSizeScaleMultiple);
 
