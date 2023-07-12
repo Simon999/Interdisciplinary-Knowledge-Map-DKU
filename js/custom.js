@@ -15,4 +15,16 @@ $(document).ready(function() {
 		$(this).children(".has-submenu .glyphicon").toggleClass("glyphicon-menu-down");
 		$(this).children(".has-submenu .glyphicon").toggleClass("glyphicon-menu-up");
 	})
+
+	$(".toggle-sub").click(function (event) { 
+		event.stopPropagation(); 
+		$(".dropdown-sub-menu").toggleClass("d-none"); 
+		return false;
+	}); 
+	$(document).click(function(event){
+		var _con = $(".dropdown-sub-menu");
+		if(!_con.is(event.target) && _con.has(event.target).length === 0){
+			$(".dropdown-sub-menu").addClass("d-none");
+		}
+	});
 });

@@ -210,18 +210,22 @@ body, html{
   padding: 15px 20px;
   font-size: 18px !important;
   font-family: "Roboto", Sans-serif;
+  font-weight: 500;
 }
 .dropdown-item.active, .dropdown-item:active {
   background-color: #E97F33;
 }
 .custom-research-page .nav-header nav ul li a.nav-link:hover,
-.custom-research-page .nav-header nav .dropdown-item:hover {
+.custom-research-page .nav-header nav .dropdown-item:hover,
+.custom-research-page .nav-header nav .dropdown-item:focus {
   background-color: #E97f33;
 }
 .custom-research-page .nav-header nav button:focus {
   background-color: transparent;
 }
-
+.custom-research-page .dropdown-sub-menu {
+  padding-left: 10px;
+}
 .custom-research-page #d3_selectable_force_directed_graph {
   top: unset;
 }
@@ -321,5 +325,14 @@ body, html{
 @media screen and (max-width: 595px) {
   .custom-research-page .nav-header nav button {
     border: unset;
+  }
+}
+@media screen and (min-width: 992px) {
+  .dropdown-sub-menu {
+    position: absolute;
+    top: calc(100% - 50px);
+    left: 100%;
+    background-color: #003399;
+    padding-left: 0;
   }
 }
