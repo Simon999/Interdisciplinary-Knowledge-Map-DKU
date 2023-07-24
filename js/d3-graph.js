@@ -407,7 +407,7 @@ function showConceptInfo(node) {
     $('#PeopleName').text(node.properties.name);
     $('#PeopleDescription')
         .html(
-            "<br/> Click a faculty's name to find out his or her research interest in this field, including the major(s) he/she primarily supports. <br>"
+            "<br/> Click a node (small dot) to see a faculty's information such as the courses he/she primarily supports and his/her research interests. <br>"
         );
 }
 
