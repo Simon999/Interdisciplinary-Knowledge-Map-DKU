@@ -1,4 +1,4 @@
-var graph_research_faculty = {
+{
   "nodes": [
     {
       "labels": [
