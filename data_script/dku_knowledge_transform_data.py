@@ -3,8 +3,8 @@ import json
 import copy
 
 # set the path to input (the original data) and output (the transformed data)
-path_in = "/Users/junyitao/Downloads/Interdisciplinary-Knowledge-Map-DKU-main/js/02-16-2023/" # original
-path_out = "/Users/junyitao/Downloads/Interdisciplinary-Knowledge-Map-DKU-main/js/07-24-2023/" # transformed
+path_in = r"C:\Users\sd540\Desktop\Division Portal\Interdisciplinary-Knowledge-Map-DKU\js\02-16-2023\\" # original
+path_out = r"C:\Users\sd540\Desktop\Division Portal\Interdisciplinary-Knowledge-Map-DKU\js\07-24-2023\\" # transformed
 
 # make sure these js files are json files (no var names)
 with open(path_in + "research-faculty.js") as f:
@@ -24,7 +24,7 @@ link_dict_all = research_faculty_data["links"] + teaching_data["links"]
 js_key_dict = {
     "research-faculty":{
         "nodes": ["PrimaryResearchPillar", "Faculty", "ResearchInterest"],
-        "links": [{"research_pillar_primary": [10, 4]}, {"has_interest": [1, 1]}]
+        "links": [{"research_pillar_primary": [10, 4]}, {"has_interest": [5, 1]}]
     },
     # "research-area":{
     #     "nodes": ["PrimaryResearchPillar", "Faculty_notshown", "ResearchInterest_shown"],
@@ -32,8 +32,8 @@ js_key_dict = {
     # },
     "teaching":{
         "nodes": ["Center_MajorSupport", "ParentPrimaryMajorSupport", "PrimaryMajorSupport", "Faculty_notshown"],
-        "links": [{"parent_primary_major_center_to": [10, 1]}, {"has_parent_primary_major": [2, 1]}, 
-                  {"support_major_primary": [2, 1]}]
+        "links": [{"parent_primary_major_center_to": [50, 1]}, {"has_parent_primary_major": [30, 1]}, 
+                  {"support_major_primary": [20, 1]}]
     }
 }
 

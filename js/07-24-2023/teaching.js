@@ -2358,7 +2358,7 @@ var graph_teaching = {
             "id": 0,
             "source": 1,
             "target": 0,
-            "value": 2
+            "value": 20
         },
         {
             "type": "parent_primary_major_center_to",
@@ -2369,7 +2369,7 @@ var graph_teaching = {
             "id": 1,
             "source": 2,
             "target": 0,
-            "value": 2
+            "value": 20
         },
         {
             "type": "parent_primary_major_center_to",
@@ -2380,7 +2380,7 @@ var graph_teaching = {
             "id": 2,
             "source": 3,
             "target": 0,
-            "value": 2
+            "value": 20
         },
         {
             "type": "parent_primary_major_center_to",
@@ -2391,7 +2391,7 @@ var graph_teaching = {
             "id": 3,
             "source": 4,
             "target": 0,
-            "value": 2
+            "value": 20
         },
         {
             "type": "parent_primary_major_center_to",
@@ -2402,7 +2402,7 @@ var graph_teaching = {
             "id": 4,
             "source": 5,
             "target": 0,
-            "value": 2
+            "value": 20
         },
         {
             "type": "parent_primary_major_center_to",
@@ -2413,7 +2413,7 @@ var graph_teaching = {
             "id": 5,
             "source": 6,
             "target": 0,
-            "value": 2
+            "value": 20
         },
         {
             "type": "parent_primary_major_center_to",
@@ -2424,7 +2424,7 @@ var graph_teaching = {
             "id": 6,
             "source": 7,
             "target": 0,
-            "value": 2
+            "value": 20
         },
         {
             "type": "has_parent_primary_major",
@@ -2435,7 +2435,7 @@ var graph_teaching = {
             "id": 7,
             "source": 8,
             "target": 4,
-            "value": 2
+            "value": 20
         },
         {
             "type": "has_parent_primary_major",
@@ -2446,7 +2446,7 @@ var graph_teaching = {
             "id": 8,
             "source": 9,
             "target": 1,
-            "value": 2
+            "value": 20
         },
         {
             "type": "has_parent_primary_major",
@@ -2457,7 +2457,7 @@ var graph_teaching = {
             "id": 9,
             "source": 10,
             "target": 3,
-            "value": 2
+            "value": 20
         },
         {
             "type": "has_parent_primary_major",
@@ -2468,7 +2468,7 @@ var graph_teaching = {
             "id": 10,
             "source": 11,
             "target": 2,
-            "value": 2
+            "value": 20
         },
         {
             "type": "has_parent_primary_major",
@@ -2479,7 +2479,7 @@ var graph_teaching = {
             "id": 11,
             "source": 12,
             "target": 7,
-            "value": 2
+            "value": 20
         },
         {
             "type": "has_parent_primary_major",
@@ -2490,7 +2490,7 @@ var graph_teaching = {
             "id": 12,
             "source": 13,
             "target": 7,
-            "value": 2
+            "value": 20
         },
         {
             "type": "has_parent_primary_major",
@@ -2501,7 +2501,7 @@ var graph_teaching = {
             "id": 13,
             "source": 14,
             "target": 4,
-            "value": 2
+            "value": 20
         },
         {
             "type": "has_parent_primary_major",
@@ -2512,7 +2512,7 @@ var graph_teaching = {
             "id": 14,
             "source": 15,
             "target": 2,
-            "value": 2
+            "value": 20
         },
         {
             "type": "has_parent_primary_major",
@@ -2523,7 +2523,7 @@ var graph_teaching = {
             "id": 15,
             "source": 16,
             "target": 6,
-            "value": 2
+            "value": 20
         },
         {
             "type": "has_parent_primary_major",
@@ -2534,7 +2534,7 @@ var graph_teaching = {
             "id": 16,
             "source": 17,
             "target": 2,
-            "value": 2
+            "value": 20
         },
         {
             "type": "has_parent_primary_major",
@@ -2545,7 +2545,7 @@ var graph_teaching = {
             "id": 17,
             "source": 18,
             "target": 5,
-            "value": 2
+            "value": 20
         },
         {
             "type": "has_parent_primary_major",
@@ -2556,7 +2556,7 @@ var graph_teaching = {
             "id": 18,
             "source": 19,
             "target": 6,
-            "value": 2
+            "value": 20
         },
         {
             "type": "has_parent_primary_major",
@@ -2567,7 +2567,7 @@ var graph_teaching = {
             "id": 19,
             "source": 20,
             "target": 2,
-            "value": 2
+            "value": 20
         },
         {
             "type": "has_parent_primary_major",
@@ -2578,7 +2578,7 @@ var graph_teaching = {
             "id": 20,
             "source": 21,
             "target": 7,
-            "value": 2
+            "value": 20
         },
         {
             "type": "has_parent_primary_major",
@@ -2589,7 +2589,7 @@ var graph_teaching = {
             "id": 21,
             "source": 22,
             "target": 1,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2600,7 +2600,7 @@ var graph_teaching = {
             "id": 22,
             "source": 23,
             "target": 17,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2611,7 +2611,7 @@ var graph_teaching = {
             "id": 23,
             "source": 24,
             "target": 15,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2622,7 +2622,7 @@ var graph_teaching = {
             "id": 24,
             "source": 25,
             "target": 16,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2633,7 +2633,7 @@ var graph_teaching = {
             "id": 25,
             "source": 26,
             "target": 12,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2644,7 +2644,7 @@ var graph_teaching = {
             "id": 26,
             "source": 27,
             "target": 11,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2655,7 +2655,7 @@ var graph_teaching = {
             "id": 27,
             "source": 28,
             "target": 21,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2666,7 +2666,7 @@ var graph_teaching = {
             "id": 28,
             "source": 29,
             "target": 9,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2677,7 +2677,7 @@ var graph_teaching = {
             "id": 29,
             "source": 30,
             "target": 9,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2688,7 +2688,7 @@ var graph_teaching = {
             "id": 30,
             "source": 31,
             "target": 11,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2699,7 +2699,7 @@ var graph_teaching = {
             "id": 31,
             "source": 32,
             "target": 11,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2710,7 +2710,7 @@ var graph_teaching = {
             "id": 32,
             "source": 33,
             "target": 9,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2721,7 +2721,7 @@ var graph_teaching = {
             "id": 33,
             "source": 34,
             "target": 8,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2732,7 +2732,7 @@ var graph_teaching = {
             "id": 34,
             "source": 35,
             "target": 12,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2743,7 +2743,7 @@ var graph_teaching = {
             "id": 35,
             "source": 36,
             "target": 9,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2754,7 +2754,7 @@ var graph_teaching = {
             "id": 36,
             "source": 37,
             "target": 19,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2765,7 +2765,7 @@ var graph_teaching = {
             "id": 37,
             "source": 38,
             "target": 13,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2776,7 +2776,7 @@ var graph_teaching = {
             "id": 38,
             "source": 39,
             "target": 20,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2787,7 +2787,7 @@ var graph_teaching = {
             "id": 39,
             "source": 40,
             "target": 18,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2798,7 +2798,7 @@ var graph_teaching = {
             "id": 40,
             "source": 41,
             "target": 10,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2809,7 +2809,7 @@ var graph_teaching = {
             "id": 41,
             "source": 42,
             "target": 10,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2820,7 +2820,7 @@ var graph_teaching = {
             "id": 42,
             "source": 43,
             "target": 9,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2831,7 +2831,7 @@ var graph_teaching = {
             "id": 43,
             "source": 44,
             "target": 11,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2842,7 +2842,7 @@ var graph_teaching = {
             "id": 44,
             "source": 45,
             "target": 8,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2853,7 +2853,7 @@ var graph_teaching = {
             "id": 45,
             "source": 46,
             "target": 9,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2864,7 +2864,7 @@ var graph_teaching = {
             "id": 46,
             "source": 47,
             "target": 11,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2875,7 +2875,7 @@ var graph_teaching = {
             "id": 47,
             "source": 48,
             "target": 22,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2886,7 +2886,7 @@ var graph_teaching = {
             "id": 48,
             "source": 49,
             "target": 9,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2897,7 +2897,7 @@ var graph_teaching = {
             "id": 49,
             "source": 50,
             "target": 14,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2908,7 +2908,7 @@ var graph_teaching = {
             "id": 50,
             "source": 51,
             "target": 11,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2919,7 +2919,7 @@ var graph_teaching = {
             "id": 51,
             "source": 52,
             "target": 10,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2930,7 +2930,7 @@ var graph_teaching = {
             "id": 52,
             "source": 53,
             "target": 11,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2941,7 +2941,7 @@ var graph_teaching = {
             "id": 53,
             "source": 54,
             "target": 22,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2952,7 +2952,7 @@ var graph_teaching = {
             "id": 54,
             "source": 55,
             "target": 9,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2963,7 +2963,7 @@ var graph_teaching = {
             "id": 55,
             "source": 56,
             "target": 12,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2974,7 +2974,7 @@ var graph_teaching = {
             "id": 56,
             "source": 57,
             "target": 8,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2985,7 +2985,7 @@ var graph_teaching = {
             "id": 57,
             "source": 58,
             "target": 9,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -2996,7 +2996,7 @@ var graph_teaching = {
             "id": 58,
             "source": 59,
             "target": 16,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -3007,7 +3007,7 @@ var graph_teaching = {
             "id": 59,
             "source": 60,
             "target": 22,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -3018,7 +3018,7 @@ var graph_teaching = {
             "id": 60,
             "source": 61,
             "target": 18,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -3029,7 +3029,7 @@ var graph_teaching = {
             "id": 61,
             "source": 62,
             "target": 16,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -3040,7 +3040,7 @@ var graph_teaching = {
             "id": 62,
             "source": 63,
             "target": 17,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -3051,7 +3051,7 @@ var graph_teaching = {
             "id": 63,
             "source": 64,
             "target": 17,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -3062,7 +3062,7 @@ var graph_teaching = {
             "id": 64,
             "source": 65,
             "target": 11,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -3073,7 +3073,7 @@ var graph_teaching = {
             "id": 65,
             "source": 66,
             "target": 18,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -3084,7 +3084,7 @@ var graph_teaching = {
             "id": 66,
             "source": 67,
             "target": 9,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -3095,7 +3095,7 @@ var graph_teaching = {
             "id": 67,
             "source": 68,
             "target": 10,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -3106,7 +3106,7 @@ var graph_teaching = {
             "id": 68,
             "source": 69,
             "target": 12,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -3117,7 +3117,7 @@ var graph_teaching = {
             "id": 69,
             "source": 70,
             "target": 21,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -3128,7 +3128,7 @@ var graph_teaching = {
             "id": 70,
             "source": 71,
             "target": 13,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -3139,7 +3139,7 @@ var graph_teaching = {
             "id": 71,
             "source": 72,
             "target": 18,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -3150,7 +3150,7 @@ var graph_teaching = {
             "id": 72,
             "source": 73,
             "target": 13,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -3161,7 +3161,7 @@ var graph_teaching = {
             "id": 73,
             "source": 74,
             "target": 9,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -3172,7 +3172,7 @@ var graph_teaching = {
             "id": 74,
             "source": 75,
             "target": 8,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -3183,7 +3183,7 @@ var graph_teaching = {
             "id": 75,
             "source": 76,
             "target": 11,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -3194,7 +3194,7 @@ var graph_teaching = {
             "id": 76,
             "source": 77,
             "target": 12,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -3205,7 +3205,7 @@ var graph_teaching = {
             "id": 77,
             "source": 78,
             "target": 9,
-            "value": 2
+            "value": 20
         },
         {
             "type": "support_major_primary",
@@ -3216,7 +3216,7 @@ var graph_teaching = {
             "id": 78,
             "source": 79,
             "target": 18,
-            "value": 2
+            "value": 20
         }
     ]
 }

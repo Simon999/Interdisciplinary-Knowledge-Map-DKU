@@ -51,9 +51,9 @@ function createD3Graph(graph, parentWidth, parentHeight, pageType) {
         initXTransform = parentWidth / 2;
         initYTransform = parentHeight / 2;
     } else {
-        reasonableScreenSizeScaleMultiple = 9000;
+        reasonableScreenSizeScaleMultiple = 8000;
         initXTransform = parentWidth / 2.5;
-        initYTransform = parentHeight / 3.6;
+        initYTransform = parentHeight / 3.0;
     }
     var initScale = Math.max(parentWidth, parentHeight) / (reasonableScreenSizeScaleMultiple);
 
@@ -134,18 +134,18 @@ function createD3Graph(graph, parentWidth, parentHeight, pageType) {
                     return 70;
                 }
                 if(n.labels[0] == "Faculty_notshown") {
-                    return 40;
+                    return 30;
                 }
                 if(n.labels[0] == "PrimaryResearchPillar") {
                     return 1200;
                 }
                 // PrimaryMajorSupport
                 if (n.labels[0] == "PrimaryMajorSupport") {
-                    return 50;
+                    return 80;
                 }
                 // ParentPrimaryMajorSupport
                 if (n.labels[0] == "ParentPrimaryMajorSupport") {
-                    return 200;
+                    return 150;
                 }
 
         })
@@ -241,7 +241,7 @@ function createD3Graph(graph, parentWidth, parentHeight, pageType) {
         .force("link", d3v4.forceLink()
                 .id(function(d) { return d.id; })
                 .distance(function(d) { return 200;}))
-        .force("charge", d3v4.forceManyBody().distanceMin(10).strength(-4500))
+        .force("charge", d3v4.forceManyBody().distanceMin(100).strength(-4500))
         //.force('charge', d3.forceManyBody().strength(-1900).theta(0.5).distanceMax(1500))
         .force("center", d3v4.forceCenter(parentWidth / 2, parentHeight / 2))
         .force("x", d3v4.forceX(parentWidth/2))

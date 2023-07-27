@@ -5849,7 +5849,7 @@ var graph_research_faculty = {
             "id": 0,
             "source": 4,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -5860,7 +5860,7 @@ var graph_research_faculty = {
             "id": 15,
             "source": 5,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -5871,7 +5871,7 @@ var graph_research_faculty = {
             "id": 26,
             "source": 6,
             "target": 0,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -5882,7 +5882,7 @@ var graph_research_faculty = {
             "id": 35,
             "source": 7,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -5893,7 +5893,7 @@ var graph_research_faculty = {
             "id": 44,
             "source": 8,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -5904,7 +5904,7 @@ var graph_research_faculty = {
             "id": 50,
             "source": 9,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -5915,7 +5915,7 @@ var graph_research_faculty = {
             "id": 58,
             "source": 10,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -5926,7 +5926,7 @@ var graph_research_faculty = {
             "id": 67,
             "source": 11,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -5937,7 +5937,7 @@ var graph_research_faculty = {
             "id": 72,
             "source": 12,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -5948,7 +5948,7 @@ var graph_research_faculty = {
             "id": 88,
             "source": 13,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -5959,7 +5959,7 @@ var graph_research_faculty = {
             "id": 94,
             "source": 14,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -5970,7 +5970,7 @@ var graph_research_faculty = {
             "id": 100,
             "source": 15,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -5981,7 +5981,7 @@ var graph_research_faculty = {
             "id": 105,
             "source": 16,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -5992,7 +5992,7 @@ var graph_research_faculty = {
             "id": 111,
             "source": 17,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6003,7 +6003,7 @@ var graph_research_faculty = {
             "id": 116,
             "source": 18,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6014,7 +6014,7 @@ var graph_research_faculty = {
             "id": 123,
             "source": 19,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6025,7 +6025,7 @@ var graph_research_faculty = {
             "id": 127,
             "source": 20,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6036,7 +6036,7 @@ var graph_research_faculty = {
             "id": 132,
             "source": 21,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6047,7 +6047,7 @@ var graph_research_faculty = {
             "id": 148,
             "source": 22,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6058,7 +6058,7 @@ var graph_research_faculty = {
             "id": 157,
             "source": 23,
             "target": 0,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6069,7 +6069,7 @@ var graph_research_faculty = {
             "id": 161,
             "source": 24,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6080,7 +6080,7 @@ var graph_research_faculty = {
             "id": 169,
             "source": 25,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6091,7 +6091,7 @@ var graph_research_faculty = {
             "id": 177,
             "source": 26,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6102,7 +6102,7 @@ var graph_research_faculty = {
             "id": 184,
             "source": 27,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6113,7 +6113,7 @@ var graph_research_faculty = {
             "id": 191,
             "source": 28,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6124,7 +6124,7 @@ var graph_research_faculty = {
             "id": 197,
             "source": 29,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6135,7 +6135,7 @@ var graph_research_faculty = {
             "id": 206,
             "source": 30,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6146,7 +6146,7 @@ var graph_research_faculty = {
             "id": 212,
             "source": 31,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6157,7 +6157,7 @@ var graph_research_faculty = {
             "id": 217,
             "source": 32,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6168,7 +6168,7 @@ var graph_research_faculty = {
             "id": 222,
             "source": 33,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6179,7 +6179,7 @@ var graph_research_faculty = {
             "id": 241,
             "source": 34,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6190,7 +6190,7 @@ var graph_research_faculty = {
             "id": 252,
             "source": 35,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6201,7 +6201,7 @@ var graph_research_faculty = {
             "id": 260,
             "source": 36,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6212,7 +6212,7 @@ var graph_research_faculty = {
             "id": 269,
             "source": 37,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6223,7 +6223,7 @@ var graph_research_faculty = {
             "id": 276,
             "source": 38,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6234,7 +6234,7 @@ var graph_research_faculty = {
             "id": 284,
             "source": 39,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6245,7 +6245,7 @@ var graph_research_faculty = {
             "id": 293,
             "source": 40,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6256,7 +6256,7 @@ var graph_research_faculty = {
             "id": 299,
             "source": 41,
             "target": 0,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6267,7 +6267,7 @@ var graph_research_faculty = {
             "id": 306,
             "source": 42,
             "target": 0,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6278,7 +6278,7 @@ var graph_research_faculty = {
             "id": 313,
             "source": 43,
             "target": 0,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6289,7 +6289,7 @@ var graph_research_faculty = {
             "id": 319,
             "source": 44,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6300,7 +6300,7 @@ var graph_research_faculty = {
             "id": 325,
             "source": 45,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6311,7 +6311,7 @@ var graph_research_faculty = {
             "id": 334,
             "source": 46,
             "target": 0,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6322,7 +6322,7 @@ var graph_research_faculty = {
             "id": 339,
             "source": 47,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6333,7 +6333,7 @@ var graph_research_faculty = {
             "id": 344,
             "source": 48,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6344,7 +6344,7 @@ var graph_research_faculty = {
             "id": 352,
             "source": 49,
             "target": 0,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6355,7 +6355,7 @@ var graph_research_faculty = {
             "id": 358,
             "source": 50,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6366,7 +6366,7 @@ var graph_research_faculty = {
             "id": 371,
             "source": 51,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6377,7 +6377,7 @@ var graph_research_faculty = {
             "id": 378,
             "source": 52,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6388,7 +6388,7 @@ var graph_research_faculty = {
             "id": 383,
             "source": 53,
             "target": 0,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6399,7 +6399,7 @@ var graph_research_faculty = {
             "id": 390,
             "source": 54,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6410,7 +6410,7 @@ var graph_research_faculty = {
             "id": 395,
             "source": 55,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6421,7 +6421,7 @@ var graph_research_faculty = {
             "id": 406,
             "source": 56,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6432,7 +6432,7 @@ var graph_research_faculty = {
             "id": 411,
             "source": 57,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6443,7 +6443,7 @@ var graph_research_faculty = {
             "id": 415,
             "source": 58,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6454,7 +6454,7 @@ var graph_research_faculty = {
             "id": 422,
             "source": 59,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6465,7 +6465,7 @@ var graph_research_faculty = {
             "id": 427,
             "source": 60,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6476,7 +6476,7 @@ var graph_research_faculty = {
             "id": 0,
             "source": 4,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6487,7 +6487,7 @@ var graph_research_faculty = {
             "id": 15,
             "source": 5,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6498,7 +6498,7 @@ var graph_research_faculty = {
             "id": 26,
             "source": 6,
             "target": 0,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6509,7 +6509,7 @@ var graph_research_faculty = {
             "id": 35,
             "source": 7,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6520,7 +6520,7 @@ var graph_research_faculty = {
             "id": 44,
             "source": 8,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6531,7 +6531,7 @@ var graph_research_faculty = {
             "id": 50,
             "source": 9,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6542,7 +6542,7 @@ var graph_research_faculty = {
             "id": 58,
             "source": 10,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6553,7 +6553,7 @@ var graph_research_faculty = {
             "id": 67,
             "source": 11,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6564,7 +6564,7 @@ var graph_research_faculty = {
             "id": 72,
             "source": 12,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6575,7 +6575,7 @@ var graph_research_faculty = {
             "id": 88,
             "source": 13,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6586,7 +6586,7 @@ var graph_research_faculty = {
             "id": 94,
             "source": 14,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6597,7 +6597,7 @@ var graph_research_faculty = {
             "id": 100,
             "source": 15,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6608,7 +6608,7 @@ var graph_research_faculty = {
             "id": 105,
             "source": 16,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6619,7 +6619,7 @@ var graph_research_faculty = {
             "id": 111,
             "source": 17,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6630,7 +6630,7 @@ var graph_research_faculty = {
             "id": 116,
             "source": 18,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6641,7 +6641,7 @@ var graph_research_faculty = {
             "id": 123,
             "source": 19,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6652,7 +6652,7 @@ var graph_research_faculty = {
             "id": 127,
             "source": 20,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6663,7 +6663,7 @@ var graph_research_faculty = {
             "id": 132,
             "source": 21,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6674,7 +6674,7 @@ var graph_research_faculty = {
             "id": 148,
             "source": 22,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6685,7 +6685,7 @@ var graph_research_faculty = {
             "id": 157,
             "source": 23,
             "target": 0,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6696,7 +6696,7 @@ var graph_research_faculty = {
             "id": 161,
             "source": 24,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6707,7 +6707,7 @@ var graph_research_faculty = {
             "id": 169,
             "source": 25,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6718,7 +6718,7 @@ var graph_research_faculty = {
             "id": 177,
             "source": 26,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6729,7 +6729,7 @@ var graph_research_faculty = {
             "id": 184,
             "source": 27,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6740,7 +6740,7 @@ var graph_research_faculty = {
             "id": 191,
             "source": 28,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6751,7 +6751,7 @@ var graph_research_faculty = {
             "id": 197,
             "source": 29,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6762,7 +6762,7 @@ var graph_research_faculty = {
             "id": 206,
             "source": 30,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6773,7 +6773,7 @@ var graph_research_faculty = {
             "id": 212,
             "source": 31,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6784,7 +6784,7 @@ var graph_research_faculty = {
             "id": 217,
             "source": 32,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6795,7 +6795,7 @@ var graph_research_faculty = {
             "id": 222,
             "source": 33,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6806,7 +6806,7 @@ var graph_research_faculty = {
             "id": 241,
             "source": 34,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6817,7 +6817,7 @@ var graph_research_faculty = {
             "id": 252,
             "source": 35,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6828,7 +6828,7 @@ var graph_research_faculty = {
             "id": 260,
             "source": 36,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6839,7 +6839,7 @@ var graph_research_faculty = {
             "id": 269,
             "source": 37,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6850,7 +6850,7 @@ var graph_research_faculty = {
             "id": 276,
             "source": 38,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6861,7 +6861,7 @@ var graph_research_faculty = {
             "id": 284,
             "source": 39,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6872,7 +6872,7 @@ var graph_research_faculty = {
             "id": 293,
             "source": 40,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6883,7 +6883,7 @@ var graph_research_faculty = {
             "id": 299,
             "source": 41,
             "target": 0,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6894,7 +6894,7 @@ var graph_research_faculty = {
             "id": 306,
             "source": 42,
             "target": 0,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6905,7 +6905,7 @@ var graph_research_faculty = {
             "id": 313,
             "source": 43,
             "target": 0,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6916,7 +6916,7 @@ var graph_research_faculty = {
             "id": 319,
             "source": 44,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6927,7 +6927,7 @@ var graph_research_faculty = {
             "id": 325,
             "source": 45,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6938,7 +6938,7 @@ var graph_research_faculty = {
             "id": 334,
             "source": 46,
             "target": 0,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6949,7 +6949,7 @@ var graph_research_faculty = {
             "id": 339,
             "source": 47,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6960,7 +6960,7 @@ var graph_research_faculty = {
             "id": 344,
             "source": 48,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6971,7 +6971,7 @@ var graph_research_faculty = {
             "id": 352,
             "source": 49,
             "target": 0,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6982,7 +6982,7 @@ var graph_research_faculty = {
             "id": 358,
             "source": 50,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -6993,7 +6993,7 @@ var graph_research_faculty = {
             "id": 371,
             "source": 51,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7004,7 +7004,7 @@ var graph_research_faculty = {
             "id": 378,
             "source": 52,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7015,7 +7015,7 @@ var graph_research_faculty = {
             "id": 383,
             "source": 53,
             "target": 0,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7026,7 +7026,7 @@ var graph_research_faculty = {
             "id": 390,
             "source": 54,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7037,7 +7037,7 @@ var graph_research_faculty = {
             "id": 395,
             "source": 55,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7048,7 +7048,7 @@ var graph_research_faculty = {
             "id": 406,
             "source": 56,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7059,7 +7059,7 @@ var graph_research_faculty = {
             "id": 411,
             "source": 57,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7070,7 +7070,7 @@ var graph_research_faculty = {
             "id": 415,
             "source": 58,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7081,7 +7081,7 @@ var graph_research_faculty = {
             "id": 422,
             "source": 59,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7092,7 +7092,7 @@ var graph_research_faculty = {
             "id": 427,
             "source": 60,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7103,7 +7103,7 @@ var graph_research_faculty = {
             "id": 0,
             "source": 4,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7114,7 +7114,7 @@ var graph_research_faculty = {
             "id": 15,
             "source": 5,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7125,7 +7125,7 @@ var graph_research_faculty = {
             "id": 26,
             "source": 6,
             "target": 0,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7136,7 +7136,7 @@ var graph_research_faculty = {
             "id": 35,
             "source": 7,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7147,7 +7147,7 @@ var graph_research_faculty = {
             "id": 44,
             "source": 8,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7158,7 +7158,7 @@ var graph_research_faculty = {
             "id": 50,
             "source": 9,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7169,7 +7169,7 @@ var graph_research_faculty = {
             "id": 58,
             "source": 10,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7180,7 +7180,7 @@ var graph_research_faculty = {
             "id": 67,
             "source": 11,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7191,7 +7191,7 @@ var graph_research_faculty = {
             "id": 72,
             "source": 12,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7202,7 +7202,7 @@ var graph_research_faculty = {
             "id": 88,
             "source": 13,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7213,7 +7213,7 @@ var graph_research_faculty = {
             "id": 94,
             "source": 14,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7224,7 +7224,7 @@ var graph_research_faculty = {
             "id": 100,
             "source": 15,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7235,7 +7235,7 @@ var graph_research_faculty = {
             "id": 105,
             "source": 16,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7246,7 +7246,7 @@ var graph_research_faculty = {
             "id": 111,
             "source": 17,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7257,7 +7257,7 @@ var graph_research_faculty = {
             "id": 116,
             "source": 18,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7268,7 +7268,7 @@ var graph_research_faculty = {
             "id": 123,
             "source": 19,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7279,7 +7279,7 @@ var graph_research_faculty = {
             "id": 127,
             "source": 20,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7290,7 +7290,7 @@ var graph_research_faculty = {
             "id": 132,
             "source": 21,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7301,7 +7301,7 @@ var graph_research_faculty = {
             "id": 148,
             "source": 22,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7312,7 +7312,7 @@ var graph_research_faculty = {
             "id": 157,
             "source": 23,
             "target": 0,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7323,7 +7323,7 @@ var graph_research_faculty = {
             "id": 161,
             "source": 24,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7334,7 +7334,7 @@ var graph_research_faculty = {
             "id": 169,
             "source": 25,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7345,7 +7345,7 @@ var graph_research_faculty = {
             "id": 177,
             "source": 26,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7356,7 +7356,7 @@ var graph_research_faculty = {
             "id": 184,
             "source": 27,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7367,7 +7367,7 @@ var graph_research_faculty = {
             "id": 191,
             "source": 28,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7378,7 +7378,7 @@ var graph_research_faculty = {
             "id": 197,
             "source": 29,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7389,7 +7389,7 @@ var graph_research_faculty = {
             "id": 206,
             "source": 30,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7400,7 +7400,7 @@ var graph_research_faculty = {
             "id": 212,
             "source": 31,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7411,7 +7411,7 @@ var graph_research_faculty = {
             "id": 217,
             "source": 32,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7422,7 +7422,7 @@ var graph_research_faculty = {
             "id": 222,
             "source": 33,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7433,7 +7433,7 @@ var graph_research_faculty = {
             "id": 241,
             "source": 34,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7444,7 +7444,7 @@ var graph_research_faculty = {
             "id": 252,
             "source": 35,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7455,7 +7455,7 @@ var graph_research_faculty = {
             "id": 260,
             "source": 36,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7466,7 +7466,7 @@ var graph_research_faculty = {
             "id": 269,
             "source": 37,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7477,7 +7477,7 @@ var graph_research_faculty = {
             "id": 276,
             "source": 38,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7488,7 +7488,7 @@ var graph_research_faculty = {
             "id": 284,
             "source": 39,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7499,7 +7499,7 @@ var graph_research_faculty = {
             "id": 293,
             "source": 40,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7510,7 +7510,7 @@ var graph_research_faculty = {
             "id": 299,
             "source": 41,
             "target": 0,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7521,7 +7521,7 @@ var graph_research_faculty = {
             "id": 306,
             "source": 42,
             "target": 0,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7532,7 +7532,7 @@ var graph_research_faculty = {
             "id": 313,
             "source": 43,
             "target": 0,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7543,7 +7543,7 @@ var graph_research_faculty = {
             "id": 319,
             "source": 44,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7554,7 +7554,7 @@ var graph_research_faculty = {
             "id": 325,
             "source": 45,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7565,7 +7565,7 @@ var graph_research_faculty = {
             "id": 334,
             "source": 46,
             "target": 0,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7576,7 +7576,7 @@ var graph_research_faculty = {
             "id": 339,
             "source": 47,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7587,7 +7587,7 @@ var graph_research_faculty = {
             "id": 344,
             "source": 48,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7598,7 +7598,7 @@ var graph_research_faculty = {
             "id": 352,
             "source": 49,
             "target": 0,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7609,7 +7609,7 @@ var graph_research_faculty = {
             "id": 358,
             "source": 50,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7620,7 +7620,7 @@ var graph_research_faculty = {
             "id": 371,
             "source": 51,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7631,7 +7631,7 @@ var graph_research_faculty = {
             "id": 378,
             "source": 52,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7642,7 +7642,7 @@ var graph_research_faculty = {
             "id": 383,
             "source": 53,
             "target": 0,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7653,7 +7653,7 @@ var graph_research_faculty = {
             "id": 390,
             "source": 54,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7664,7 +7664,7 @@ var graph_research_faculty = {
             "id": 395,
             "source": 55,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7675,7 +7675,7 @@ var graph_research_faculty = {
             "id": 406,
             "source": 56,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7686,7 +7686,7 @@ var graph_research_faculty = {
             "id": 411,
             "source": 57,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7697,7 +7697,7 @@ var graph_research_faculty = {
             "id": 415,
             "source": 58,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7708,7 +7708,7 @@ var graph_research_faculty = {
             "id": 422,
             "source": 59,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7719,7 +7719,7 @@ var graph_research_faculty = {
             "id": 427,
             "source": 60,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7730,7 +7730,7 @@ var graph_research_faculty = {
             "id": 0,
             "source": 4,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7741,7 +7741,7 @@ var graph_research_faculty = {
             "id": 15,
             "source": 5,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7752,7 +7752,7 @@ var graph_research_faculty = {
             "id": 26,
             "source": 6,
             "target": 0,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7763,7 +7763,7 @@ var graph_research_faculty = {
             "id": 35,
             "source": 7,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7774,7 +7774,7 @@ var graph_research_faculty = {
             "id": 44,
             "source": 8,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7785,7 +7785,7 @@ var graph_research_faculty = {
             "id": 50,
             "source": 9,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7796,7 +7796,7 @@ var graph_research_faculty = {
             "id": 58,
             "source": 10,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7807,7 +7807,7 @@ var graph_research_faculty = {
             "id": 67,
             "source": 11,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7818,7 +7818,7 @@ var graph_research_faculty = {
             "id": 72,
             "source": 12,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7829,7 +7829,7 @@ var graph_research_faculty = {
             "id": 88,
             "source": 13,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7840,7 +7840,7 @@ var graph_research_faculty = {
             "id": 94,
             "source": 14,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7851,7 +7851,7 @@ var graph_research_faculty = {
             "id": 100,
             "source": 15,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7862,7 +7862,7 @@ var graph_research_faculty = {
             "id": 105,
             "source": 16,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7873,7 +7873,7 @@ var graph_research_faculty = {
             "id": 111,
             "source": 17,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7884,7 +7884,7 @@ var graph_research_faculty = {
             "id": 116,
             "source": 18,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7895,7 +7895,7 @@ var graph_research_faculty = {
             "id": 123,
             "source": 19,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7906,7 +7906,7 @@ var graph_research_faculty = {
             "id": 127,
             "source": 20,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7917,7 +7917,7 @@ var graph_research_faculty = {
             "id": 132,
             "source": 21,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7928,7 +7928,7 @@ var graph_research_faculty = {
             "id": 148,
             "source": 22,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7939,7 +7939,7 @@ var graph_research_faculty = {
             "id": 157,
             "source": 23,
             "target": 0,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7950,7 +7950,7 @@ var graph_research_faculty = {
             "id": 161,
             "source": 24,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7961,7 +7961,7 @@ var graph_research_faculty = {
             "id": 169,
             "source": 25,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7972,7 +7972,7 @@ var graph_research_faculty = {
             "id": 177,
             "source": 26,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7983,7 +7983,7 @@ var graph_research_faculty = {
             "id": 184,
             "source": 27,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -7994,7 +7994,7 @@ var graph_research_faculty = {
             "id": 191,
             "source": 28,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -8005,7 +8005,7 @@ var graph_research_faculty = {
             "id": 197,
             "source": 29,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -8016,7 +8016,7 @@ var graph_research_faculty = {
             "id": 206,
             "source": 30,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -8027,7 +8027,7 @@ var graph_research_faculty = {
             "id": 212,
             "source": 31,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -8038,7 +8038,7 @@ var graph_research_faculty = {
             "id": 217,
             "source": 32,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -8049,7 +8049,7 @@ var graph_research_faculty = {
             "id": 222,
             "source": 33,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -8060,7 +8060,7 @@ var graph_research_faculty = {
             "id": 241,
             "source": 34,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -8071,7 +8071,7 @@ var graph_research_faculty = {
             "id": 252,
             "source": 35,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -8082,7 +8082,7 @@ var graph_research_faculty = {
             "id": 260,
             "source": 36,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -8093,7 +8093,7 @@ var graph_research_faculty = {
             "id": 269,
             "source": 37,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -8104,7 +8104,7 @@ var graph_research_faculty = {
             "id": 276,
             "source": 38,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -8115,7 +8115,7 @@ var graph_research_faculty = {
             "id": 284,
             "source": 39,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -8126,7 +8126,7 @@ var graph_research_faculty = {
             "id": 293,
             "source": 40,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -8137,7 +8137,7 @@ var graph_research_faculty = {
             "id": 299,
             "source": 41,
             "target": 0,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -8148,7 +8148,7 @@ var graph_research_faculty = {
             "id": 306,
             "source": 42,
             "target": 0,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -8159,7 +8159,7 @@ var graph_research_faculty = {
             "id": 313,
             "source": 43,
             "target": 0,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -8170,7 +8170,7 @@ var graph_research_faculty = {
             "id": 319,
             "source": 44,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -8181,7 +8181,7 @@ var graph_research_faculty = {
             "id": 325,
             "source": 45,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -8192,7 +8192,7 @@ var graph_research_faculty = {
             "id": 334,
             "source": 46,
             "target": 0,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -8203,7 +8203,7 @@ var graph_research_faculty = {
             "id": 339,
             "source": 47,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -8214,7 +8214,7 @@ var graph_research_faculty = {
             "id": 344,
             "source": 48,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -8225,7 +8225,7 @@ var graph_research_faculty = {
             "id": 352,
             "source": 49,
             "target": 0,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -8236,7 +8236,7 @@ var graph_research_faculty = {
             "id": 358,
             "source": 50,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -8247,7 +8247,7 @@ var graph_research_faculty = {
             "id": 371,
             "source": 51,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -8258,7 +8258,7 @@ var graph_research_faculty = {
             "id": 378,
             "source": 52,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -8269,7 +8269,7 @@ var graph_research_faculty = {
             "id": 383,
             "source": 53,
             "target": 0,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -8280,7 +8280,7 @@ var graph_research_faculty = {
             "id": 390,
             "source": 54,
             "target": 3,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -8291,7 +8291,7 @@ var graph_research_faculty = {
             "id": 395,
             "source": 55,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -8302,7 +8302,7 @@ var graph_research_faculty = {
             "id": 406,
             "source": 56,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -8313,7 +8313,7 @@ var graph_research_faculty = {
             "id": 411,
             "source": 57,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -8324,7 +8324,7 @@ var graph_research_faculty = {
             "id": 415,
             "source": 58,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -8335,7 +8335,7 @@ var graph_research_faculty = {
             "id": 422,
             "source": 59,
             "target": 2,
-            "value": 1
+            "value": 5
         },
         {
             "type": "research_pillar_primary",
@@ -8346,7 +8346,7 @@ var graph_research_faculty = {
             "id": 427,
             "source": 60,
             "target": 1,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8357,7 +8357,7 @@ var graph_research_faculty = {
             "id": 1,
             "source": 4,
             "target": 322,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8368,7 +8368,7 @@ var graph_research_faculty = {
             "id": 2,
             "source": 4,
             "target": 126,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8379,7 +8379,7 @@ var graph_research_faculty = {
             "id": 3,
             "source": 4,
             "target": 292,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8390,7 +8390,7 @@ var graph_research_faculty = {
             "id": 4,
             "source": 4,
             "target": 379,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8401,7 +8401,7 @@ var graph_research_faculty = {
             "id": 5,
             "source": 4,
             "target": 252,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8412,7 +8412,7 @@ var graph_research_faculty = {
             "id": 6,
             "source": 4,
             "target": 336,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8423,7 +8423,7 @@ var graph_research_faculty = {
             "id": 7,
             "source": 4,
             "target": 114,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8434,7 +8434,7 @@ var graph_research_faculty = {
             "id": 8,
             "source": 4,
             "target": 206,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8445,7 +8445,7 @@ var graph_research_faculty = {
             "id": 9,
             "source": 4,
             "target": 238,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8456,7 +8456,7 @@ var graph_research_faculty = {
             "id": 10,
             "source": 4,
             "target": 348,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8467,7 +8467,7 @@ var graph_research_faculty = {
             "id": 11,
             "source": 4,
             "target": 155,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8478,7 +8478,7 @@ var graph_research_faculty = {
             "id": 12,
             "source": 4,
             "target": 122,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8489,7 +8489,7 @@ var graph_research_faculty = {
             "id": 13,
             "source": 4,
             "target": 72,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8500,7 +8500,7 @@ var graph_research_faculty = {
             "id": 14,
             "source": 4,
             "target": 144,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8511,7 +8511,7 @@ var graph_research_faculty = {
             "id": 16,
             "source": 5,
             "target": 247,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8522,7 +8522,7 @@ var graph_research_faculty = {
             "id": 17,
             "source": 5,
             "target": 289,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8533,7 +8533,7 @@ var graph_research_faculty = {
             "id": 18,
             "source": 5,
             "target": 304,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8544,7 +8544,7 @@ var graph_research_faculty = {
             "id": 19,
             "source": 5,
             "target": 230,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8555,7 +8555,7 @@ var graph_research_faculty = {
             "id": 20,
             "source": 5,
             "target": 70,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8566,7 +8566,7 @@ var graph_research_faculty = {
             "id": 21,
             "source": 5,
             "target": 221,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8577,7 +8577,7 @@ var graph_research_faculty = {
             "id": 22,
             "source": 5,
             "target": 308,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8588,7 +8588,7 @@ var graph_research_faculty = {
             "id": 23,
             "source": 5,
             "target": 372,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8599,7 +8599,7 @@ var graph_research_faculty = {
             "id": 24,
             "source": 5,
             "target": 263,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8610,7 +8610,7 @@ var graph_research_faculty = {
             "id": 25,
             "source": 5,
             "target": 239,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8621,7 +8621,7 @@ var graph_research_faculty = {
             "id": 27,
             "source": 6,
             "target": 335,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8632,7 +8632,7 @@ var graph_research_faculty = {
             "id": 28,
             "source": 6,
             "target": 99,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8643,7 +8643,7 @@ var graph_research_faculty = {
             "id": 29,
             "source": 6,
             "target": 180,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8654,7 +8654,7 @@ var graph_research_faculty = {
             "id": 30,
             "source": 6,
             "target": 321,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8665,7 +8665,7 @@ var graph_research_faculty = {
             "id": 31,
             "source": 6,
             "target": 333,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8676,7 +8676,7 @@ var graph_research_faculty = {
             "id": 32,
             "source": 6,
             "target": 297,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8687,7 +8687,7 @@ var graph_research_faculty = {
             "id": 33,
             "source": 6,
             "target": 96,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8698,7 +8698,7 @@ var graph_research_faculty = {
             "id": 34,
             "source": 6,
             "target": 255,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8709,7 +8709,7 @@ var graph_research_faculty = {
             "id": 36,
             "source": 7,
             "target": 65,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8720,7 +8720,7 @@ var graph_research_faculty = {
             "id": 37,
             "source": 7,
             "target": 349,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8731,7 +8731,7 @@ var graph_research_faculty = {
             "id": 38,
             "source": 7,
             "target": 87,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8742,7 +8742,7 @@ var graph_research_faculty = {
             "id": 39,
             "source": 7,
             "target": 277,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8753,7 +8753,7 @@ var graph_research_faculty = {
             "id": 40,
             "source": 7,
             "target": 288,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8764,7 +8764,7 @@ var graph_research_faculty = {
             "id": 41,
             "source": 7,
             "target": 349,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8775,7 +8775,7 @@ var graph_research_faculty = {
             "id": 42,
             "source": 7,
             "target": 253,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8786,7 +8786,7 @@ var graph_research_faculty = {
             "id": 43,
             "source": 7,
             "target": 73,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8797,7 +8797,7 @@ var graph_research_faculty = {
             "id": 45,
             "source": 8,
             "target": 359,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8808,7 +8808,7 @@ var graph_research_faculty = {
             "id": 46,
             "source": 8,
             "target": 233,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8819,7 +8819,7 @@ var graph_research_faculty = {
             "id": 47,
             "source": 8,
             "target": 285,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8830,7 +8830,7 @@ var graph_research_faculty = {
             "id": 48,
             "source": 8,
             "target": 179,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8841,7 +8841,7 @@ var graph_research_faculty = {
             "id": 49,
             "source": 8,
             "target": 158,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8852,7 +8852,7 @@ var graph_research_faculty = {
             "id": 51,
             "source": 9,
             "target": 313,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8863,7 +8863,7 @@ var graph_research_faculty = {
             "id": 52,
             "source": 9,
             "target": 351,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8874,7 +8874,7 @@ var graph_research_faculty = {
             "id": 53,
             "source": 9,
             "target": 265,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8885,7 +8885,7 @@ var graph_research_faculty = {
             "id": 54,
             "source": 9,
             "target": 364,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8896,7 +8896,7 @@ var graph_research_faculty = {
             "id": 55,
             "source": 9,
             "target": 63,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8907,7 +8907,7 @@ var graph_research_faculty = {
             "id": 56,
             "source": 9,
             "target": 80,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8918,7 +8918,7 @@ var graph_research_faculty = {
             "id": 57,
             "source": 9,
             "target": 184,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8929,7 +8929,7 @@ var graph_research_faculty = {
             "id": 59,
             "source": 10,
             "target": 373,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8940,7 +8940,7 @@ var graph_research_faculty = {
             "id": 60,
             "source": 10,
             "target": 241,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8951,7 +8951,7 @@ var graph_research_faculty = {
             "id": 61,
             "source": 10,
             "target": 87,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8962,7 +8962,7 @@ var graph_research_faculty = {
             "id": 62,
             "source": 10,
             "target": 349,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8973,7 +8973,7 @@ var graph_research_faculty = {
             "id": 63,
             "source": 10,
             "target": 100,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8984,7 +8984,7 @@ var graph_research_faculty = {
             "id": 64,
             "source": 10,
             "target": 177,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -8995,7 +8995,7 @@ var graph_research_faculty = {
             "id": 65,
             "source": 10,
             "target": 332,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9006,7 +9006,7 @@ var graph_research_faculty = {
             "id": 66,
             "source": 10,
             "target": 197,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9017,7 +9017,7 @@ var graph_research_faculty = {
             "id": 68,
             "source": 11,
             "target": 343,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9028,7 +9028,7 @@ var graph_research_faculty = {
             "id": 69,
             "source": 11,
             "target": 338,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9039,7 +9039,7 @@ var graph_research_faculty = {
             "id": 70,
             "source": 11,
             "target": 242,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9050,7 +9050,7 @@ var graph_research_faculty = {
             "id": 71,
             "source": 11,
             "target": 121,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9061,7 +9061,7 @@ var graph_research_faculty = {
             "id": 73,
             "source": 12,
             "target": 190,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9072,7 +9072,7 @@ var graph_research_faculty = {
             "id": 74,
             "source": 12,
             "target": 90,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9083,7 +9083,7 @@ var graph_research_faculty = {
             "id": 75,
             "source": 12,
             "target": 366,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9094,7 +9094,7 @@ var graph_research_faculty = {
             "id": 76,
             "source": 12,
             "target": 120,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9105,7 +9105,7 @@ var graph_research_faculty = {
             "id": 77,
             "source": 12,
             "target": 387,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9116,7 +9116,7 @@ var graph_research_faculty = {
             "id": 78,
             "source": 12,
             "target": 228,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9127,7 +9127,7 @@ var graph_research_faculty = {
             "id": 79,
             "source": 12,
             "target": 202,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9138,7 +9138,7 @@ var graph_research_faculty = {
             "id": 80,
             "source": 12,
             "target": 141,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9149,7 +9149,7 @@ var graph_research_faculty = {
             "id": 81,
             "source": 12,
             "target": 369,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9160,7 +9160,7 @@ var graph_research_faculty = {
             "id": 82,
             "source": 12,
             "target": 98,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9171,7 +9171,7 @@ var graph_research_faculty = {
             "id": 83,
             "source": 12,
             "target": 75,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9182,7 +9182,7 @@ var graph_research_faculty = {
             "id": 84,
             "source": 12,
             "target": 95,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9193,7 +9193,7 @@ var graph_research_faculty = {
             "id": 85,
             "source": 12,
             "target": 91,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9204,7 +9204,7 @@ var graph_research_faculty = {
             "id": 86,
             "source": 12,
             "target": 153,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9215,7 +9215,7 @@ var graph_research_faculty = {
             "id": 87,
             "source": 12,
             "target": 186,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9226,7 +9226,7 @@ var graph_research_faculty = {
             "id": 89,
             "source": 13,
             "target": 378,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9237,7 +9237,7 @@ var graph_research_faculty = {
             "id": 90,
             "source": 13,
             "target": 92,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9248,7 +9248,7 @@ var graph_research_faculty = {
             "id": 91,
             "source": 13,
             "target": 396,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9259,7 +9259,7 @@ var graph_research_faculty = {
             "id": 92,
             "source": 13,
             "target": 211,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9270,7 +9270,7 @@ var graph_research_faculty = {
             "id": 93,
             "source": 13,
             "target": 215,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9281,7 +9281,7 @@ var graph_research_faculty = {
             "id": 95,
             "source": 14,
             "target": 201,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9292,7 +9292,7 @@ var graph_research_faculty = {
             "id": 96,
             "source": 14,
             "target": 391,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9303,7 +9303,7 @@ var graph_research_faculty = {
             "id": 97,
             "source": 14,
             "target": 264,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9314,7 +9314,7 @@ var graph_research_faculty = {
             "id": 98,
             "source": 14,
             "target": 352,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9325,7 +9325,7 @@ var graph_research_faculty = {
             "id": 99,
             "source": 14,
             "target": 71,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9336,7 +9336,7 @@ var graph_research_faculty = {
             "id": 101,
             "source": 15,
             "target": 280,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9347,7 +9347,7 @@ var graph_research_faculty = {
             "id": 102,
             "source": 15,
             "target": 89,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9358,7 +9358,7 @@ var graph_research_faculty = {
             "id": 103,
             "source": 15,
             "target": 111,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9369,7 +9369,7 @@ var graph_research_faculty = {
             "id": 104,
             "source": 15,
             "target": 198,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9380,7 +9380,7 @@ var graph_research_faculty = {
             "id": 106,
             "source": 16,
             "target": 375,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9391,7 +9391,7 @@ var graph_research_faculty = {
             "id": 107,
             "source": 16,
             "target": 284,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9402,7 +9402,7 @@ var graph_research_faculty = {
             "id": 108,
             "source": 16,
             "target": 151,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9413,7 +9413,7 @@ var graph_research_faculty = {
             "id": 109,
             "source": 16,
             "target": 80,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9424,7 +9424,7 @@ var graph_research_faculty = {
             "id": 110,
             "source": 16,
             "target": 214,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9435,7 +9435,7 @@ var graph_research_faculty = {
             "id": 112,
             "source": 17,
             "target": 232,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9446,7 +9446,7 @@ var graph_research_faculty = {
             "id": 113,
             "source": 17,
             "target": 135,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9457,7 +9457,7 @@ var graph_research_faculty = {
             "id": 114,
             "source": 17,
             "target": 195,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9468,7 +9468,7 @@ var graph_research_faculty = {
             "id": 115,
             "source": 17,
             "target": 152,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9479,7 +9479,7 @@ var graph_research_faculty = {
             "id": 117,
             "source": 18,
             "target": 249,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9490,7 +9490,7 @@ var graph_research_faculty = {
             "id": 118,
             "source": 18,
             "target": 383,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9501,7 +9501,7 @@ var graph_research_faculty = {
             "id": 119,
             "source": 18,
             "target": 160,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9512,7 +9512,7 @@ var graph_research_faculty = {
             "id": 120,
             "source": 18,
             "target": 272,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9523,7 +9523,7 @@ var graph_research_faculty = {
             "id": 121,
             "source": 18,
             "target": 79,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9534,7 +9534,7 @@ var graph_research_faculty = {
             "id": 122,
             "source": 18,
             "target": 65,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9545,7 +9545,7 @@ var graph_research_faculty = {
             "id": 124,
             "source": 19,
             "target": 365,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9556,7 +9556,7 @@ var graph_research_faculty = {
             "id": 125,
             "source": 19,
             "target": 271,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9567,7 +9567,7 @@ var graph_research_faculty = {
             "id": 126,
             "source": 19,
             "target": 283,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9578,7 +9578,7 @@ var graph_research_faculty = {
             "id": 128,
             "source": 20,
             "target": 312,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9589,7 +9589,7 @@ var graph_research_faculty = {
             "id": 129,
             "source": 20,
             "target": 194,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9600,7 +9600,7 @@ var graph_research_faculty = {
             "id": 130,
             "source": 20,
             "target": 129,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9611,7 +9611,7 @@ var graph_research_faculty = {
             "id": 131,
             "source": 20,
             "target": 85,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9622,7 +9622,7 @@ var graph_research_faculty = {
             "id": 133,
             "source": 21,
             "target": 193,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9633,7 +9633,7 @@ var graph_research_faculty = {
             "id": 134,
             "source": 21,
             "target": 303,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9644,7 +9644,7 @@ var graph_research_faculty = {
             "id": 135,
             "source": 21,
             "target": 178,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9655,7 +9655,7 @@ var graph_research_faculty = {
             "id": 136,
             "source": 21,
             "target": 86,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9666,7 +9666,7 @@ var graph_research_faculty = {
             "id": 137,
             "source": 21,
             "target": 183,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9677,7 +9677,7 @@ var graph_research_faculty = {
             "id": 138,
             "source": 21,
             "target": 219,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9688,7 +9688,7 @@ var graph_research_faculty = {
             "id": 139,
             "source": 21,
             "target": 164,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9699,7 +9699,7 @@ var graph_research_faculty = {
             "id": 140,
             "source": 21,
             "target": 360,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9710,7 +9710,7 @@ var graph_research_faculty = {
             "id": 141,
             "source": 21,
             "target": 135,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9721,7 +9721,7 @@ var graph_research_faculty = {
             "id": 142,
             "source": 21,
             "target": 116,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9732,7 +9732,7 @@ var graph_research_faculty = {
             "id": 143,
             "source": 21,
             "target": 254,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9743,7 +9743,7 @@ var graph_research_faculty = {
             "id": 144,
             "source": 21,
             "target": 169,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9754,7 +9754,7 @@ var graph_research_faculty = {
             "id": 145,
             "source": 21,
             "target": 310,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9765,7 +9765,7 @@ var graph_research_faculty = {
             "id": 146,
             "source": 21,
             "target": 133,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9776,7 +9776,7 @@ var graph_research_faculty = {
             "id": 147,
             "source": 21,
             "target": 344,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9787,7 +9787,7 @@ var graph_research_faculty = {
             "id": 149,
             "source": 22,
             "target": 108,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9798,7 +9798,7 @@ var graph_research_faculty = {
             "id": 150,
             "source": 22,
             "target": 170,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9809,7 +9809,7 @@ var graph_research_faculty = {
             "id": 151,
             "source": 22,
             "target": 176,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9820,7 +9820,7 @@ var graph_research_faculty = {
             "id": 152,
             "source": 22,
             "target": 294,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9831,7 +9831,7 @@ var graph_research_faculty = {
             "id": 153,
             "source": 22,
             "target": 109,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9842,7 +9842,7 @@ var graph_research_faculty = {
             "id": 154,
             "source": 22,
             "target": 115,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9853,7 +9853,7 @@ var graph_research_faculty = {
             "id": 155,
             "source": 22,
             "target": 200,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9864,7 +9864,7 @@ var graph_research_faculty = {
             "id": 156,
             "source": 22,
             "target": 106,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9875,7 +9875,7 @@ var graph_research_faculty = {
             "id": 158,
             "source": 23,
             "target": 300,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9886,7 +9886,7 @@ var graph_research_faculty = {
             "id": 159,
             "source": 23,
             "target": 371,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9897,7 +9897,7 @@ var graph_research_faculty = {
             "id": 160,
             "source": 23,
             "target": 185,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9908,7 +9908,7 @@ var graph_research_faculty = {
             "id": 162,
             "source": 24,
             "target": 370,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9919,7 +9919,7 @@ var graph_research_faculty = {
             "id": 163,
             "source": 24,
             "target": 105,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9930,7 +9930,7 @@ var graph_research_faculty = {
             "id": 164,
             "source": 24,
             "target": 298,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9941,7 +9941,7 @@ var graph_research_faculty = {
             "id": 165,
             "source": 24,
             "target": 266,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9952,7 +9952,7 @@ var graph_research_faculty = {
             "id": 166,
             "source": 24,
             "target": 117,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9963,7 +9963,7 @@ var graph_research_faculty = {
             "id": 167,
             "source": 24,
             "target": 130,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9974,7 +9974,7 @@ var graph_research_faculty = {
             "id": 168,
             "source": 24,
             "target": 353,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9985,7 +9985,7 @@ var graph_research_faculty = {
             "id": 170,
             "source": 25,
             "target": 316,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -9996,7 +9996,7 @@ var graph_research_faculty = {
             "id": 171,
             "source": 25,
             "target": 246,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10007,7 +10007,7 @@ var graph_research_faculty = {
             "id": 172,
             "source": 25,
             "target": 82,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10018,7 +10018,7 @@ var graph_research_faculty = {
             "id": 173,
             "source": 25,
             "target": 240,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10029,7 +10029,7 @@ var graph_research_faculty = {
             "id": 174,
             "source": 25,
             "target": 392,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10040,7 +10040,7 @@ var graph_research_faculty = {
             "id": 175,
             "source": 25,
             "target": 234,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10051,7 +10051,7 @@ var graph_research_faculty = {
             "id": 176,
             "source": 25,
             "target": 250,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10062,7 +10062,7 @@ var graph_research_faculty = {
             "id": 178,
             "source": 26,
             "target": 368,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10073,7 +10073,7 @@ var graph_research_faculty = {
             "id": 179,
             "source": 26,
             "target": 276,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10084,7 +10084,7 @@ var graph_research_faculty = {
             "id": 180,
             "source": 26,
             "target": 350,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10095,7 +10095,7 @@ var graph_research_faculty = {
             "id": 181,
             "source": 26,
             "target": 345,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10106,7 +10106,7 @@ var graph_research_faculty = {
             "id": 182,
             "source": 26,
             "target": 305,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10117,7 +10117,7 @@ var graph_research_faculty = {
             "id": 183,
             "source": 26,
             "target": 184,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10128,7 +10128,7 @@ var graph_research_faculty = {
             "id": 185,
             "source": 27,
             "target": 393,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10139,7 +10139,7 @@ var graph_research_faculty = {
             "id": 186,
             "source": 27,
             "target": 163,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10150,7 +10150,7 @@ var graph_research_faculty = {
             "id": 187,
             "source": 27,
             "target": 175,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10161,7 +10161,7 @@ var graph_research_faculty = {
             "id": 188,
             "source": 27,
             "target": 357,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10172,7 +10172,7 @@ var graph_research_faculty = {
             "id": 189,
             "source": 27,
             "target": 205,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10183,7 +10183,7 @@ var graph_research_faculty = {
             "id": 190,
             "source": 27,
             "target": 119,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10194,7 +10194,7 @@ var graph_research_faculty = {
             "id": 192,
             "source": 28,
             "target": 323,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10205,7 +10205,7 @@ var graph_research_faculty = {
             "id": 193,
             "source": 28,
             "target": 309,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10216,7 +10216,7 @@ var graph_research_faculty = {
             "id": 194,
             "source": 28,
             "target": 162,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10227,7 +10227,7 @@ var graph_research_faculty = {
             "id": 195,
             "source": 28,
             "target": 340,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10238,7 +10238,7 @@ var graph_research_faculty = {
             "id": 196,
             "source": 28,
             "target": 259,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10249,7 +10249,7 @@ var graph_research_faculty = {
             "id": 198,
             "source": 29,
             "target": 145,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10260,7 +10260,7 @@ var graph_research_faculty = {
             "id": 199,
             "source": 29,
             "target": 64,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10271,7 +10271,7 @@ var graph_research_faculty = {
             "id": 200,
             "source": 29,
             "target": 386,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10282,7 +10282,7 @@ var graph_research_faculty = {
             "id": 201,
             "source": 29,
             "target": 213,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10293,7 +10293,7 @@ var graph_research_faculty = {
             "id": 202,
             "source": 29,
             "target": 76,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10304,7 +10304,7 @@ var graph_research_faculty = {
             "id": 203,
             "source": 29,
             "target": 237,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10315,7 +10315,7 @@ var graph_research_faculty = {
             "id": 204,
             "source": 29,
             "target": 290,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10326,7 +10326,7 @@ var graph_research_faculty = {
             "id": 205,
             "source": 29,
             "target": 278,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10337,7 +10337,7 @@ var graph_research_faculty = {
             "id": 207,
             "source": 30,
             "target": 191,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10348,7 +10348,7 @@ var graph_research_faculty = {
             "id": 208,
             "source": 30,
             "target": 243,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10359,7 +10359,7 @@ var graph_research_faculty = {
             "id": 209,
             "source": 30,
             "target": 159,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10370,7 +10370,7 @@ var graph_research_faculty = {
             "id": 210,
             "source": 30,
             "target": 261,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10381,7 +10381,7 @@ var graph_research_faculty = {
             "id": 211,
             "source": 30,
             "target": 314,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10392,7 +10392,7 @@ var graph_research_faculty = {
             "id": 213,
             "source": 31,
             "target": 256,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10403,7 +10403,7 @@ var graph_research_faculty = {
             "id": 214,
             "source": 31,
             "target": 157,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10414,7 +10414,7 @@ var graph_research_faculty = {
             "id": 215,
             "source": 31,
             "target": 281,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10425,7 +10425,7 @@ var graph_research_faculty = {
             "id": 216,
             "source": 31,
             "target": 224,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10436,7 +10436,7 @@ var graph_research_faculty = {
             "id": 218,
             "source": 32,
             "target": 377,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10447,7 +10447,7 @@ var graph_research_faculty = {
             "id": 219,
             "source": 32,
             "target": 374,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10458,7 +10458,7 @@ var graph_research_faculty = {
             "id": 220,
             "source": 32,
             "target": 66,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10469,7 +10469,7 @@ var graph_research_faculty = {
             "id": 221,
             "source": 32,
             "target": 134,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10480,7 +10480,7 @@ var graph_research_faculty = {
             "id": 223,
             "source": 33,
             "target": 341,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10491,7 +10491,7 @@ var graph_research_faculty = {
             "id": 224,
             "source": 33,
             "target": 302,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10502,7 +10502,7 @@ var graph_research_faculty = {
             "id": 225,
             "source": 33,
             "target": 260,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10513,7 +10513,7 @@ var graph_research_faculty = {
             "id": 226,
             "source": 33,
             "target": 362,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10524,7 +10524,7 @@ var graph_research_faculty = {
             "id": 227,
             "source": 33,
             "target": 361,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10535,7 +10535,7 @@ var graph_research_faculty = {
             "id": 228,
             "source": 33,
             "target": 168,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10546,7 +10546,7 @@ var graph_research_faculty = {
             "id": 229,
             "source": 33,
             "target": 196,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10557,7 +10557,7 @@ var graph_research_faculty = {
             "id": 230,
             "source": 33,
             "target": 389,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10568,7 +10568,7 @@ var graph_research_faculty = {
             "id": 231,
             "source": 33,
             "target": 145,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10579,7 +10579,7 @@ var graph_research_faculty = {
             "id": 232,
             "source": 33,
             "target": 355,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10590,7 +10590,7 @@ var graph_research_faculty = {
             "id": 233,
             "source": 33,
             "target": 386,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10601,7 +10601,7 @@ var graph_research_faculty = {
             "id": 234,
             "source": 33,
             "target": 103,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10612,7 +10612,7 @@ var graph_research_faculty = {
             "id": 235,
             "source": 33,
             "target": 171,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10623,7 +10623,7 @@ var graph_research_faculty = {
             "id": 236,
             "source": 33,
             "target": 299,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10634,7 +10634,7 @@ var graph_research_faculty = {
             "id": 237,
             "source": 33,
             "target": 345,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10645,7 +10645,7 @@ var graph_research_faculty = {
             "id": 238,
             "source": 33,
             "target": 107,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10656,7 +10656,7 @@ var graph_research_faculty = {
             "id": 239,
             "source": 33,
             "target": 203,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10667,7 +10667,7 @@ var graph_research_faculty = {
             "id": 240,
             "source": 33,
             "target": 326,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10678,7 +10678,7 @@ var graph_research_faculty = {
             "id": 242,
             "source": 34,
             "target": 215,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10689,7 +10689,7 @@ var graph_research_faculty = {
             "id": 243,
             "source": 34,
             "target": 127,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10700,7 +10700,7 @@ var graph_research_faculty = {
             "id": 244,
             "source": 34,
             "target": 314,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10711,7 +10711,7 @@ var graph_research_faculty = {
             "id": 245,
             "source": 34,
             "target": 184,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10722,7 +10722,7 @@ var graph_research_faculty = {
             "id": 246,
             "source": 34,
             "target": 203,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10733,7 +10733,7 @@ var graph_research_faculty = {
             "id": 247,
             "source": 34,
             "target": 395,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10744,7 +10744,7 @@ var graph_research_faculty = {
             "id": 248,
             "source": 34,
             "target": 395,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10755,7 +10755,7 @@ var graph_research_faculty = {
             "id": 249,
             "source": 34,
             "target": 339,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10766,7 +10766,7 @@ var graph_research_faculty = {
             "id": 250,
             "source": 34,
             "target": 101,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10777,7 +10777,7 @@ var graph_research_faculty = {
             "id": 251,
             "source": 34,
             "target": 88,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10788,7 +10788,7 @@ var graph_research_faculty = {
             "id": 253,
             "source": 35,
             "target": 112,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10799,7 +10799,7 @@ var graph_research_faculty = {
             "id": 254,
             "source": 35,
             "target": 192,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10810,7 +10810,7 @@ var graph_research_faculty = {
             "id": 255,
             "source": 35,
             "target": 83,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10821,7 +10821,7 @@ var graph_research_faculty = {
             "id": 256,
             "source": 35,
             "target": 347,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10832,7 +10832,7 @@ var graph_research_faculty = {
             "id": 257,
             "source": 35,
             "target": 212,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10843,7 +10843,7 @@ var graph_research_faculty = {
             "id": 258,
             "source": 35,
             "target": 301,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10854,7 +10854,7 @@ var graph_research_faculty = {
             "id": 259,
             "source": 35,
             "target": 229,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10865,7 +10865,7 @@ var graph_research_faculty = {
             "id": 261,
             "source": 36,
             "target": 258,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10876,7 +10876,7 @@ var graph_research_faculty = {
             "id": 262,
             "source": 36,
             "target": 298,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10887,7 +10887,7 @@ var graph_research_faculty = {
             "id": 263,
             "source": 36,
             "target": 356,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10898,7 +10898,7 @@ var graph_research_faculty = {
             "id": 264,
             "source": 36,
             "target": 287,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10909,7 +10909,7 @@ var graph_research_faculty = {
             "id": 265,
             "source": 36,
             "target": 167,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10920,7 +10920,7 @@ var graph_research_faculty = {
             "id": 266,
             "source": 36,
             "target": 140,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10931,7 +10931,7 @@ var graph_research_faculty = {
             "id": 267,
             "source": 36,
             "target": 148,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10942,7 +10942,7 @@ var graph_research_faculty = {
             "id": 268,
             "source": 36,
             "target": 118,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10953,7 +10953,7 @@ var graph_research_faculty = {
             "id": 270,
             "source": 37,
             "target": 275,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10964,7 +10964,7 @@ var graph_research_faculty = {
             "id": 271,
             "source": 37,
             "target": 244,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10975,7 +10975,7 @@ var graph_research_faculty = {
             "id": 272,
             "source": 37,
             "target": 128,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10986,7 +10986,7 @@ var graph_research_faculty = {
             "id": 273,
             "source": 37,
             "target": 123,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -10997,7 +10997,7 @@ var graph_research_faculty = {
             "id": 274,
             "source": 37,
             "target": 354,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11008,7 +11008,7 @@ var graph_research_faculty = {
             "id": 275,
             "source": 37,
             "target": 343,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11019,7 +11019,7 @@ var graph_research_faculty = {
             "id": 277,
             "source": 38,
             "target": 348,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11030,7 +11030,7 @@ var graph_research_faculty = {
             "id": 278,
             "source": 38,
             "target": 209,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11041,7 +11041,7 @@ var graph_research_faculty = {
             "id": 279,
             "source": 38,
             "target": 154,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11052,7 +11052,7 @@ var graph_research_faculty = {
             "id": 280,
             "source": 38,
             "target": 334,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11063,7 +11063,7 @@ var graph_research_faculty = {
             "id": 281,
             "source": 38,
             "target": 192,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11074,7 +11074,7 @@ var graph_research_faculty = {
             "id": 282,
             "source": 38,
             "target": 296,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11085,7 +11085,7 @@ var graph_research_faculty = {
             "id": 283,
             "source": 38,
             "target": 325,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11096,7 +11096,7 @@ var graph_research_faculty = {
             "id": 285,
             "source": 39,
             "target": 385,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11107,7 +11107,7 @@ var graph_research_faculty = {
             "id": 286,
             "source": 39,
             "target": 218,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11118,7 +11118,7 @@ var graph_research_faculty = {
             "id": 287,
             "source": 39,
             "target": 223,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11129,7 +11129,7 @@ var graph_research_faculty = {
             "id": 288,
             "source": 39,
             "target": 182,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11140,7 +11140,7 @@ var graph_research_faculty = {
             "id": 289,
             "source": 39,
             "target": 93,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11151,7 +11151,7 @@ var graph_research_faculty = {
             "id": 290,
             "source": 39,
             "target": 371,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11162,7 +11162,7 @@ var graph_research_faculty = {
             "id": 291,
             "source": 39,
             "target": 105,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11173,7 +11173,7 @@ var graph_research_faculty = {
             "id": 292,
             "source": 39,
             "target": 105,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11184,7 +11184,7 @@ var graph_research_faculty = {
             "id": 294,
             "source": 40,
             "target": 138,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11195,7 +11195,7 @@ var graph_research_faculty = {
             "id": 295,
             "source": 40,
             "target": 291,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11206,7 +11206,7 @@ var graph_research_faculty = {
             "id": 296,
             "source": 40,
             "target": 161,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11217,7 +11217,7 @@ var graph_research_faculty = {
             "id": 297,
             "source": 40,
             "target": 245,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11228,7 +11228,7 @@ var graph_research_faculty = {
             "id": 298,
             "source": 40,
             "target": 342,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11239,7 +11239,7 @@ var graph_research_faculty = {
             "id": 300,
             "source": 41,
             "target": 188,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11250,7 +11250,7 @@ var graph_research_faculty = {
             "id": 301,
             "source": 41,
             "target": 371,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11261,7 +11261,7 @@ var graph_research_faculty = {
             "id": 302,
             "source": 41,
             "target": 185,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11272,7 +11272,7 @@ var graph_research_faculty = {
             "id": 303,
             "source": 41,
             "target": 363,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11283,7 +11283,7 @@ var graph_research_faculty = {
             "id": 304,
             "source": 41,
             "target": 81,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11294,7 +11294,7 @@ var graph_research_faculty = {
             "id": 305,
             "source": 41,
             "target": 319,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11305,7 +11305,7 @@ var graph_research_faculty = {
             "id": 307,
             "source": 42,
             "target": 156,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11316,7 +11316,7 @@ var graph_research_faculty = {
             "id": 308,
             "source": 42,
             "target": 293,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11327,7 +11327,7 @@ var graph_research_faculty = {
             "id": 309,
             "source": 42,
             "target": 149,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11338,7 +11338,7 @@ var graph_research_faculty = {
             "id": 310,
             "source": 42,
             "target": 150,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11349,7 +11349,7 @@ var graph_research_faculty = {
             "id": 311,
             "source": 42,
             "target": 142,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11360,7 +11360,7 @@ var graph_research_faculty = {
             "id": 312,
             "source": 42,
             "target": 327,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11371,7 +11371,7 @@ var graph_research_faculty = {
             "id": 314,
             "source": 43,
             "target": 331,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11382,7 +11382,7 @@ var graph_research_faculty = {
             "id": 315,
             "source": 43,
             "target": 306,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11393,7 +11393,7 @@ var graph_research_faculty = {
             "id": 316,
             "source": 43,
             "target": 216,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11404,7 +11404,7 @@ var graph_research_faculty = {
             "id": 317,
             "source": 43,
             "target": 340,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11415,7 +11415,7 @@ var graph_research_faculty = {
             "id": 318,
             "source": 43,
             "target": 273,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11426,7 +11426,7 @@ var graph_research_faculty = {
             "id": 320,
             "source": 44,
             "target": 161,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11437,7 +11437,7 @@ var graph_research_faculty = {
             "id": 321,
             "source": 44,
             "target": 78,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11448,7 +11448,7 @@ var graph_research_faculty = {
             "id": 322,
             "source": 44,
             "target": 251,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11459,7 +11459,7 @@ var graph_research_faculty = {
             "id": 323,
             "source": 44,
             "target": 207,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11470,7 +11470,7 @@ var graph_research_faculty = {
             "id": 324,
             "source": 44,
             "target": 231,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11481,7 +11481,7 @@ var graph_research_faculty = {
             "id": 326,
             "source": 45,
             "target": 166,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11492,7 +11492,7 @@ var graph_research_faculty = {
             "id": 327,
             "source": 45,
             "target": 384,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11503,7 +11503,7 @@ var graph_research_faculty = {
             "id": 328,
             "source": 45,
             "target": 204,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11514,7 +11514,7 @@ var graph_research_faculty = {
             "id": 329,
             "source": 45,
             "target": 210,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11525,7 +11525,7 @@ var graph_research_faculty = {
             "id": 330,
             "source": 45,
             "target": 390,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11536,7 +11536,7 @@ var graph_research_faculty = {
             "id": 331,
             "source": 45,
             "target": 328,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11547,7 +11547,7 @@ var graph_research_faculty = {
             "id": 332,
             "source": 45,
             "target": 310,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11558,7 +11558,7 @@ var graph_research_faculty = {
             "id": 333,
             "source": 45,
             "target": 344,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11569,7 +11569,7 @@ var graph_research_faculty = {
             "id": 335,
             "source": 46,
             "target": 94,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11580,7 +11580,7 @@ var graph_research_faculty = {
             "id": 336,
             "source": 46,
             "target": 282,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11591,7 +11591,7 @@ var graph_research_faculty = {
             "id": 337,
             "source": 46,
             "target": 143,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11602,7 +11602,7 @@ var graph_research_faculty = {
             "id": 338,
             "source": 46,
             "target": 381,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11613,7 +11613,7 @@ var graph_research_faculty = {
             "id": 340,
             "source": 47,
             "target": 131,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11624,7 +11624,7 @@ var graph_research_faculty = {
             "id": 341,
             "source": 47,
             "target": 388,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11635,7 +11635,7 @@ var graph_research_faculty = {
             "id": 342,
             "source": 47,
             "target": 298,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11646,7 +11646,7 @@ var graph_research_faculty = {
             "id": 343,
             "source": 47,
             "target": 217,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11657,7 +11657,7 @@ var graph_research_faculty = {
             "id": 345,
             "source": 48,
             "target": 88,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11668,7 +11668,7 @@ var graph_research_faculty = {
             "id": 346,
             "source": 48,
             "target": 311,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11679,7 +11679,7 @@ var graph_research_faculty = {
             "id": 347,
             "source": 48,
             "target": 376,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11690,7 +11690,7 @@ var graph_research_faculty = {
             "id": 348,
             "source": 48,
             "target": 324,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11701,7 +11701,7 @@ var graph_research_faculty = {
             "id": 349,
             "source": 48,
             "target": 139,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11712,7 +11712,7 @@ var graph_research_faculty = {
             "id": 350,
             "source": 48,
             "target": 136,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11723,7 +11723,7 @@ var graph_research_faculty = {
             "id": 351,
             "source": 48,
             "target": 371,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11734,7 +11734,7 @@ var graph_research_faculty = {
             "id": 353,
             "source": 49,
             "target": 189,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11745,7 +11745,7 @@ var graph_research_faculty = {
             "id": 354,
             "source": 49,
             "target": 371,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11756,7 +11756,7 @@ var graph_research_faculty = {
             "id": 355,
             "source": 49,
             "target": 300,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11767,7 +11767,7 @@ var graph_research_faculty = {
             "id": 356,
             "source": 49,
             "target": 165,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11778,7 +11778,7 @@ var graph_research_faculty = {
             "id": 357,
             "source": 49,
             "target": 270,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11789,7 +11789,7 @@ var graph_research_faculty = {
             "id": 359,
             "source": 50,
             "target": 379,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11800,7 +11800,7 @@ var graph_research_faculty = {
             "id": 360,
             "source": 50,
             "target": 279,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11811,7 +11811,7 @@ var graph_research_faculty = {
             "id": 361,
             "source": 50,
             "target": 346,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11822,7 +11822,7 @@ var graph_research_faculty = {
             "id": 362,
             "source": 50,
             "target": 320,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11833,7 +11833,7 @@ var graph_research_faculty = {
             "id": 363,
             "source": 50,
             "target": 206,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11844,7 +11844,7 @@ var graph_research_faculty = {
             "id": 364,
             "source": 50,
             "target": 173,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11855,7 +11855,7 @@ var graph_research_faculty = {
             "id": 365,
             "source": 50,
             "target": 102,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11866,7 +11866,7 @@ var graph_research_faculty = {
             "id": 366,
             "source": 50,
             "target": 174,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11877,7 +11877,7 @@ var graph_research_faculty = {
             "id": 367,
             "source": 50,
             "target": 61,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11888,7 +11888,7 @@ var graph_research_faculty = {
             "id": 368,
             "source": 50,
             "target": 227,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11899,7 +11899,7 @@ var graph_research_faculty = {
             "id": 369,
             "source": 50,
             "target": 267,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11910,7 +11910,7 @@ var graph_research_faculty = {
             "id": 370,
             "source": 50,
             "target": 382,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11921,7 +11921,7 @@ var graph_research_faculty = {
             "id": 372,
             "source": 51,
             "target": 110,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11932,7 +11932,7 @@ var graph_research_faculty = {
             "id": 373,
             "source": 51,
             "target": 348,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11943,7 +11943,7 @@ var graph_research_faculty = {
             "id": 374,
             "source": 51,
             "target": 329,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11954,7 +11954,7 @@ var graph_research_faculty = {
             "id": 375,
             "source": 51,
             "target": 371,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11965,7 +11965,7 @@ var graph_research_faculty = {
             "id": 376,
             "source": 51,
             "target": 394,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11976,7 +11976,7 @@ var graph_research_faculty = {
             "id": 377,
             "source": 51,
             "target": 77,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11987,7 +11987,7 @@ var graph_research_faculty = {
             "id": 379,
             "source": 52,
             "target": 161,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -11998,7 +11998,7 @@ var graph_research_faculty = {
             "id": 380,
             "source": 52,
             "target": 262,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12009,7 +12009,7 @@ var graph_research_faculty = {
             "id": 381,
             "source": 52,
             "target": 292,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12020,7 +12020,7 @@ var graph_research_faculty = {
             "id": 382,
             "source": 52,
             "target": 146,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12031,7 +12031,7 @@ var graph_research_faculty = {
             "id": 384,
             "source": 53,
             "target": 208,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12042,7 +12042,7 @@ var graph_research_faculty = {
             "id": 385,
             "source": 53,
             "target": 274,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12053,7 +12053,7 @@ var graph_research_faculty = {
             "id": 386,
             "source": 53,
             "target": 367,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12064,7 +12064,7 @@ var graph_research_faculty = {
             "id": 387,
             "source": 53,
             "target": 330,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12075,7 +12075,7 @@ var graph_research_faculty = {
             "id": 388,
             "source": 53,
             "target": 68,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12086,7 +12086,7 @@ var graph_research_faculty = {
             "id": 389,
             "source": 53,
             "target": 94,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12097,7 +12097,7 @@ var graph_research_faculty = {
             "id": 391,
             "source": 54,
             "target": 318,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12108,7 +12108,7 @@ var graph_research_faculty = {
             "id": 392,
             "source": 54,
             "target": 236,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12119,7 +12119,7 @@ var graph_research_faculty = {
             "id": 393,
             "source": 54,
             "target": 235,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12130,7 +12130,7 @@ var graph_research_faculty = {
             "id": 394,
             "source": 54,
             "target": 222,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12141,7 +12141,7 @@ var graph_research_faculty = {
             "id": 396,
             "source": 55,
             "target": 85,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12152,7 +12152,7 @@ var graph_research_faculty = {
             "id": 397,
             "source": 55,
             "target": 317,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12163,7 +12163,7 @@ var graph_research_faculty = {
             "id": 398,
             "source": 55,
             "target": 132,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12174,7 +12174,7 @@ var graph_research_faculty = {
             "id": 399,
             "source": 55,
             "target": 269,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12185,7 +12185,7 @@ var graph_research_faculty = {
             "id": 400,
             "source": 55,
             "target": 62,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12196,7 +12196,7 @@ var graph_research_faculty = {
             "id": 401,
             "source": 55,
             "target": 337,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12207,7 +12207,7 @@ var graph_research_faculty = {
             "id": 402,
             "source": 55,
             "target": 67,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12218,7 +12218,7 @@ var graph_research_faculty = {
             "id": 403,
             "source": 55,
             "target": 248,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12229,7 +12229,7 @@ var graph_research_faculty = {
             "id": 404,
             "source": 55,
             "target": 124,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12240,7 +12240,7 @@ var graph_research_faculty = {
             "id": 405,
             "source": 55,
             "target": 137,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12251,7 +12251,7 @@ var graph_research_faculty = {
             "id": 407,
             "source": 56,
             "target": 369,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12262,7 +12262,7 @@ var graph_research_faculty = {
             "id": 408,
             "source": 56,
             "target": 254,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12273,7 +12273,7 @@ var graph_research_faculty = {
             "id": 409,
             "source": 56,
             "target": 187,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12284,7 +12284,7 @@ var graph_research_faculty = {
             "id": 410,
             "source": 56,
             "target": 69,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12295,7 +12295,7 @@ var graph_research_faculty = {
             "id": 412,
             "source": 57,
             "target": 261,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12306,7 +12306,7 @@ var graph_research_faculty = {
             "id": 413,
             "source": 57,
             "target": 225,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12317,7 +12317,7 @@ var graph_research_faculty = {
             "id": 414,
             "source": 57,
             "target": 286,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12328,7 +12328,7 @@ var graph_research_faculty = {
             "id": 416,
             "source": 58,
             "target": 226,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12339,7 +12339,7 @@ var graph_research_faculty = {
             "id": 417,
             "source": 58,
             "target": 261,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12350,7 +12350,7 @@ var graph_research_faculty = {
             "id": 418,
             "source": 58,
             "target": 84,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12361,7 +12361,7 @@ var graph_research_faculty = {
             "id": 419,
             "source": 58,
             "target": 74,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12372,7 +12372,7 @@ var graph_research_faculty = {
             "id": 420,
             "source": 58,
             "target": 125,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12383,7 +12383,7 @@ var graph_research_faculty = {
             "id": 421,
             "source": 58,
             "target": 97,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12394,7 +12394,7 @@ var graph_research_faculty = {
             "id": 423,
             "source": 59,
             "target": 307,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12405,7 +12405,7 @@ var graph_research_faculty = {
             "id": 424,
             "source": 59,
             "target": 295,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12416,7 +12416,7 @@ var graph_research_faculty = {
             "id": 425,
             "source": 59,
             "target": 181,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12427,7 +12427,7 @@ var graph_research_faculty = {
             "id": 426,
             "source": 59,
             "target": 315,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12438,7 +12438,7 @@ var graph_research_faculty = {
             "id": 428,
             "source": 60,
             "target": 147,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12449,7 +12449,7 @@ var graph_research_faculty = {
             "id": 429,
             "source": 60,
             "target": 220,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12460,7 +12460,7 @@ var graph_research_faculty = {
             "id": 430,
             "source": 60,
             "target": 268,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12471,7 +12471,7 @@ var graph_research_faculty = {
             "id": 431,
             "source": 60,
             "target": 113,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12482,7 +12482,7 @@ var graph_research_faculty = {
             "id": 432,
             "source": 60,
             "target": 104,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12493,7 +12493,7 @@ var graph_research_faculty = {
             "id": 433,
             "source": 60,
             "target": 172,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12504,7 +12504,7 @@ var graph_research_faculty = {
             "id": 434,
             "source": 60,
             "target": 380,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12515,7 +12515,7 @@ var graph_research_faculty = {
             "id": 435,
             "source": 60,
             "target": 358,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12526,7 +12526,7 @@ var graph_research_faculty = {
             "id": 436,
             "source": 60,
             "target": 199,
-            "value": 1
+            "value": 5
         },
         {
             "type": "has_interest",
@@ -12537,7 +12537,7 @@ var graph_research_faculty = {
             "id": 437,
             "source": 60,
             "target": 257,
-            "value": 1
+            "value": 5
         }
     ]
 }
