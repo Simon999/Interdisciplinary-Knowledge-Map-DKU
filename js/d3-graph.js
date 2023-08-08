@@ -53,7 +53,7 @@ function createD3Graph(graph, parentWidth, parentHeight, pageType) {
     } else {
         reasonableScreenSizeScaleMultiple = 8000;
         initXTransform = parentWidth / 2.5;
-        initYTransform = parentHeight / 3.0;
+        initYTransform = parentHeight / 3.2;
     }
     var initScale = Math.max(parentWidth, parentHeight) / (reasonableScreenSizeScaleMultiple);
 
@@ -348,22 +348,22 @@ function setSelectedNode(node, allNodes, allLinks) {
         selectedNode = node;
     }
     if(node.labels[0] == "ResearchInterest" || node.labels[0] == "ResearchInterest_shown") {
-        showConceptInfo(node);
+        showConceptInfo(node, "ResearchInterest");
         selectedNode = node;
     }
     // PrimaryPillar
     if(node.labels[0] == "PrimaryResearchPillar") {
-        showConceptInfo(node);
+        showConceptInfo(node, "ResearchPillar");
         selectedNode = node;
     }
     // PrimaryMajorSupport
     if(node.labels[0] == "PrimaryMajorSupport") {
-        showConceptInfo(node);
+        showConceptInfo(node, "TeachingMajor");
         selectedNode = node;
     }
     // ParentPrimaryMajorSupport
     if(node.labels[0] == "ParentPrimaryMajorSupport") {
-        showConceptInfo(node);
+        showConceptInfo(node, "TeachingFaculty");
         selectedNode = node;
     }
        
@@ -399,15 +399,25 @@ function showPeopleInfo(node) {
         );
 }
 
-function showConceptInfo(node) {
+function showConceptInfo(node, nodeType) {
     
     $('.modal').modal('open');
     // $('#PeopleImg').attr("src", node.img); 
     // $('#PeopleName').attr("href", "here is a link!" + node.id);
     $('#PeopleName').text(node.properties.name);
+    var desc = ""
+    if (nodeType == "ResearchPillar") {
+        desc = "<br/> Click a faculty's name to find out his or her research areas and interests.  <br>"
+    } else if (nodeType == "ResearchInterest") {
+        desc = "<br/> Please contact he/she to get the details of this research interest. <br>"
+    } else if (nodeType == "TeachingMajor") {
+        desc = "<br/> Click a node (small dot) to see a faculty's information such as the courses he/she primarily supports and his/her research interests. <br>"
+    } else if (nodeType == "TeachingFaculty") {
+        desc = "<br/> Click a node (small dot) to see a faculty's information such as the courses he/she primarily supports and his/her research interests. <br>"
+    }
     $('#PeopleDescription')
         .html(
-            "<br/> Click a node (small dot) to see a faculty's information such as the courses he/she primarily supports and his/her research interests. <br>"
+            desc
         );
 }
 
