@@ -388,7 +388,7 @@ function showPeopleInfo(node) {
             "<br/><i><strong>"+ node.properties.title + " at " + node.properties.affiliation + "</i></strong>"+
             "<br/><i><strong>"+ node.properties.division + " Division </i></strong>" +
             "<br/><i>"+ node.properties.email  +"</i>" +
-            "<br/><i>Personal Website: "+ node.properties.website_link  +"</i>" + "<br>" +
+            "<br/><i>Personal Website: "+ "<a href=\"" + node.properties.website_link + "\">" + node.properties.website_link + "<a/>"  +"</i>" + "<br>" +
             "<br/><strong>Primary Research Direction</strong>: <i>"+ node.properties.research_direction + "</i>" +
             "<br/><strong>Research Pillar</strong>: <i><br>Primary - "+ node.properties.research_pillar_primary + "<br>Secondary - "+ node.properties.research_pillar_secondary +"</i>" +
             "<br/><strong>Research Interests</strong>: <br/><i>"+ node.properties.research_interest + "</i>" +
@@ -411,9 +411,9 @@ function showConceptInfo(node, nodeType) {
     } else if (nodeType == "ResearchInterest") {
         desc = "<br/> Please contact he/she to get the details of this research interest. <br>"
     } else if (nodeType == "TeachingMajor") {
-        desc = "<br/> Click a node (small dot) to see a faculty's information such as the courses he/she primarily supports and his/her research interests. <br>"
+        desc = "<br/> This is a track, click a node (small dot) link to this node to see the faculty's information who are teaching this track. <br>"
     } else if (nodeType == "TeachingFaculty") {
-        desc = "<br/> Click a node (small dot) to see a faculty's information such as the courses he/she primarily supports and his/her research interests. <br>"
+        desc = "<br/> This is a major, click a node (small dot) link to this node to see the tracks belong to this major. <br>"
     }
     $('#PeopleDescription')
         .html(
