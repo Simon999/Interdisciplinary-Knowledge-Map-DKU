@@ -411,9 +411,9 @@ function showConceptInfo(node, nodeType) {
     } else if (nodeType == "ResearchInterest") {
         desc = "<br/> Please contact he/she to get the details of this research interest. <br>"
     } else if (nodeType == "TeachingMajor") {
-        desc = "<br/> This is a track, click a node (small dot) link to this node to see the faculty's information who are teaching this track. <br>"
+        desc = "<br/> This is a track. Click a node (small dot) linking to this node for the information about the faculty who teaches courses for this track. <br>"
     } else if (nodeType == "TeachingFaculty") {
-        desc = "<br/> This is a major, click a node (small dot) link to this node to see the tracks belong to this major. <br>"
+        desc = "<br/> This is a major. Click a linking node to see a track under this major. <br>"
     }
     $('#PeopleDescription')
         .html(
