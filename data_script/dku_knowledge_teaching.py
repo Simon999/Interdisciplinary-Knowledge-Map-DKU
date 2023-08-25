@@ -140,4 +140,5 @@ whole_data = {"nodes": nodes_list, "links": links_list}
 result = json.dumps(whole_data, indent = 2)
 # Writing to sample.json
 with open("teaching.js", "w") as outfile:
-    outfile.write("var graph_teaching = %s" % result)
+    #outfile.write("var graph_teaching = %s" % result)
+    outfile.write("%s" % result)

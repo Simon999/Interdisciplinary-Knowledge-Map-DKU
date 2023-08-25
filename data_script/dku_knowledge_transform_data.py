@@ -3,13 +3,13 @@ import json
 import copy
 
 # set the path to input (the original data) and output (the transformed data)
-path_in = r"C:\Users\sd540\Desktop\Division Portal\Interdisciplinary-Knowledge-Map-DKU\js\02-16-2023\\" # original
-path_out = r"C:\Users\sd540\Desktop\Division Portal\Interdisciplinary-Knowledge-Map-DKU\js\07-24-2023\\" # transformed
+path_in = r".\\" # original
+path_out = r".\\" # transformed
 
 # make sure these js files are json files (no var names)
-with open(path_in + "research-faculty.js") as f:
+with open("research-faculty.js") as f:
     research_faculty_data = json.load(f)
-with open(path_in + "teaching.js") as f:
+with open("teaching.js") as f:
     teaching_data = json.load(f)
 
 # get all nodes and links

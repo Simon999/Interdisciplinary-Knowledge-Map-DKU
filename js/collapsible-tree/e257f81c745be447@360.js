@@ -183,7 +183,7 @@ function _data(FileAttachment){return({
           "children": [
             {
               "name": "Mark Spaller",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/spaller-mark/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/mark-spaller"
             }
           ]
         },
@@ -196,7 +196,7 @@ function _data(FileAttachment){return({
             },
             {
               "name": "Yiu Wing Kam",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/kam-yiu-wing-jason/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/yiu-wing-jason-kam"
             }
           ]
         },
@@ -205,11 +205,11 @@ function _data(FileAttachment){return({
           "children": [
             {
               "name": "Ka Leung Lam",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/lam-ka-leung/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/ka-leung-lam"
             },
             {
               "name": "William Winner",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/winner-william/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/william-winner"
             }
           ]
         },
@@ -222,11 +222,11 @@ function _data(FileAttachment){return({
             },
             {
               "name": "Eunyu Kim",
-              "url": "http://eunyu.kim.lab.com/"
+              "url": "https://eunyukimlab.com/"
             },
             {
               "name": "Ferdinand Kappes",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/kappes-ferdinand/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/ferdinand-kappes"
             },
             {
               "name": "Huansheng Cao",
@@ -238,7 +238,7 @@ function _data(FileAttachment){return({
             },
             {
               "name": "Jianbo Yue",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/yue-jianbo/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/jianbo-yue"
             },
             {
               "name": "Joohyun Lee",
@@ -246,11 +246,11 @@ function _data(FileAttachment){return({
             },
             {
               "name": "Linfeng Huang",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-linfeng/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/linfeng-huang"
             },
             {
               "name": "Xianzhi Lin",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/lin-xianzhi/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/xianzhi-lin"
             }
           ]
         },
@@ -259,7 +259,7 @@ function _data(FileAttachment){return({
           "children": [
             {
               "name": "Pedro Rada",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/rada-pedro/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/pedro-rada"
             },
             {
               "name": "Sze Chai Kwok",
@@ -272,11 +272,11 @@ function _data(FileAttachment){return({
           "children": [
             {
               "name": "Eric Chen",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/chen-chia-chien-eric/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/chia-chien-eric-chen"
             },
             {
               "name": "Shan Wang",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/wang-shan/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/shan-wang"
             }
           ]
         }
@@ -294,7 +294,7 @@ function _data(FileAttachment){return({
             },
             {
               "name": "Feng Tian",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/tian-feng/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/feng-tian/"
             },
             {
               "name": "Ming Li",
@@ -302,7 +302,7 @@ function _data(FileAttachment){return({
             },
             {
               "name": "Ming-chun Huang",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-ming-chun/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/ming-chun-huang"
             },
             {
               "name": "Mustafa Misir",
@@ -315,7 +315,7 @@ function _data(FileAttachment){return({
           "children": [
             {
               "name": "Peng Sun",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/sun-peng/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/peng-sun"
             }
           ]
         },
@@ -333,7 +333,7 @@ function _data(FileAttachment){return({
           "children": [
             {
               "name": "Jiang Long",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/long-jiang/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/jiang-long"
             }
           ]
         }
@@ -347,23 +347,23 @@ function _data(FileAttachment){return({
           "children": [
             {
               "name": "Chi-Yeung(Jimmy) Choi",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/choi-chi-yeung-jimmy/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/chi-yeung-jimmy-choi"
             },
             {
               "name": "Chuanhui Gu",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/gu-chuanhui/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/chuanhui-gu"
             },
             {
               "name": "Ding Ma",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/ma-ding/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/ding-ma"
             },
             {
               "name": "Renee Richer",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/richer-renee/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/renee-richer"
             },
             {
               "name": "Song Gao",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/gao-song/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/song-gao"
             },
             {
               "name": "Zuchuan Li",
@@ -376,11 +376,11 @@ function _data(FileAttachment){return({
           "children": [
             {
               "name": "Ka Leung Lam",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/lam-ka-leung/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/ka-leung-lam"
             },
             {
               "name": "William Winner",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/winner-william/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/william-winner"
             }
           ]
         },
@@ -402,11 +402,11 @@ function _data(FileAttachment){return({
             },
             {
               "name": "Eunyu Kim",
-              "url": "http://eunyu.kim.lab.com/"
+              "url": "https://eunyukimlab.com/"
             },
             {
               "name": "Ferdinand Kappes",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/kappes-ferdinand/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/ferdinand-kappes"
             },
             {
               "name": "Huansheng Cao",
@@ -418,7 +418,7 @@ function _data(FileAttachment){return({
             },
             {
               "name": "Jianbo Yue",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/yue-jianbo/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/jianbo-yue"
             },
             {
               "name": "Joohyun Lee",
@@ -426,11 +426,11 @@ function _data(FileAttachment){return({
             },
             {
               "name": "Linfeng Huang",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-linfeng/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/linfeng-huang"
             },
             {
               "name": "Xianzhi Lin",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/lin-xianzhi/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/xianzhi-lin"
             }
           ]
         },
@@ -439,7 +439,7 @@ function _data(FileAttachment){return({
           "children": [
             {
               "name": "Tan Zhang",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/zhang-tan/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/tan-zhang"
             },
             {
               "name": "Xinrong Lin",
@@ -470,7 +470,7 @@ function _data(FileAttachment){return({
             },
             {
               "name": "Marcus Werner",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/werner-marcus/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/marcus-werner"
             },
             {
               "name": "Shixin Xu",
@@ -478,7 +478,7 @@ function _data(FileAttachment){return({
             },
             {
               "name": "Xiaoqian Xu",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/xu-xiaoqian/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/xiaoqian-xu"
             }
           ]
         },
@@ -496,7 +496,7 @@ function _data(FileAttachment){return({
           "children": [
             {
               "name": "Floyd Beckford",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/beckford-floyd/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/floyd-beckford"
             }
           ]
         },
@@ -514,7 +514,7 @@ function _data(FileAttachment){return({
           "children": [
             {
               "name": "Paul Stanley",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/stanley-paul/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/paul-stanley"
             }
           ]
         },
@@ -523,7 +523,7 @@ function _data(FileAttachment){return({
           "children": [
             {
               "name": "Weiwei Shi",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/shi-weiwei/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/weiwei-shi"
             }
           ]
         },
@@ -532,7 +532,7 @@ function _data(FileAttachment){return({
           "children": [
             {
               "name": "Changcheng Zheng",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/zheng-changcheng/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/changcheng-zheng"
             }
           ]
         },
@@ -541,7 +541,7 @@ function _data(FileAttachment){return({
           "children": [
             {
               "name": "Xiawa Wang",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/wang-xiawa/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/xiawa-wang"
             }
           ]
         },
@@ -550,11 +550,11 @@ function _data(FileAttachment){return({
           "children": [
             {
               "name": "Dangxing Chen",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/chen-dang-xing/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/dangxing-chen"
             },
             {
               "name": "Pascal Grange",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/grange-pascal/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/pascal-grange"
             }
           ]
         },
@@ -563,7 +563,7 @@ function _data(FileAttachment){return({
           "children": [
             {
               "name": "Myung-Joong Hwang",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/hwang-myung-joong/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/myung-joong-hwang"
             }
           ]
         },
@@ -572,7 +572,7 @@ function _data(FileAttachment){return({
           "children": [
             {
               "name": "Kai Huang",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huang-kai/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/kai-huang"
             }
           ]
         },
@@ -581,11 +581,11 @@ function _data(FileAttachment){return({
           "children": [
             {
               "name": "Zhe Liu",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/liu-zhe/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/zhe-liu"
             },
             {
               "name": "Zhenghui Huo",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huo-zhenghui/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/zhenghui-huo"
             }
           ]
         },
@@ -594,11 +594,11 @@ function _data(FileAttachment){return({
           "children": [
             {
               "name": "Dongmian Zou",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/zou-dongmian/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/dongmian-zou"
             },
             {
               "name": "Italo Simonelli",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/simonelli-italo/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/italo-simonelli"
             },
             {
               "name": "Lin Jiu",
@@ -606,7 +606,7 @@ function _data(FileAttachment){return({
             },
             {
               "name": "Xingshi Cai",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cai-xing-shi/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/xingshi-cai"
             }
           ]
         }

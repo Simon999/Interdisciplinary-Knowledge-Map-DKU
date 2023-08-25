@@ -49,7 +49,7 @@ function createD3Graph(graph, parentWidth, parentHeight, pageType) {
     if (pageType == 'faculty') {
         reasonableScreenSizeScaleMultiple = 16000;
         initXTransform = parentWidth / 2;
-        initYTransform = parentHeight / 2;
+        initYTransform = parentHeight / 2.3;
     } else {
         reasonableScreenSizeScaleMultiple = 8000;
         initXTransform = parentWidth / 2.5;
