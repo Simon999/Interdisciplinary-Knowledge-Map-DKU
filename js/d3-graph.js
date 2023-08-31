@@ -171,6 +171,10 @@ function createD3Graph(graph, parentWidth, parentHeight, pageType) {
             }
             
             if(n.labels[0] == "PrimaryResearchPillar") {
+                if(n.properties.name == "Biological, behavioral sciences and health") {return "rgba(245, 88, 39, 0.2)";}
+                if(n.properties.name == "Math, physical and materials sciences") {return "rgba(39, 245, 63, 0.2)";}
+                if(n.properties.name == "Data and computer sciences") {return "rgba(84, 39, 245, 0.2)";}
+                if(n.properties.name == "Environmental science and sustainability") {return "rgba(155, 175, 195, 0.2)";}
                 return "rgba(155, 175, 195, 0.2)";
             }
             // PrimaryMajorSupport
@@ -388,7 +392,7 @@ function showPeopleInfo(node) {
             "<br/><i><strong>"+ node.properties.title + " at " + node.properties.affiliation + "</i></strong>"+
             "<br/><i><strong>"+ node.properties.division + " Division </i></strong>" +
             "<br/><i>"+ node.properties.email  +"</i>" +
-            "<br/><i>Personal Website: "+ "<a href=\"" + node.properties.website_link + "\">" + node.properties.website_link + "<a/>"  +"</i>" + "<br>" +
+            "<br/><i>Personal Website: "+ "<a href=\"" + node.properties.website_link + "\" target=\"_blank\" rel=\"noopener noreferrer\">" + node.properties.website_link + "<a/>"  +"</i>" + "<br>" +
             "<br/><strong>Primary Research Direction</strong>: <i>"+ node.properties.research_direction + "</i>" +
             "<br/><strong>Research Pillar</strong>: <i><br>Primary - "+ node.properties.research_pillar_primary + "<br>Secondary - "+ node.properties.research_pillar_secondary +"</i>" +
             "<br/><strong>Research Interests</strong>: <br/><i>"+ node.properties.research_interest + "</i>" +
