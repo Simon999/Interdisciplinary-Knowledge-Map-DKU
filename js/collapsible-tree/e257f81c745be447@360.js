@@ -246,7 +246,7 @@ function _data(FileAttachment){return({
             },
             {
               "name": "Linfeng Huang",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/linfeng-huang"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/linfeng-huang; http://www.pro-sirna.com/lab/"
             },
             {
               "name": "Xiangdong Gao",
@@ -379,7 +379,7 @@ function _data(FileAttachment){return({
             },
             {
               "name": "Zuchuan Li",
-              "url": "https://sites.duke.edu/sagdku/"
+              "url": "https://scholars.duke.edu/person/zuchuan.li"
             }
           ]
         },
@@ -438,7 +438,7 @@ function _data(FileAttachment){return({
             },
             {
               "name": "Linfeng Huang",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/linfeng-huang"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/linfeng-huang; http://www.pro-sirna.com/lab/"
             },
             {
               "name": "Xiangdong Gao",
