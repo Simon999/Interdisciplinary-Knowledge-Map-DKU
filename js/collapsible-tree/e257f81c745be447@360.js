@@ -249,6 +249,10 @@ function _data(FileAttachment){return({
               "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/linfeng-huang"
             },
             {
+              "name": "Xiangdong Gao",
+              "url": NaN
+            },
+            {
               "name": "Xianzhi Lin",
               "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/xianzhi-lin"
             }
@@ -295,6 +299,10 @@ function _data(FileAttachment){return({
             {
               "name": "Feng Tian",
               "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/feng-tian/"
+            },
+            {
+              "name": "Kaizhu Huang",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/kaizhu-huang"
             },
             {
               "name": "Ming Li",
@@ -366,6 +374,10 @@ function _data(FileAttachment){return({
               "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/song-gao"
             },
             {
+              "name": "Ya-Jou Chen",
+              "url": "https://cyj-environmental-microbiology-lab.webnode.page"
+            },
+            {
               "name": "Zuchuan Li",
               "url": "https://sites.duke.edu/sagdku/"
             }
@@ -427,6 +439,10 @@ function _data(FileAttachment){return({
             {
               "name": "Linfeng Huang",
               "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/linfeng-huang"
+            },
+            {
+              "name": "Xiangdong Gao",
+              "url": NaN
             },
             {
               "name": "Xianzhi Lin",
@@ -501,15 +517,6 @@ function _data(FileAttachment){return({
           ]
         },
         {
-          "name": "Chemistry, physical",
-          "children": [
-            {
-              "name": "Kai Zhang",
-              "url": "https://sites.google.com/site/kaizhangstatmech/"
-            }
-          ]
-        },
-        {
           "name": "Education & educational research",
           "children": [
             {
@@ -580,10 +587,6 @@ function _data(FileAttachment){return({
           "name": "Pure math",
           "children": [
             {
-              "name": "Zhe Liu",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/zhe-liu"
-            },
-            {
               "name": "Zhenghui Huo",
               "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/zhenghui-huo"
             }
@@ -607,6 +610,15 @@ function _data(FileAttachment){return({
             {
               "name": "Xingshi Cai",
               "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/xingshi-cai"
+            }
+          ]
+        },
+        {
+          "name": "Statistics and probability",
+          "children": [
+            {
+              "name": "Cristiano Villa",
+              "url": "Cristiano Villa | Scholars@Duke profile"
             }
           ]
         }
