@@ -230,7 +230,7 @@ function _data(FileAttachment){return({
             },
             {
               "name": "Huansheng Cao",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cao-huansheng/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huansheng-cao"
             },
             {
               "name": "Hyun-Min Kim",
@@ -242,15 +242,15 @@ function _data(FileAttachment){return({
             },
             {
               "name": "Joohyun Lee",
-              "url": "jleelab.org"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/joohyun-lee"
             },
             {
               "name": "Linfeng Huang",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/linfeng-huang; http://www.pro-sirna.com/lab/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/linfeng-huang"
             },
             {
               "name": "Xiangdong Gao",
-              "url": NaN
+              "url": "https://scholars.duke.edu/person/Xiangdong.Gao "
             },
             {
               "name": "Xianzhi Lin",
@@ -370,10 +370,6 @@ function _data(FileAttachment){return({
               "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/renee-richer"
             },
             {
-              "name": "Song Gao",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/song-gao"
-            },
-            {
               "name": "Ya-Jou Chen",
               "url": "https://cyj-environmental-microbiology-lab.webnode.page"
             },
@@ -422,7 +418,7 @@ function _data(FileAttachment){return({
             },
             {
               "name": "Huansheng Cao",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cao-huansheng/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/huansheng-cao"
             },
             {
               "name": "Hyun-Min Kim",
@@ -434,15 +430,15 @@ function _data(FileAttachment){return({
             },
             {
               "name": "Joohyun Lee",
-              "url": "jleelab.org"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/joohyun-lee"
             },
             {
               "name": "Linfeng Huang",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/linfeng-huang; http://www.pro-sirna.com/lab/"
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/linfeng-huang"
             },
             {
               "name": "Xiangdong Gao",
-              "url": NaN
+              "url": "https://scholars.duke.edu/person/Xiangdong.Gao "
             },
             {
               "name": "Xianzhi Lin",
@@ -596,6 +592,10 @@ function _data(FileAttachment){return({
           "name": "Statistics & probability",
           "children": [
             {
+              "name": "Cristiano Villa",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/cristiano-villa"
+            },
+            {
               "name": "Dongmian Zou",
               "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/dongmian-zou"
             },
@@ -610,15 +610,6 @@ function _data(FileAttachment){return({
             {
               "name": "Xingshi Cai",
               "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/xingshi-cai"
-            }
-          ]
-        },
-        {
-          "name": "Statistics and probability",
-          "children": [
-            {
-              "name": "Cristiano Villa",
-              "url": "Cristiano Villa | Scholars@Duke profile"
             }
           ]
         }
