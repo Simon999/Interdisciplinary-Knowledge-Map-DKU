@@ -32,7 +32,9 @@ for index in range(0, research_pillar_primary_list.size):
     col2 = research_interest_list[index]
     col3 = name_list[index]
     col4 = web_list[index]
-    name_2_web[col3] = col4
+    # col4 may contain multiple website links, using ; to seperate, just use the first one
+    first_web = col4.strip().split(';')[0]
+    name_2_web[col3] = first_web
     if col1 not in primary_2_interest:
         primary_2_interest[col1] = list()
     interest = col2.strip().split(';')
@@ -65,8 +67,8 @@ for col in sorted(df['research_pillar_primary']):
 result = json.dumps(final_dict, indent = 2)
 
 # Writing to sample.json
-with open("research-tree.json", "w") as outfile:
-    outfile.write(result)
+with open("research-tree.js", "w") as outfile:
+    outfile.write("export const research_tree_data = %s" % result)
 
 #按行读取
 # for index, row in df.iterrows():

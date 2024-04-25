@@ -382,7 +382,14 @@ function resetSelectedNode(allNodes, allLinks) {
 
 // info board
 function showPeopleInfo(node) {
-    
+    // Personal Website may contain multiple links
+    var website_html = "<br><i><strong>Personal Website: </strong>";
+    website_list = node.properties.website_link.split(';');
+    for (let i = 0; i < website_list.length; i++) {
+        website_html += "<br><a href=\"" + website_list[i] + "\" target=\"_blank\" rel=\"noopener noreferrer\">" + website_list[i] + "<a/>";
+    }
+    website_html += "</i>" + "<br>";
+    console.log(website_html);
     $('.modal').modal('open');
     // $('#PeopleImg').attr("src", node.img); 
     //$('#PeopleName').attr("href", "here is a link!" + node.id);
@@ -392,7 +399,7 @@ function showPeopleInfo(node) {
             "<br/><i><strong>"+ node.properties.title + " at " + node.properties.affiliation + "</i></strong>"+
             "<br/><i><strong>"+ node.properties.division + " Division </i></strong>" +
             "<br/><i>"+ node.properties.email  +"</i>" +
-            "<br/><i>Personal Website: "+ "<a href=\"" + node.properties.website_link + "\" target=\"_blank\" rel=\"noopener noreferrer\">" + node.properties.website_link + "<a/>"  +"</i>" + "<br>" +
+            website_html +
             "<br/><strong>Primary Research Direction</strong>: <i>"+ node.properties.research_direction + "</i>" +
             "<br/><strong>Research Pillar</strong>: <i><br>Primary - "+ node.properties.research_pillar_primary + "<br>Secondary - "+ node.properties.research_pillar_secondary +"</i>" +
             "<br/><strong>Research Interests</strong>: <br/><i>"+ node.properties.research_interest + "</i>" +
