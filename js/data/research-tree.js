@@ -154,6 +154,15 @@ export const research_tree_data = {
           ]
         },
         {
+          "name": "Computer science, artificial intelligence",
+          "children": [
+            {
+              "name": "Yucheng Jin",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/yucheng-jin"
+            }
+          ]
+        },
+        {
           "name": "Data mining",
           "children": [
             {
@@ -194,6 +203,10 @@ export const research_tree_data = {
             {
               "name": "Renee Richer",
               "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/renee-richer"
+            },
+            {
+              "name": "Tongshu Zheng",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/tongshu-zheng"
             },
             {
               "name": "Ya-Jou Chen",
@@ -321,20 +334,20 @@ export const research_tree_data = {
           ]
         },
         {
-          "name": "Biophysics",
-          "children": [
-            {
-              "name": "Domna Kotsifaki",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/domna-kotsifaki"
-            }
-          ]
-        },
-        {
           "name": "Chemistry, medicinal",
           "children": [
             {
               "name": "Floyd Beckford",
               "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/floyd-beckford"
+            }
+          ]
+        },
+        {
+          "name": "Chemistry, organic",
+          "children": [
+            {
+              "name": "Rui Liu",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/rui-liu"
             }
           ]
         },
@@ -384,6 +397,15 @@ export const research_tree_data = {
             {
               "name": "Pascal Grange",
               "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/pascal-grange"
+            }
+          ]
+        },
+        {
+          "name": "Physics",
+          "children": [
+            {
+              "name": "Domna Kotsifaki",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/domna-kotsifaki"
             }
           ]
         },
