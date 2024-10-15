@@ -73,17 +73,20 @@
             </div>
             <input id="search" type="search" class="form-control mr-1" placeholder="Search" style="z-index: 20; position: relative;">
             
-            <div class="input-group-btn" style="z-index: 20; position: relative;" >
-              <button class="btn btn-outline-secondary" type="button" onclick="onHelpClick()">
+            <div class="input-group-btn" style="z-index: 20; position: relative; left: 10px;" >
+              <button class="btn btn-outline-secondary" type="button" onclick="on`Click()">
                 <!-- <span class="glyphicon glyphicon-question-sign"></span> -->
                 Help
               </button>
             </div>
-            <div class="input-group-btn main-menu" style="z-index: 20; position: relative;" >
-              <button class="btn btn-outline-secondary menu-ico" type="button">
-                <span class="glyphicon glyphicon-menu-hamburger"></span>
+
+            <div class="input-group-btn" style="z-index: 20; position: relative; left: 14px;">
+              <button class="btn btn-outline-secondary" type="button" onclick="window.location.href='https://dnas.dukekunshan.edu.cn/';">
+                <span class="glyphicon glyphicon-home"></span>
               </button>
             </div>
+
+            <div></div>
             
             <!-- <span class="input-group-btn" id="detail-area-button">
               <button class="btn btn-outline-secondary" type="button" onclick="onAreaDetailClick()">Detail</button>
@@ -225,6 +228,7 @@
   </div>
 
   <!-- main menu -->
+  <!--
   <div class="main-menu-item d-none">
     <i class="material-icons white-text small">close</i>
     <ul id="menu-1-2155a271" class="elementor-nav-menu" data-smartmenus-id="16833426637388433">
@@ -272,7 +276,8 @@
           }
       );
   </script>
-  
+  -->
+
   <!-- Graph initialization -->
   <script>
       var graphContainer = document.getElementById("d3_selectable_force_directed_graph");
