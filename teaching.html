@@ -6,6 +6,27 @@
     <meta name="author" content="Junyi Tao">
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+
+    <style>
+      .dropdown-submenu {
+        position: relative;
+      }
+      
+      .dropdown-submenu .dropdown-content {
+        display: none;
+        position: absolute;
+        left: 100%; /* 让子菜单出现在右侧 */
+        top: 0;
+        margin-left: .1rem;
+        background-color: #f9f9f9;
+        z-index: 1000;
+      }
+      
+      .dropdown-submenu:hover .dropdown-content {
+        display: block;
+      }
+    </style>
+
     <link rel='stylesheet' href='vendor/ajax/libs/materialize/0.98.1/css/materialize.min.css'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
     <!-- Load bootstrap -->
@@ -68,39 +89,62 @@
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                    Faculty
+                    About
                   </a>
                   <div class="dropdown-menu">
-                    <a class="dropdown-item" href="https://dnas.dukekunshan.edu.cn/biology/">Biology</a>
-                    <a class="dropdown-item" href="https://dnas.dukekunshan.edu.cn/chemistry/">Chemistry</a>
-                    <!--<div class="dropdown-divider"></div> -->
-                    <a class="dropdown-item" href="https://dnas.dukekunshan.edu.cn/data-science/">Data Science</a>
-                    <a class="dropdown-item" href="https://dnas.dukekunshan.edu.cn/am/">Mathematics</a>
-                    <a class="dropdown-item" href="https://dnas.dukekunshan.edu.cn/physics/">Physics</a>
+                    <a class="dropdown-item" href="https://dnas.dukekunshan.edu.cn/overview/">Overview</a>
                   </div>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="https://dnas.dukekunshan.edu.cn/research/">Research</a>
+
+
+                
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                    People
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="https://dnas.dukekunshan.edu.cn/staff/">Staff</a>
+                    <a class="dropdown-item dropdown-toggle toggle-sub" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Faculty</a>
+                    <div class="dropdown-sub-menu d-none">
+                      <a href="https://dnas.dukekunshan.edu.cn/biological-behavioral-sciences-and-health/" class="dropdown-item">Biological, behavioral sciences and health</a>
+                      <a href="https://dnas.dukekunshan.edu.cn/data-and-computer-sciences/" class="dropdown-item">Data and computer sciences</a>
+                      <a href="https://dnas.dukekunshan.edu.cn/environmental-science-and-sustainability/" class="dropdown-item">Environmental science and sustainability</a>
+                      <a href="https://dnas.dukekunshan.edu.cn/math-physical-and-materials-sciences/" class="dropdown-item">Math, physical and materials sciences</a>
+                    </div>
+                  </div>
                 </li>
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                    Research
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="https://dnas.dukekunshan.edu.cn/research-labs/">Research Groups</a>
+                    <a class="dropdown-item" href="https://dnas.dukekunshan.edu.cn/research/">Research by Faculty | Area</a>
+                    <a class="dropdown-item" href="https://dnas.dukekunshan.edu.cn/research-opportunities/">Research Opportunities</a>
+                  </div>
+                </li>
+
+
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                     Education
                   </a>
                   <div class="dropdown-menu">
+                    
+                    <a class="dropdown-item" href="https://dnas.dukekunshan.edu.cn/majors-introduction/">Majors Introduction</a>
+                    <a class="dropdown-item" href="https://dnas.dukekunshan.edu.cn/research/teaching.html">Teaching</a>
+                    
                     <a class="dropdown-item" href="https://ugstudies.dukekunshan.edu.cn/">UG Education</a>
-                    <!--<a class="dropdown-item" href="https://ugstudies.dukekunshan.edu.cn/academics/majors/">Majors</a> -->
-                    <a class="dropdown-item  active" href="#">Teaching</a>
+
                     <a class="dropdown-item dropdown-toggle toggle-sub" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                      Majors
+                      Teaching Laboratory
                     </a>
                     <div class="dropdown-sub-menu d-none">
-                      <a href="https://ugstudies.dukekunshan.edu.cn/majors/molecular-bioscience-with-tracks-in-biogeochemistry-biophysics-cell-and-molecular-biology-genetics-and-genomics/" class="dropdown-item">Molecular Bioscience</a>
-                      <a href="https://ugstudies.dukekunshan.edu.cn/majors/materials-science-with-tracks-in-chemistry-and-physics/" class="dropdown-item">Materials science</a>
-                      <a href="https://ugstudies.dukekunshan.edu.cn/majors/global-health-with-tracks-in-biology-and-public-policy/" class="dropdown-item">Global health</a>
-                      <a href="https://ugstudies.dukekunshan.edu.cn/majors/data-science/" class="dropdown-item">Data science</a>
-                      <a href="https://ugstudies.dukekunshan.edu.cn/majors/environmental-science-with-tracks-in-biogeochemistry-biology-chemistry-and-public-policy/" class="dropdown-item">Environmental science</a>
-                      <a href="https://ugstudies.dukekunshan.edu.cn/majors/behavioral-science-with-tracks-in-psychology-and-neuroscience/" class="dropdown-item">Behavioral Science</a>
-                      <a href="https://ugstudies.dukekunshan.edu.cn/majors/applied-mathematics-and-computational-sciences-math/" class="dropdown-item">Applied math and computation</a>
+                      <a href="https://dnas.dukekunshan.edu.cn/introduction-laboratory/" class="dropdown-item">Introduction</a>
+                      <a href="https://dnas.dukekunshan.edu.cn/introduction-laboratory/equipment-laboratory/" class="dropdown-item">Equipment</a>
+                      <a href="https://dnas.dukekunshan.edu.cn/introduction-laboratory/safety-laboratory/" class="dropdown-item">Safety</a>
+                      <a href="https://dnas.dukekunshan.edu.cn/introduction-laboratory/faq-laboratory/" class="dropdown-item">FAQ</a>
                     </div>
                   </div>
                 </li>
@@ -405,6 +449,13 @@
   
     });
 
+    $(document).ready(function(){
+      $('.dropdown-submenu a.dropdown-toggle').on("click", function(e){
+        e.preventDefault();
+        $(this).next('.dropdown-content').toggle();
+        e.stopPropagation();
+      });
+    });
     
   </script>
   
