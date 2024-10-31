@@ -467,6 +467,12 @@ function onClickHighlightNode() {
 function searchByName() {
     // get strings in search bar
     var searchTerm = document.getElementById("search").value;
+    var searchBox = document.getElementById("search");
+
+    // Clear previous results
+    var resultContainer = document.getElementById("search-results");
+    resultContainer.innerHTML = '';
+
     // color 
     nodes.classed("search-match", function(n){
         if(searchTerm.length == 0) {
@@ -483,6 +489,32 @@ function searchByName() {
             return !n.properties.name.toLowerCase().includes(searchTerm.toLowerCase());
         }
     });
+
+
+    if (searchTerm.length === 0) {
+        resultContainer.innerHTML = '';
+        resultContainer.classList.remove('visible'); // Hide modal if no results
+        return;
+    }
+
+    // List matched nodes' names
+    nodes.each(function(n) {
+        if (n.properties.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+            var resultItem = document.createElement("div");
+            resultItem.textContent = n.properties.name;
+            resultContainer.appendChild(resultItem);
+        }
+    });
+
+    // Show modal if there are results
+    if (resultContainer.innerHTML !== '') {
+        var rect = searchBox.getBoundingClientRect(); // 获取搜索框的位置
+        resultContainer.style.top = (rect.bottom + window.scrollY) + 'px'; // 设置弹窗的顶部位置
+        resultContainer.style.left = rect.left + 'px'; // 设置弹窗的左侧位置
+        resultContainer.classList.add('visible'); // Show modal
+    } else {
+        resultContainer.classList.remove('visible'); // Hide modal if no results
+    }
 }
 
 
