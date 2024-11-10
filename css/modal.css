@@ -1,0 +1,14 @@
+.modalsearch {
+    position: absolute; /* 使弹窗绝对定位 */
+    background-color: white; /* 背景颜色 */
+    border: 1px solid #ccc; /* 边框 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    z-index: 1000; /* 确保在其他元素之上 */
+    padding: 10px; /* 内边距 */
+    border-radius: 5px; /* 圆角 */
+    display: none; /* 初始不显示 */
+  }
+
+  .modalsearch.visible {
+    display: block; /* 显示弹窗 */
+  }

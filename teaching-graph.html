@@ -41,6 +41,7 @@
     <link rel='stylesheet' href='css/search.css'>
     <link rel='stylesheet' href='css/info.css'>
     <link rel='stylesheet' href='css/custom.css'>
+    <link rel='stylesheet' href='css/modal.css'>
     <!-- js -->
     <script src="vendor/d3js.org/d3.v4.js"></script>
     <!-- data -->
@@ -69,6 +70,7 @@
       <div style="display: flex; justify-content: center; margin-left: 100px;">
         <input id="search" type="search" class="form-control mr-1" placeholder="Search By Name" style="width: 150px;border:0px;outline:none;background-color:#ffffff;color:#141412">
       </div>
+      <div id="search-results" class="modalsearch"></div> <!-- Add the list of results -->
       <svg id="d3_svg"/>
     </div>
   </div>
@@ -96,6 +98,7 @@
         
     </div>
 </div>
+  
   
   <!-- Detail table of area -->
   <div class="container" id="detail-area-container" style="position: relative;">
