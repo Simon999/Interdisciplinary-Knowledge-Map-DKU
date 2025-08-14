@@ -157,6 +157,10 @@ export const research_tree_data = {
           "name": "Computer science, artificial intelligence",
           "children": [
             {
+              "name": "Miao Xiaoxiao",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/xiaoxiao-miao"
+            },
+            {
               "name": "Yucheng Jin",
               "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/yucheng-jin"
             }
@@ -320,8 +324,16 @@ export const research_tree_data = {
               "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/konstantinos-efstathiou"
             },
             {
+              "name": "Lee Heejin",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/heejin-lee"
+            },
+            {
               "name": "Marcus Werner",
               "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/marcus-werner"
+            },
+            {
+              "name": "May Georg",
+              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/georg-may"
             },
             {
               "name": "Shixin Xu",
@@ -390,10 +402,6 @@ export const research_tree_data = {
         {
           "name": "Mathematics, interdisciplinary applications",
           "children": [
-            {
-              "name": "Dangxing Chen",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/dangxing-chen"
-            },
             {
               "name": "Pascal Grange",
               "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/pascal-grange"
