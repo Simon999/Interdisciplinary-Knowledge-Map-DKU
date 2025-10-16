@@ -5,21 +5,8 @@ export const research_tree_data = {
       "name": "Biological, behavioral sciences and health",
       "children": [
         {
-          "name": "Biochemistry & molecular biology",
-          "children": [
-            {
-              "name": "Mark Spaller",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/mark-spaller"
-            }
-          ]
-        },
-        {
           "name": "Biology",
           "children": [
-            {
-              "name": "Sajid Umar",
-              "url": "https://newstatic.dukekunshan.edu.cn/globalhealth/2022/05/07145949/CV-SAJID-UMAR-2022.pdf"
-            },
             {
               "name": "Yiu Wing Kam",
               "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/yiu-wing-jason-kam"
@@ -454,10 +441,6 @@ export const research_tree_data = {
             {
               "name": "Dongmian Zou",
               "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/dongmian-zou"
-            },
-            {
-              "name": "Italo Simonelli",
-              "url": "https://faculty.dukekunshan.edu.cn/faculty_profiles/italo-simonelli"
             },
             {
               "name": "Lin Jiu",
