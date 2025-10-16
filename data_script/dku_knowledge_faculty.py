@@ -9,7 +9,7 @@ interest_2_faculty = {}
 faculty_2_website = {}
 
 #读取excel文件
-df = pd.read_excel('dku_knowledge_230504.xlsx')
+df = pd.read_excel('dku_knowledge_info.xlsx')
 
 research_pillar_primary_list = df['research_pillar_primary']
 research_pillar_primary_set = set()
